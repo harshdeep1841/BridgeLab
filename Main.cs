@@ -5,7 +5,7 @@ using ConsoleAppLearning1.Learning.Operator.Learning.ProblemSolving;
 using Operators;
 namespace ConsoleAppLearning1.Learning.Operator;
 
-public class MainCS
+public  class MainCS
 {
     public static void Main(string[] args)
     {
@@ -82,20 +82,20 @@ public class MainCS
         // int int1 = Convert.ToInt32(Console.ReadLine());
         // Console.WriteLine(int1);
 
-     //  double double2 =   ArrayProblem.triangleArea(12, 12);
+     //  double double2 =   ArrayProblem.TriangleArea(12, 12);
      //  Console.WriteLine(double2);
      //  
-     //  Console.WriteLine(ArrayProblem.anagram("HarSh" , "harsH"));
+     //  Console.WriteLine(ArrayProblem.Anagram("HarSh" , "harsH"));
      //
      //  string[] strs = { "flower", "flow", "flight" };
      //
      //  string longestPrefix = ArrayProblem.LongestCommonPrefix(strs);
      //  Console.WriteLine(longestPrefix);
      //
-     // string rev =  ArrayProblem.reverse("EasyRewardz");
+     // string rev =  ArrayProblem.Reverse("EasyRewardz");
      // Console.WriteLine(rev);
      // int [] arr1 = { 1, 3, 2, 0, 1, 0, 2, 1, 0, 4 };
-     // ArrayProblem.moveZerosToEnd(arr1);
+     // ArrayProblem.MoveZerosToEnd(arr1);
      //
      // foreach (int i in arr1)
      // {
@@ -147,7 +147,7 @@ public class MainCS
         // ArrayProblem.practiceProblem(input);
         
        //  string inputString = Convert.ToString(Console.ReadLine());
-       // char ch =  ArrayProblem.firstNonRepatingCharacter(inputString);
+       // char ch =  ArrayProblem.FirstNonRepatingCharacter(inputString);
        // Console.WriteLine(ch);
        
        //input 2d array
@@ -171,14 +171,14 @@ public class MainCS
        //     }
        // }
        //
-       // ArrayProblem.print2DArray(array2D);
-    
-       Assignment1.WelcomeToBridgelabz();
-       Assignment1.AddTwoNumbers();
-       Assignment1.CelsiusToFahrenheit();
-       Assignment1.AreaOfCircle();
-       Assignment1.VolumeOfCylinder();
-       Assignment1.CalculateSimpleInterest();
+       // ArrayProblem.Print2DArray(array2D);
+       //
+       // Assignment1.WelcomeToBridgelabz();
+       // Assignment1.AddTwoNumbers();
+       // Assignment1.CelsiusToFahrenheit();
+       // Assignment1.AreaOfCircle();
+       // Assignment1.VolumeOfCylinder();
+       // Assignment1.CalculateSimpleInterest();
 
 
     }

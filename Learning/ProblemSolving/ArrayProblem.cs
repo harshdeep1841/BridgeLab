@@ -4,7 +4,7 @@ namespace ConsoleAppLearning1.Learning.Operator.Learning.ProblemSolving;
 
 public class ArrayProblem
 {
-    public static void printElements(int[] arr)
+    public static void PrintElements(int[] arr)
     {
         foreach (int e in arr)
         {
@@ -13,7 +13,7 @@ public class ArrayProblem
         
     }
 
-    public static List<int> removeDuplicates(int[] arr)
+    public static List<int> RemoveDuplicates(int[] arr)
     {
         int n = arr.Length;
         List<int> list = new List<int>();
@@ -36,13 +36,13 @@ public class ArrayProblem
         return list;
     }
 
-    public static double triangleArea(int b, int h)
+    public static double TriangleArea(int b, int h)
     {
         double area = ( b * h / 2);
         return area;
     }
 
-    public static bool leapYear(int year)
+    public static bool LeapYear(int year)
     {
         if (year % 400 == 0)
         {
@@ -55,7 +55,7 @@ public class ArrayProblem
         return false;
     }
 
-    public static bool anagram(string a, string b)
+    public static bool Anagram(string a, string b)
     {
         Dictionary<char, int> dict = new Dictionary<char, int>();
         
@@ -86,7 +86,7 @@ public class ArrayProblem
         return true;
     }
     
-    public static string minLen(string[] str)
+    public static string MinLen(string[] str)
     {
         int len = 500;
         string res = "";
@@ -108,7 +108,7 @@ public class ArrayProblem
         int a = 0;
         string ans = "";
        
-        string str = minLen(strs);
+        string str = MinLen(strs);
         for(int i = 0 ; i < str.Length ; i++)
         {
             char ch = strs[0][i];
@@ -129,7 +129,7 @@ public class ArrayProblem
         return ans;
     }
 
-    public static string reverse( string str)
+    public static string Reverse( string str)
     {
         int start = 0;
         int end = str.Length - 1;
@@ -148,7 +148,7 @@ public class ArrayProblem
 
     }
 
-    public static void moveZerosToEnd(int[] arr)
+    public static void MoveZerosToEnd(int[] arr)
     {
         // 1 3 2 0 1 0 2 1 0 4
         
@@ -167,7 +167,7 @@ public class ArrayProblem
         
     }
 
-    public static char firstNonRepatingCharacter(string s)
+    public static char FirstNonRepatingCharacter(string s)
     {
         // r    a   c   e   c   a   r
         for (int i = 0; i < s.Length; i++)
@@ -192,7 +192,7 @@ public class ArrayProblem
         return 'x'; //when all characters are repating
     }
 
-    public static void practiceProblem(int n)
+    public static void PracticeProblem(int n)
     {
         int[] arr = new int[n];
 
@@ -224,7 +224,7 @@ public class ArrayProblem
         
     }
 
-    public static void print2DArray(int[,] arr)
+    public static void Print2DArray(int[,] arr)
     {
         for (int i = 0; i < arr.GetLength(0); i++)
         {
