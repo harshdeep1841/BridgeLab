@@ -1,0 +1,9 @@
+Buildin methods we use in Array
+-> Reverse(arr , startingIndex , LastIndex/length)
+-> Copy(arr , copyArr , Len ) where Len must be less then equal to arr
+-> Resize(ref arr ,Len) and here len can be anything based on that it creates an object
+   of new arr and that would be point that my old ref i-e arr.
+-> Clear(arr , startingIdx , endingIdx/Len)
+-> Exists(arr , x => x > 24) it returns bool
+-> Find(arr , x => x > 8) return the first value that satisfies result if not satisfies 
+   then give me default values 0.

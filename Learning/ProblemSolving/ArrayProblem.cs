@@ -2,7 +2,7 @@ using System.Text;
 
 namespace ConsoleAppLearning1.Learning.Operator.Learning.ProblemSolving;
 
-public class ArrayCS
+public class ArrayProblem
 {
     public static void printElements(int[] arr)
     {
@@ -166,8 +166,63 @@ public class ArrayCS
         }
         
     }
-    
-    
+
+    public static char firstNonRepatingCharacter(string s)
+    {
+        // r    a   c   e   c   a   r
+        for (int i = 0; i < s.Length; i++)
+        {
+            bool flag = false;
+            for (int j = 0; j < s.Length; j++)
+            {
+                if (i != j && s[i] == s[j])
+                {
+                    flag = true;
+                    break;
+                }
+            }
+
+            if (!flag)
+            {
+                return s[i];
+            }
+            
+        }
+
+        return 'x'; //when all characters are repating
+    }
+
+    public static void practiceProblem(int n)
+    {
+        int[] arr = new int[n];
+
+        for(int i = 0 ; i < n ; i++)
+        {
+            
+            arr[i] = Convert.ToInt32(Console.ReadLine());
+            if (arr[i] <= 0)
+            {
+                arr[i] = 0;
+                break;
+            }
+        }
+
+        int sum = 0;
+        for (int i = 0; i < n; i++)
+        {
+            sum += arr[i];
+        }
+
+        for (int i = 0; i < n; i++)
+        {
+            if (arr[i] != 0)
+            {
+                Console.WriteLine(arr[i]);
+            }
+        }
+        Console.WriteLine(sum);
+        
+    }
     
     
 }

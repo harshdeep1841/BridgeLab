@@ -2,7 +2,7 @@ namespace ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverridin
 
 public class Animal
 {
-    public  virtual  void Speak()
+    public virtual void Speak()
     {
         Console.WriteLine("Animal speaks");
     }

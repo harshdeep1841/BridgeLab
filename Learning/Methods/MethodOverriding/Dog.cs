@@ -4,7 +4,7 @@ namespace ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverridin
 
 public class Dog : Animal
 {
-    public override  void Speak()
+    public  override void Speak()
     {
         
         Console.Write("Dog barks");

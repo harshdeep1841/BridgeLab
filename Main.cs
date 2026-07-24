@@ -1,3 +1,4 @@
+using System.Collections.Specialized;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverloading;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverriding;
 using ConsoleAppLearning1.Learning.Operator.Learning.ProblemSolving;
@@ -81,20 +82,20 @@ public class MainCS
         // int int1 = Convert.ToInt32(Console.ReadLine());
         // Console.WriteLine(int1);
 
-      double double2 =   ArrayCS.triangleArea(12, 12);
+      double double2 =   ArrayProblem.triangleArea(12, 12);
       Console.WriteLine(double2);
       
-      Console.WriteLine(ArrayCS.anagram("HarSh" , "harsH"));
+      Console.WriteLine(ArrayProblem.anagram("HarSh" , "harsH"));
 
       string[] strs = { "flower", "flow", "flight" };
 
-      string longestPrefix = ArrayCS.LongestCommonPrefix(strs);
+      string longestPrefix = ArrayProblem.LongestCommonPrefix(strs);
       Console.WriteLine(longestPrefix);
 
-     string rev =  ArrayCS.reverse("EasyRewardz");
+     string rev =  ArrayProblem.reverse("EasyRewardz");
      Console.WriteLine(rev);
      int [] arr1 = { 1, 3, 2, 0, 1, 0, 2, 1, 0, 4 };
-     ArrayCS.moveZerosToEnd(arr1);
+     ArrayProblem.moveZerosToEnd(arr1);
      
      foreach (int i in arr1)
      {
@@ -104,7 +105,51 @@ public class MainCS
      string s1 = new string("Harsh");
      string s2 = "Harsh";
      
-     if(s1 == s2) Console.WriteLine(s1); //both equals() and == check cotent not referance
+     if(s1 == s2) Console.WriteLine(s1); //both equals() and == check content not referance
+
+
+     int [ , ] array = new int[3 , 3]; //2d array
+
+     for (int i = 0; i < array.GetLength(0); i++) //GetLength gives us the length of particular dimension
+     {
+         for (int j = 0; j < array.GetLength(1); j++)
+         {
+            array[i, j] = i + j; 
+         }
+     }
+        Console.Error.WriteLine(array);
+        
+        
+        
+
+       int[] array2 = { 1, 2, 3, 4 };
+       int [] copy = new int[array2.Length];
+       
+       Array.Copy(array2 , copy , 4);
+       //Array.Clear(array2 , 1 , 3);
+      
+       
+       // Array.Reverse(array2 , 1 , 3);
+       // Array.Resize(ref array2 , 6);
+
+       // for (int i = 0; i < array2.Length; i++)
+       // {
+       //     Console.Write(array2[i] + " ");
+       // }
+       
+        
+         // for (int i = 0; i < copy.Length; i++)
+         // {
+         //     Console.Write(copy[i] + " ");
+         // }
+         //
+        //  int input = Convert.ToInt32(Console.ReadLine());
+        // ArrayProblem.practiceProblem(input);
+        
+        string inputString = Convert.ToString(Console.ReadLine());
+       char ch =  ArrayProblem.firstNonRepatingCharacter(inputString);
+       Console.WriteLine(ch);
 
     }
 }
+
