@@ -1,4 +1,5 @@
 using System.Collections.Specialized;
+using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodExplore;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverloading;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverriding;
 using ConsoleAppLearning1.Learning.Operator.Learning.ProblemSolving;
@@ -180,7 +181,52 @@ public  class MainCS
        // Assignment1.VolumeOfCylinder();
        // Assignment1.CalculateSimpleInterest();
 
+       // int[] termiator = { 1, 2, 3, 4, 5 };
+       // int[] skynet = new int[4];
+       // Array.Copy(termiator , skynet, 2); //here length is how many elements we 
+       //want to copy in new arr. (length in parameter  <= length of new arr)
 
+       // for (int i = 0; i < skynet.Length; i++)
+       // {
+       //     Console.WriteLine(skynet[i]);
+       // }
+       
+       
+       int[] nums = {10,20,30};
+       // int a = 5;
+       // MethodExp.Change(nums , ref a) ;
+       // Console.WriteLine(a);
+       //Console.WriteLine(nums[0]);
+       
+       // string name = "Hello";
+       // MethodExp.Change2(name);
+       // Console.WriteLine(name); //Hello 
+
+
+       
+       // MethodExp.Change3(nums);
+       // Console.WriteLine(nums[0]);
+       // Console.WriteLine(nums[1]);
+       // Console.WriteLine(nums[2]);
+       
+       
+       // MethodExp.Change4(nums);
+       // Console.WriteLine(nums[0]);
+        
+       //MethodExp.Change5(nums);
+       
+       //MethodExp.Change6(nums);
+       
+       
+       // MethodExp.Change7(ref nums);
+       // Console.WriteLine(nums[0]);
+       
+       //MethodExp.Change8(nums);
+       
+
+       MethodExp.Change9(ref nums);
+       Console.WriteLine(nums.Length);
+       
     }
 
 }
