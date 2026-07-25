@@ -21,8 +21,7 @@ public class MethodExp
         arr[1]++;
         arr[2]++;
     }
-    
-    public static void Change4(int[] arr)
+       public static void Change4(int[] arr)
     {
         arr = arr;
         arr[0] = 99;
@@ -63,7 +62,7 @@ public class MethodExp
 
         Console.WriteLine(arr[0]);
     }
-    
+    //*****STAR****** 
     public static void Change9(ref int[] arr)
     {
         Array.Resize(ref arr, 5);

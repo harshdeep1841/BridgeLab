@@ -6,7 +6,7 @@ using ConsoleAppLearning1.Learning.Operator.Learning.ProblemSolving;
 using Operators;
 namespace ConsoleAppLearning1.Learning.Operator;
 
-public  class MainCS
+public  class MainCs
 {
     public static void Main(string[] args)
     {
@@ -117,7 +117,6 @@ public  class MainCS
      //     {
      //        array[i, j] = i + j; 
      //     }
-     // }
      //    Console.Error.WriteLine(array);
         
         
@@ -127,7 +126,7 @@ public  class MainCS
        // int [] copy = new int[array2.Length];
        //
        // Array.Copy(array2 , copy , 4);
-       //Array.Clear(array2 , 1 , 3);
+       //Array.Clear(array2 , 1 , 3);     // }
       
        
        // Array.Reverse(array2 , 1 , 3);
@@ -137,7 +136,7 @@ public  class MainCS
        // {
        //     Console.Write(array2[i] + " ");
        // }
-       
+        
         
          // for (int i = 0; i < copy.Length; i++)
          // {
@@ -222,11 +221,36 @@ public  class MainCS
        // Console.WriteLine(nums[0]);
        
        //MethodExp.Change8(nums);
+           
+        
+       // MethodExp.Change9(ref nums);
+       // Console.WriteLine(nums.Length);
        
+       int[] dice = { 1, 2, 3, 4, 5, 6 };
+       Random random = new Random();
+       random.Shuffle(dice);
+       Console.WriteLine(string.Join(",", dice));
 
-       MethodExp.Change9(ref nums);
-       Console.WriteLine(nums.Length);
+       for (int i = 0; i < 6; i++)
+       {
+           Console.WriteLine(random.Next(3 , 5)); //from 3  to 5 - 1 i-e 4
+           
+       }
+
+       int randomNum = random.Next(1 , 10); // 1 to 9
        
+       Console.WriteLine(random.Next()); //it will print number from 1 to 10 in random order
+       
+       
+       
+       //Math
+      double absDouble =  Math.Abs(2.6);
+      Console.WriteLine(absDouble);
+      Console.WriteLine(Math.Ceiling(absDouble)); //next int
+      Console.WriteLine(Math.Floor(absDouble)); //prev int
+      Console.WriteLine(Math.Round(absDouble)); //closest int
+      
+      
     }
 
 }
