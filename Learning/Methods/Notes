@@ -1,1 +1,7 @@
 * String is a referance type but it is passed as value in argument.
+
+*ref understanding
+|When we pass a parameter using ref, the method receives a reference to the caller's 
+variable itself instead of a copy of the variable's value. Therefore, if the method 
+changes the variable (for example, assigns a new array to arr), the caller's variable 
+(nums) is also updated because both refer to the same variable.|

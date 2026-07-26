@@ -18,7 +18,7 @@ public  class MainCs
         // Console.WriteLine(Calculator.Add(10, 20));
         //
         // Console.WriteLine(Calculator.Add(10, 20, 30));
-        
+
         //method overriding
         // Dog dog = new Dog();
         // dog.Speak();
@@ -45,84 +45,85 @@ public  class MainCs
         //         break;
         //     
         // }
-        
-       // string str1 = Console.ReadLine();
-       // Console.WriteLine(str1);
-       // int num = int.Parse(str1);
-       // Console.WriteLine(num); //if str1 contains characters then it will give ForamtException
-       //  int num1 = int.Parse(Console.ReadLine());
-       //  Console.WriteLine(num1);
 
-       // int num2 = Console.ReadKey();
-       // char ch = Console.ReadLine() ![0];
-       // Console.WriteLine(ch);
-       // char ch1 = (char)Console.Read();
-       // Console.WriteLine(ch1);
-       
-       
-       //Problem Solving
+        // string str1 = Console.ReadLine();
+        // Console.WriteLine(str1);
+        // int num = int.Parse(str1);
+        // Console.WriteLine(num); //if str1 contains characters then it will give ForamtException
+        //  int num1 = int.Parse(Console.ReadLine());
+        //  Console.WriteLine(num1);
 
-     //  int[] arr = { 1, 2, 2, 3, 3 };
-     
-       // for(int i = 0 ; i < arr.Length ; i++)
-       // {
-       //     arr[i] = int.Parse(Console.ReadLine());
-       // }
-       
-       // ArrayCS.printElements(arr);
-        
+        // int num2 = Console.ReadKey();
+        // char ch = Console.ReadLine() ![0];
+        // Console.WriteLine(ch);
+        // char ch1 = (char)Console.Read();
+        // Console.WriteLine(ch1);
+
+
+        //Problem Solving
+
+        //  int[] arr = { 1, 2, 2, 3, 3 };
+
+        // for(int i = 0 ; i < arr.Length ; i++)
+        // {
+        //     arr[i] = int.Parse(Console.ReadLine());
+        // }
+
+        // ArrayCS.printElements(arr);
+
         // List<int> res  = ArrayCS.removeDuplicates(arr);
         // Console.WriteLine(res);
         // foreach (int i in res)
         // {
         //     Console.WriteLine(i);
         // }
-        
+
         // double double1 = Convert.ToDouble(Console.ReadLine());
         // Console.WriteLine(double1);
         // int int1 = Convert.ToInt32(Console.ReadLine());
         // Console.WriteLine(int1);
 
-     //  double double2 =   ArrayProblem.TriangleArea(12, 12);
-     //  Console.WriteLine(double2);
-     //  
-     //  Console.WriteLine(ArrayProblem.Anagram("HarSh" , "harsH"));
-     //
-     //  string[] strs = { "flower", "flow", "flight" };
-     //
-     //  string longestPrefix = ArrayProblem.LongestCommonPrefix(strs);
-     //  Console.WriteLine(longestPrefix);
-     //
-     // string rev =  ArrayProblem.Reverse("EasyRewardz");
-     // Console.WriteLine(rev);
-     // int [] arr1 = { 1, 3, 2, 0, 1, 0, 2, 1, 0, 4 };
-     // ArrayProblem.MoveZerosToEnd(arr1);
-     //
-     // foreach (int i in arr1)
-     // {
-     //     Console.Write(i + " ");
-     // }
+        //  double double2 =   ArrayProblem.TriangleArea(12, 12);
+        //  Console.WriteLine(double2);
+        //  
+        //  Console.WriteLine(ArrayProblem.Anagram("HarSh" , "harsH"));
+        //
+        //  string[] strs = { "flower", "flow", "flight" };
+        //
+        //  string longestPrefix = ArrayProblem.LongestCommonPrefix(strs);
+        //  Console.WriteLine(longestPrefix);
+        //
+        // string rev =  ArrayProblem.Reverse("EasyRewardz");
+        // Console.WriteLine(rev);
+        // int [] arr1 = { 1, 3, 2, 0, 1, 0, 2, 1, 0, 4 };
+        // ArrayProblem.MoveZerosToEnd(arr1);
+        //
+        // foreach (int i in arr1)
+        // {
+        //     Console.Write(i + " ");
+        // }
 
-     // string s1 = new string("Harsh");
-     // string s2 = "Harsh";
-     //
-     // if(s1 == s2) Console.WriteLine(s1); //both equals() and == check content not referance
-     //
-     //
-     // int [ , ] array = new int[3 , 3]; //2d array
-     //
-     // for (int i = 0; i < array.GetLength(0); i++) //GetLength gives us the length of particular dimension
-     // {
-     //     for (int j = 0; j < array.GetLength(1); j++)
-     //     {
-     //        array[i, j] = i + j; 
-     //     }
-     //    Console.Error.WriteLine(array);
-        
-        
-        
+        // string s1 = new string("Harsh");
+        // string s2 = "Harsh";
+        //
+        // if(s1 == s2) Console.WriteLine(s1); //both equals() and == check content not referance
+        //
+        //
+        // int [ , ] array = new int[3 , 3]; //2d array
+        //
+        // for (int i = 0; i < array.GetLength(0); i++) //GetLength gives us the length of particular dimension
+        // {
+        //     for (int j = 0; j < array.GetLength(1); j++)
+        //     {
+        //        array[i, j] = i + j; 
+        //     }
+        //    Console.Error.WriteLine(array);
+        //}
 
-       // int[] array2 = { 1, 2, 3, 4 };
+
+
+
+    // int[] array2 = { 1, 2, 3, 4 };
        // int [] copy = new int[array2.Length];
        //
        // Array.Copy(array2 , copy , 4);
@@ -191,7 +192,8 @@ public  class MainCs
        // }
        
        
-       int[] nums = {10,20,30};
+       int[] nums = {10, 20, -30 , 40 , 50};
+       int[] ones = { 1, 0, 1, 1, 1, 0, 20, 40 };
        // int a = 5;
        // MethodExp.Change(nums , ref a) ;
        // Console.WriteLine(a);
@@ -226,32 +228,55 @@ public  class MainCs
        // MethodExp.Change9(ref nums);
        // Console.WriteLine(nums.Length);
        
-       int[] dice = { 1, 2, 3, 4, 5, 6 };
-       Random random = new Random();
-       random.Shuffle(dice);
-       Console.WriteLine(string.Join(",", dice));
-
-       for (int i = 0; i < 6; i++)
-       {
-           Console.WriteLine(random.Next(3 , 5)); //from 3  to 5 - 1 i-e 4
-           
-       }
-
-       int randomNum = random.Next(1 , 10); // 1 to 9
-       
-       Console.WriteLine(random.Next()); //it will print number from 1 to 10 in random order
-       
-       
+       // int[] dice = { 1, 2, 3, 4, 5, 6 };
+       // Random random = new Random();
+       // random.Shuffle(dice);
+       // Console.WriteLine(string.Join(",", dice));
+       //
+       // for (int i = 0; i < 6; i++)
+       // {
+       //     Console.WriteLine(random.Next(3 , 5)); //from 3  to 5 - 1 i-e 4
+       //     
+       // }
+       //
+       // int randomNum = random.Next(1 , 10); // 1 to 9
+       //
+       // Console.WriteLine(random.Next()); //it will print number from 1 to 10 in random order
+       //
+       //
        
        //Math
-      double absDouble =  Math.Abs(2.6);
-      Console.WriteLine(absDouble);
-      Console.WriteLine(Math.Ceiling(absDouble)); //next int
-      Console.WriteLine(Math.Floor(absDouble)); //prev int
-      Console.WriteLine(Math.Round(absDouble)); //closest int
-      
-      
+      //double absDouble =  Math.Abs(2.6);
+      //Console.WriteLine(absDouble);
+      //Console.WriteLine(Math.Ceiling(absDouble)); //next int
+      //Console.WriteLine(Math.Floor(absDouble)); //prev int
+      //Console.WriteLine(Math.Round(absDouble)); //closest int
+
+    //MethodExp.Change10(10 , 20 , 3 , 7 );
+    
+    
+    // string number = Console.ReadLine();
+    //
+    // if (!int.TryParse( number , out int num))
+    // {
+    //     Console.Error.WriteLine("Invalid input");
+    // }
+
+    // int cntUpperCase = ArrayProblem.CountUpperCase("HarsH");
+    // Console.WriteLine(cntUpperCase);
+    //
+    // ArrayProblem.rotateArrayLeft(nums , 2);
+    // Console.WriteLine(string.Join(", " , nums));
+    
+    // int maxOnes = ArrayProblem.MaxConsecutiveOnes(ones);
+    // Console.WriteLine(maxOnes);
+    
+    // int maxSubarraySum = ArrayProblem.MaxSubarraySum(nums);
+    // Console.WriteLine(maxSubarraySum);
+    
+    IList<int> unionArrays  = ArrayProblem.UnionArray(nums, ones);
+    Console.WriteLine(string.Join(", " , unionArrays));
+    
     }
 
 }
-

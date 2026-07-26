@@ -148,6 +148,18 @@ public class ArrayProblem
 
     }
 
+    public static void Reverse(int[] arr , int st , int end)
+    {
+        while (st <= end)
+        {
+            int temp =  arr[st];
+            arr[st] = arr[end];
+            arr[end] = temp;
+            st++;
+            end--;
+        }
+    }
+
     public static void MoveZerosToEnd(int[] arr)
     {
         // 1 3 2 0 1 0 2 1 0 4
@@ -235,8 +247,93 @@ public class ArrayProblem
             Console.WriteLine();
         }
     }
+
+    public static int CountUpperCase(string str)
+    {
+        int cnt = 0;
+        for (int i = 0; i < str.Length; i++)
+        {
+            if (char.IsUpper(str[i]))
+            {
+                cnt++;
+            }
+        }
+
+        return cnt;
+    }
+
+    public static void rotateArrayLeft(int[] arr , int k)
+    {
+        int len  = arr.Length;
+       // 1,2,3,4,5 //k = 2;
+        //3 ,4, 5, 1, 2 
+        
+        Reverse(arr , 0 , k - 1);
+        Reverse(arr , k , arr.Length - 1);
+        Reverse(arr , 0 , arr.Length - 1);
+        
+    }
+
+    public static int MaxConsecutiveOnes(int[] arr)
+    {
+        //1 0 0 1 1 1 0 1
+        int cnt = 0;
+        int maxCnt = 0;
+        for (int i = 1; i < arr.Length; i++)
+        {
+            if (arr[i] == 1)
+            {
+                cnt++;
+            }
+            else cnt = 0;
+            
+            maxCnt = Math.Max(cnt, maxCnt);
+        }
+        return maxCnt;
+    }
+
+    public static int MaxSubarraySum(int[] arr)
+    {
+        int sum = 0;
+        int maxSum = 0;
+        for (int i = 0; i < arr.Length; i++)
+        {
+            if (arr[i] < 0)
+            {
+                sum = 0;
+            }
+            else
+            {
+                sum += arr[i];
+            }
+            maxSum = Math.Max(maxSum, sum);
+        }
+        
+        return maxSum;
+    }
+
+    public static IList<int> UnionArray(int[] arr1, int[] arr2)
+    {
+        HashSet<int> set = new HashSet<int>();
+        IList<int> ans = new List<int>();
+        for (int i = 0; i < arr1.Length; i++)
+        {
+            set.Add(arr1[i]);
+        }
+        for (int i = 0; i < arr2.Length; i++)
+        {
+            set.Add(arr2[i]);
+        }
+
+        foreach (int e in set)
+        {
+            ans.Add(e);
+        }
+
+        return ans;
+    }
     
     
-    
-    
+
+
 }

@@ -68,6 +68,16 @@ public class MethodExp
         Array.Resize(ref arr, 5);
     }
 
+    public static void Change10(params int[] arr)
+    {
+        int sum = 0;
+        foreach (int i in arr)
+        {
+            sum += i;
+        }
+        Console.WriteLine(sum);
+    }
+
 
     
 }
