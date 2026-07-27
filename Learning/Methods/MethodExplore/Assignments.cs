@@ -139,8 +139,93 @@ public class Assignments
 
         return date.DayOfWeek;
     }
-    
-    
-    //Rombus printing
-    
+
+    public static void Transpose(int[,] arr)
+    {
+        //1 2 3         1 4 7
+        //4 5 6 ------> 2 5 8
+        //7 8 9         3 6 9
+        for (int i = 0; i < arr.GetLength(0); i++)
+        {
+            for (int j = i; j < arr.GetLength(1); j++)
+            {
+                int temp = arr[i, j];
+                arr[i, j] = arr[j, i];
+                arr[j, i] = temp;
+            }
+        }
+
+        for (int i = 0; i < arr.GetLength(0); i++)
+        {
+            for (int j = 0; j < arr.GetLength(1); j++)
+            {
+                Console.Write(arr[i, j] + " ");
+            }
+            Console.WriteLine();
+        }
+        
+    }
+
+    public static void printDiamond(int n)
+    {
+        
+        for (int i = 1; i <= n;  i++)
+        {
+            for (int j = 1; j <= n - i; j++)
+            {
+                Console.Write(" ");
+            }
+            
+            for(int j = 1 ; j <= 2*i - 1; j++)
+            {
+                if (j == 1 || j == 2 * i - 1)
+                {
+                    Console.Write("*");
+                }
+                else
+                {
+                    Console.Write(" ");
+                }
+                
+            }
+
+            for (int j = 1; j <= n - i - 1; j++)
+            {
+                Console.Write(" ");
+            }
+            Console.WriteLine();
+            
+          
+            
+        }
+
+        for (int i = n -1 ; i>=1 ;i--)
+        {
+            
+            for (int j = 1; j <= n - i; j++)
+            {
+                Console.Write(" ");
+               
+            }
+            
+            for(int j =1 ; j <=2*i - 1 ; j++)
+            {
+                if (j == 1 || j == 2 * i - 1 )
+                {
+                    Console.Write("*");
+                }
+                else
+                {
+                    Console.Write(" ");
+                }
+                
+            }
+
+          
+            Console.WriteLine();
+        }
+
+    }
+
+
 }

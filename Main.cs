@@ -303,9 +303,15 @@ public  class MainCs
     //         Console.WriteLine();
     //     }
     // }
-    
-    Assignments.rombusPrint(4);
-    
+    // int[,] convertToTranspose =
+    // {
+    //     { 1, 2, 3 },
+    //     { 4, 5, 6 },
+    //     { 7, 8, 9 },
+    // };
+    // Assignments.Transpose(convertToTranspose);
+Assignments.printDiamond(4);
     }
+    
 
 }
