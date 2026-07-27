@@ -274,8 +274,37 @@ public  class MainCs
     // int maxSubarraySum = ArrayProblem.MaxSubarraySum(nums);
     // Console.WriteLine(maxSubarraySum);
     
-    IList<int> unionArrays  = ArrayProblem.UnionArray(nums, ones);
-    Console.WriteLine(string.Join(", " , unionArrays));
+    // IList<int> unionArrays  = ArrayProblem.UnionArray(nums, ones);
+    // Console.WriteLine(string.Join(", " , unionArrays));
+    // string sentence = "my name is harshdeep singh";
+    // string [] strs   = sentence.Split(' ');
+
+   // Console.WriteLine(Assignments.ArmStrong(153));
+   //Console.WriteLine(Assignments.NeonNumber(9));
+   // DayOfWeek startDay = Assignments.FirstDayOfMonth(4, 2006); 
+   //  Console.WriteLine(startDay);
+   
+    // string monthName = "April";
+    // int year = 2006;
+    // Console.WriteLine($"{monthName} {year}");
+    // Console.WriteLine("Sun Mon Tue Wed Thu Fri Sat");
+    // int startDay = (int)Assignments.FirstDayOfMonth(4, year);
+    // for (int i = 0; i < startDay; i++)
+    // {
+    //     Console.Write("    ");
+    // }
+    // int numberOfDays = Assignments.NumberOfDaysInMonth(monthName, year);
+    // for(int day=1;day<=numberOfDays;day++)
+    // {
+    //     Console.Write($"{day,3} ");
+    //
+    //     if((day+startDay)%7==0)
+    //     {
+    //         Console.WriteLine();
+    //     }
+    // }
+    
+    Assignments.rombusPrint(4);
     
     }
 
