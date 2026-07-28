@@ -7,3 +7,12 @@ Buildin methods we use in Array
 -> Exists(arr , x => x > 24) it returns bool
 -> Find(arr , x => x > 8) return the first value that satisfies result if not satisfies 
    then give me default values 0.
+-> Clone() // int [] newarr = (int [])arr.Clone()
+
+
+//Array array = new int[5];
+//int[] newArray; //this is also valid as it will point to null;
+// int[] newArray2 = null; //same
+// int[][] jagged = new int[3][]; jagged is a one D array where its 
+// values can also make its independent arrays (size can be diffrent) 
+// jagged[0] = new int[5];
