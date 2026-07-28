@@ -1,4 +1,5 @@
 using System.Collections.Specialized;
+using System.Runtime.InteropServices;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodExplore;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverloading;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverriding;
@@ -307,10 +308,18 @@ public  class MainCs
     // {
     //     { 1, 2, 3 },
     //     { 4, 5, 6 },
-    //     { 7, 8, 9 },
+    //      { 7, 8, 9 },
     // };
     // Assignments.Transpose(convertToTranspose);
-Assignments.printDiamond(4);
+    //Assignments.printDiamond(4);
+    // string s1 = "HARSH";
+    // string s2 = "HARSH";
+    // Console.WriteLine(s1.Equals(s2));
+    // Console.WriteLine(s1 == s2);
+    // int a, b;
+    // ArrayProblem.func1( out a , out b);
+    ArrayProblem.HollowTriangle(4);
+    
     }
     
 

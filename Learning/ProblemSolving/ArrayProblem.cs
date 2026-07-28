@@ -332,7 +332,44 @@ public class ArrayProblem
 
         return ans;
     }
-    
+
+    public static int  func1(out int a , out int b)
+    {
+        a = 12;
+        b = 12;
+        return a ;
+    }
+
+    public static void HollowTriangle(int n)
+    {
+        for (int i = 1; i <= n; i++)
+        {
+            for (int j = 1; j <= n - i; j++)
+            {
+                Console.Write(" ");
+            }
+
+            for (int j = 1; j <= 2 * i - 1; j++)
+            {
+                if (i == n)
+                {
+                    Console.Write("*");
+                }
+                else if (j == 1 || j == 2 * i - 1)
+                {
+                    Console.Write("*");
+                }
+                else
+                {
+                    Console.Write(" ");
+                }
+            }
+            Console.WriteLine();
+        }
+    }
+
+
+    private static int cnt = 0;
     
 
 

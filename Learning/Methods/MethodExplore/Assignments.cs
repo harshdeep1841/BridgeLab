@@ -199,24 +199,24 @@ public class Assignments
             
         }
 
-        for (int i = n -1 ; i>=1 ;i--)
+        for (int i = 1 ; i<=n - 1;i++)
         {
             
-            for (int j = 1; j <= n - i; j++)
+            for (int j = 1; j <= i ; j++)
             {
                 Console.Write(" ");
                
             }
             
-            for(int j =1 ; j <=2*i - 1 ; j++)
+            for(int j = 1 ; j<= 2*(n - i ) - 1 ; j++)
             {
-                if (j == 1 || j == 2 * i - 1 )
+                if (j == 1 || j == 2 *(n - i) - 1)
                 {
                     Console.Write("*");
                 }
                 else
                 {
-                    Console.Write(" ");
+                    Console.Write("$");
                 }
                 
             }
