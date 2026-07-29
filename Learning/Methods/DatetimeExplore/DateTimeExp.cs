@@ -55,6 +55,17 @@ public class DateTimeExp
         Console.WriteLine(d6);
         DayOfWeek dayOfWeek = d6.DayOfWeek;
         Console.WriteLine(dayOfWeek);   
+        Console.WriteLine(dateTimeOffset1);
+
+
+
+        DateTime utc = DateTime.UtcNow;
+        
+        TimeZoneInfo timeZoneInfo = TimeZoneInfo.FindSystemTimeZoneById("Tokyo Standard Time");  
+        
+        DateTime tokyoTimeZone = TimeZoneInfo.ConvertTime(utc, timeZoneInfo);
+        Console.WriteLine(tokyoTimeZone);
+        
     }
     
     
