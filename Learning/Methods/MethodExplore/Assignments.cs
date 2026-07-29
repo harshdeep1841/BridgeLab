@@ -1,7 +1,5 @@
 using ConsoleAppLearning1.Learning.Operator.Learning.ProblemSolving;
-
 namespace ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodExplore;
-
 public class Assignments
 {
     public static int FindSum(int[] arr)
@@ -136,7 +134,6 @@ public class Assignments
     public static DayOfWeek FirstDayOfMonth(int month,int year)
     {
         DateTime date = new DateTime(year, month, 1);
-
         return date.DayOfWeek;
     }
 

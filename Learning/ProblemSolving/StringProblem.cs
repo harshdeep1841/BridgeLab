@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace ConsoleAppLearning1.Learning.Operator.Learning.ProblemSolving;
 
 public class StringProblem
@@ -132,7 +134,7 @@ public class StringProblem
 
         return new string(result);
     }
-    
+
     public static void CompareStrings(string s1, string s2)
     {
         int min = Math.Min(s1.Length, s2.Length);
@@ -159,6 +161,57 @@ public class StringProblem
         else
             Console.WriteLine("Both strings are equal");
     }
-    
-    
+
+    public static void ThreadSaftyExample()
+    {
+        Object lockObj = new  Object();
+        StringBuilder sb = new  StringBuilder();
+
+        Thread t1 = new Thread(() =>
+        {
+            lock (lockObj)
+            {
+                for (int i = 0; i < 1000; i++)
+                {
+
+
+                    sb.Append("A");
+
+                }
+            }
+
+        });
+
+        Thread t2 = new Thread(() =>
+        {
+            lock (lockObj)
+            {
+
+
+                for (int i = 0; i < 1000; i++)
+                {
+
+
+                    sb.Append("B");
+
+                }
+            }
+        });
+        
+        t1.Start();
+        t2.Start();
+        t1.Join();
+        t2.Join();
+        Console.WriteLine(sb.ToString());
+
+        Console.WriteLine(sb.ToString().Length); 
+
+    }
+
+    public static void PracticeDateTime()
+    {
+        
+    }
+
+
 }

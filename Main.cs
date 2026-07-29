@@ -1,12 +1,13 @@
 using System.Collections.Specialized;
 using System.Runtime.InteropServices;
+using ConsoleAppLearning1.Learning.Operator.Learning.Methods.DatetimeExplore;
+using ConsoleAppLearning1.Learning.Operator.Learning.Methods.ExploreObject;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodExplore;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverloading;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverriding;
 using ConsoleAppLearning1.Learning.Operator.Learning.ProblemSolving;
 using Operators;
 namespace ConsoleAppLearning1.Learning.Operator;
-
 public  class MainCs
 {
     public static void Main(string[] args)
@@ -318,7 +319,20 @@ public  class MainCs
     // Console.WriteLine(s1 == s2);
     // int a, b;
     // ArrayProblem.func1( out a , out b);
-    ArrayProblem.HollowTriangle(4);
+    //ArrayProblem.HollowTriangle(4);
+    
+    
+    //StringProblem.ThreadSaftyExample();
+    
+    // ExploreObject objA = new ExploreObject(1, "Harsh");
+    // ExploreObject objB = new ExploreObject(1, "Harsh");
+    // Console.WriteLine(objA.Equals(objB));
+    // HashSet<ExploreObject> set1 = new  HashSet<ExploreObject>();
+    // set1.Add(objA);
+    // set1.Add(objB);
+    // Console.WriteLine(set1.Count);
+    
+    DateTimeExp.BuildInFunc();
     
     }
     
