@@ -5,6 +5,7 @@ using ConsoleAppLearning1.Learning.Operator.Learning.Methods.ExploreObject;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodExplore;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverloading;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverriding;
+using ConsoleAppLearning1.Learning.Operator.Learning.OOPS;
 using ConsoleAppLearning1.Learning.Operator.Learning.ProblemSolving;
 using Operators;
 namespace ConsoleAppLearning1.Learning.Operator;
@@ -332,8 +333,20 @@ public  class MainCs
     // set1.Add(objB);
     // Console.WriteLine(set1.Count);
     
-    DateTimeExp.BuildInFunc();
-    
+   // DateTimeExp.BuildInFunc();
+
+   // Circle circle = new Circle(4);
+   // Console.WriteLine(circle.GetArea());
+   // Console.WriteLine(circle.GetPerimeter());
+   //
+   //
+   // Book book = new Book("Thinking slow and fast", "Daniel Kahneman", 120);
+   // Console.WriteLine(book.Title);
+   // //book.Title = "How are you?";
+   // book.display();
+   
+   
+   
     }
     
 

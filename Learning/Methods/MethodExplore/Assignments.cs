@@ -74,7 +74,7 @@ public class Assignments
 
     public static bool NeonNumber(int num)
     {
-        //number whos some of the digits of its square is equal to the number itself
+        //number who's some of the digits of its square is equal to the number itself
         //9 - > 9X9 -> 81 -> 8 + 1 = 9
         int sqr = num * num;
         int tempNum = num;
@@ -89,7 +89,7 @@ public class Assignments
         return sum == num ? true : false;
     }
     
-    //Calender Question
+    //Calendar Question
 
     public static string MonthName(int num)
     {

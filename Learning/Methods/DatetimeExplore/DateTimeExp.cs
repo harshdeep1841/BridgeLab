@@ -19,8 +19,8 @@ public class DateTimeExp
         DateTime date1 = new  DateTime(2000, 1, 1);
         DateTime date2 = new  DateTime(2000, 1, 3);
        
-        DateTime newdate2 = date2.AddHours(5);
-        TimeSpan ts = date1 - newdate2;
+        DateTime newDate2 = date2.AddHours(5);
+        TimeSpan ts = date1 - newDate2;
         Console.WriteLine(Math.Abs(ts.TotalDays));
         Console.WriteLine(Math.Abs(ts.Days));
         Console.WriteLine(Math.Abs(ts.Hours));
@@ -30,16 +30,15 @@ public class DateTimeExp
         Console.WriteLine(date3.Year);
         Console.WriteLine(date3.Month);
 
-        DateTime date4;
-        bool dateFormat = DateTime.TryParse("04-05-03", out date4); //by default it will see date-month-year
+        bool dateFormat = DateTime.TryParse("04-05-03", out DateTime date4); //by default, it will see date-month-year
         Console.WriteLine(date4.Year);
         Console.WriteLine(dateFormat);
         Console.WriteLine(date4.ToString("yyyy//MM//dd"));
-        DateTime newdate4 = date4.AddDays(1); //AddDays return a new object of DateTime
+        DateTime newDate4 = date4.AddDays(1); //AddDays return a new object of DateTime
         Console.WriteLine(date4);
-        Console.WriteLine(newdate4.ToString("yyyy//MM//dd"));
+        Console.WriteLine(newDate4.ToString("yyyy//MM//dd"));
 
-        int compareDate = newdate4.CompareTo(date4); // -1 - > early 0 -> same  1 -> after
+        int compareDate = newDate4.CompareTo(date4); // -1 - > early 0 -> same  1 -> after
         Console.WriteLine(compareDate);
         
         
