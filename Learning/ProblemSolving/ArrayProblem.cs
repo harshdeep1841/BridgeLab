@@ -369,7 +369,6 @@ public class ArrayProblem
     }
 
 
-    private static int cnt = 0;
     
 
 
