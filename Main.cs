@@ -10,7 +10,7 @@ using ConsoleAppLearning1.Learning.Operator.Learning.OOPS;
 using ConsoleAppLearning1.Learning.Operator.Learning.ProblemSolving;
 using Operators;
 namespace ConsoleAppLearning1.Learning.Operator;
-public  class MainCs
+public class MainCs
 {
  public static void Main(string[] args)
  {
@@ -375,6 +375,39 @@ public  class MainCs
  
  //PostgraduateStudent postgraduateStudent1 = new PostgraduateStudent(1841 , "Harsh" , 9.21);
 
+ // BankAccount bankAccount = new SavingAccount(12345654321, "Harsh");
+ // SavingAccount savingAccount = new SavingAccount(12345654322, "James");
+ // if (bankAccount is SavingAccount)
+ // {
+ //  Console.WriteLine("This is a saving account");
+ // }
+ //
+ //
+ //
+ // if (bankAccount is SavingAccount)
+ // {
+ //  Console.WriteLine("This is a bank account");
+ // }
+ // LibraryBook libraryBook = new LibraryBook("author", "title", 12, 120);
+ // libraryBook.Author = "Daniel Kahneman";
+ //
+ 
+ 
+ Patient p1 = new Patient("Rahul", 25, "Fever");
+ Patient p2 = new Patient("Anita", 30, "Migraine");
+
+ Console.WriteLine($"Hospital Name: {Patient.HospitalName}");
+ Console.WriteLine($"Total Patients: {Patient.GetTotalPatients()}");
+ Console.WriteLine();
+
+ // Using 'is' operator
+ object obj = p1;
+
+ if (obj is Patient )
+ {
+  Patient? p = obj as Patient;
+  p?.Display();
+ }
 
  }
  

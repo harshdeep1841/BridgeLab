@@ -1,9 +1,10 @@
-public class BankAccount
+public abstract class BankAccount
 {
+    private readonly long accountNumber;
     public long AccountNumber { get; }
     public string AccountHolder { get; }
-
-    public long Balance { get; private set; }
+    public static int NumberOfAccounts;
+    public long Balance { get;  set; }
 
     public BankAccount(long accountNumber, string accountHolder)
         : this(accountNumber, accountHolder, 0)
@@ -28,14 +29,7 @@ public class BankAccount
         Balance += amount;
     }
 
-    public virtual bool Withdraw(long amount)
-    {
-        if (amount <= 0 || amount > Balance)
-            return false;
-
-        Balance -= amount;
-        return true;
-    }
+    public  abstract bool Withdraw(long amount);
 }
 
 public class SavingAccount : BankAccount
@@ -43,5 +37,14 @@ public class SavingAccount : BankAccount
     public SavingAccount(long accountNumber, string accountHolder)
         : base(accountNumber, accountHolder)
     {
+    }
+
+    public override bool Withdraw(long amount)
+    {
+        if (amount <= 0 || amount > Balance)
+            return false;
+
+        Balance -= amount;
+        return true;
     }
 }
