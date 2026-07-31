@@ -1,0 +1,30 @@
+Add(Object)
+
+      │
+      ▼
+GetHashCode()
+
+      │
+      ▼
+hashCode % numberOfBuckets
+
+      │
+      ▼
+Go to that bucket
+
+      │
+      ▼
+Is bucket empty?
+      │
+ ┌────┴────┐
+ │         │
+Yes        No
+ │         │
+ ▼         ▼
+Add    Compare using Equals()
+              │
+      ┌───────┴────────┐
+      ▼                ▼
+Equals == true   Equals == false
+      │                │
+ Don't Add        Add Object

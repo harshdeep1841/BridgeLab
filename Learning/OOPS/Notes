@@ -1,0 +1,15 @@
+AUTO-IMPLEMENENTED PROPERTY ->
+An auto-implemented property is a property in which the C# compiler 
+automatically creates a hidden backing field, so the programmer does not need to explicitly declare one.
+Example -> public string FirstName { get; set; }
+
+COMPUTED PROPERTY ->
+A computed property is a property whose value is calculated 
+dynamically from other fields or properties each time it is accessed, rather than being stored in memory.
+Example ->  public double Area
+          {
+              get
+              {
+                  return Math.PI * Radius * Radius;
+              }
+          }
