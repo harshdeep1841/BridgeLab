@@ -3,7 +3,7 @@ namespace ConsoleAppLearning1.Learning.Operator.Learning.OOPS;
 public class Book
 {
     
-    public string Title { get; private set;}
+    public string Title { get; set;}
     public string Author { get; set;}
     public int Price { get; set;}
 

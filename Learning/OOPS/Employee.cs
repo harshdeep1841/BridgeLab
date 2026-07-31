@@ -6,6 +6,19 @@ public class Employee
     public string Name { get;set; }
     public int Salary { get; set; }
 
+    private string email;
+     string Email
+     {
+         get { return email;} set
+     {
+         if (!string.IsNullOrWhiteSpace(value) && Email.Length > 10 && Email == Email.ToLower())
+         {
+             email = value;
+         }
+     }
+         
+     }
+
     public Employee(int id, string name, int salary)
     {
         this.id = id;
