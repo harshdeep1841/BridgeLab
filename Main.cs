@@ -7,10 +7,14 @@ using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodExplore;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverloading;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverriding;
 using ConsoleAppLearning1.Learning.Operator.Learning.OOPS;
+using ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem;
 using ConsoleAppLearning1.Learning.Operator.Learning.ProblemSolving;
 using Operators;
+using Hospital = ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem.Hospital;
+using Patient = ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem.Patient;
+
 namespace ConsoleAppLearning1.Learning.Operator;
-public  class MainCs
+public class MainCs
 {
  public static void Main(string[] args)
  {
@@ -375,6 +379,48 @@ public  class MainCs
  
  //PostgraduateStudent postgraduateStudent1 = new PostgraduateStudent(1841 , "Harsh" , 9.21);
 
+ // BankAccount bankAccount = new SavingAccount(12345654321, "Harsh");
+ // SavingAccount savingAccount = new SavingAccount(12345654322, "James");
+ // if (bankAccount is SavingAccount)
+ // {
+ //  Console.WriteLine("This is a saving account");
+ // }
+ //
+ //
+ //
+ // if (bankAccount is SavingAccount)
+ // {
+ //  Console.WriteLine("This is a bank account");
+ // }
+ // LibraryBook libraryBook = new LibraryBook("author", "title", 12, 120);
+ // libraryBook.Author = "Daniel Kahneman";
+ //
+ 
+ 
+ // Patient p1 = new Patient("Rahul", 25, "Fever");
+ // Patient p2 = new Patient("Anita", 30, "Migraine");
+ //
+ // Console.WriteLine($"Hospital Name: {Patient.HospitalName}");
+ // Console.WriteLine($"Total Patients: {Patient.GetTotalPatients()}");
+ // Console.WriteLine();
+ //
+ // // Using 'is' operator
+ // object obj = p1;
+ //
+ // if (obj is Patient )
+ // {
+ //  Patient? p = obj as Patient;
+ //  p?.Display();
+ // }
+
+//
+//  Hospital hospital = new Hospital("Civil Hospital");
+//  Address address = new Address("Ambala" , "stree1" , "13232" , "India");
+//  MedicalRecord medicalRecord = new MedicalRecord(1 , "diagonisis" , "Fever");
+//  Patient p1 = new Patient(1, "Rohan", 21, "Male" , BloodGroup.B_Positive, address, medicalRecord);
+// Doctor d1 = new Doctor(1 , "Mahesh Bhatt" ,34 , "Male" , "Cardiologists" , 13131);
+// hospital.RegisterPatient(p1);
+// Appointment appointment = new Appointment("")
 
  }
  
