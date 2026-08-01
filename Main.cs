@@ -412,30 +412,15 @@ public class MainCs
  //  Patient? p = obj as Patient;
  //  p?.Display();
  // }
- 
- 
- 
- 
- Hospital hospital = new Hospital();
 
- Doctor d1 = new Doctor(1, "Raj");
-
- Doctor d2 = new Doctor(2, "Sharma");
-
- Patient p1 = new Patient(101, "Harsh");
-
- Patient p2 = new Patient(102, "Rahul");
-
- hospital.AddDoctor(d1);
- hospital.AddDoctor(d2);
-
- hospital.AddPatient(p1);
- hospital.AddPatient(p2);
-
- d1.Consult(p1);
- d1.Consult(p2);
-
- d2.Consult(p1);
+//
+//  Hospital hospital = new Hospital("Civil Hospital");
+//  Address address = new Address("Ambala" , "stree1" , "13232" , "India");
+//  MedicalRecord medicalRecord = new MedicalRecord(1 , "diagonisis" , "Fever");
+//  Patient p1 = new Patient(1, "Rohan", 21, "Male" , BloodGroup.B_Positive, address, medicalRecord);
+// Doctor d1 = new Doctor(1 , "Mahesh Bhatt" ,34 , "Male" , "Cardiologists" , 13131);
+// hospital.RegisterPatient(p1);
+// Appointment appointment = new Appointment("")
 
  }
  

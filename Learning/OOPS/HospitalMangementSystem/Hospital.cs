@@ -1,20 +1,28 @@
 namespace ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem;
 
+
 public class Hospital
 {
-    private List<Doctor> doctors = new();
+    public string Name { get; set; }
 
-    private List<Patient> patients = new();
+    private readonly List<Department> departments = new();
 
-    public Hospital(){}
+    private readonly List<Patient> patients = new();
 
-    public void AddDoctor(Doctor doctor)
+    public Hospital(string name)
     {
-        doctors.Add(doctor);
+        Name = name;
     }
 
-    public void AddPatient(Patient patient)
+    public void AddDepartment(Department department)
+    {
+        departments.Add(department);
+    }
+
+    public void RegisterPatient(Patient patient)
     {
         patients.Add(patient);
+
+        Console.WriteLine($"{patient.Name} registered successfully.");
     }
 }
