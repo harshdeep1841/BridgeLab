@@ -2,7 +2,7 @@ namespace ConsoleAppLearning1.Learning.Operator.Learning.OOPS;
 
 using System;
 
-public class Patient
+public class Hospital
 {
     public static string HospitalName = "City Hospital";
 
@@ -16,7 +16,7 @@ public class Patient
 
     private static int nextPatientId = 1001;
 
-    public Patient(string name, int age, string ailment)
+    public Hospital(string name, int age, string ailment)
     {
         this.Name = name;
         this.Age = age;
@@ -25,6 +25,7 @@ public class Patient
         PatientID = nextPatientId++;
         totalPatients++;
     }
+
 
     public static int GetTotalPatients()
     {

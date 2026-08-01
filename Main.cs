@@ -7,8 +7,12 @@ using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodExplore;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverloading;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverriding;
 using ConsoleAppLearning1.Learning.Operator.Learning.OOPS;
+using ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem;
 using ConsoleAppLearning1.Learning.Operator.Learning.ProblemSolving;
 using Operators;
+using Hospital = ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem.Hospital;
+using Patient = ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem.Patient;
+
 namespace ConsoleAppLearning1.Learning.Operator;
 public class MainCs
 {
@@ -393,21 +397,45 @@ public class MainCs
  //
  
  
- Patient p1 = new Patient("Rahul", 25, "Fever");
- Patient p2 = new Patient("Anita", 30, "Migraine");
+ // Patient p1 = new Patient("Rahul", 25, "Fever");
+ // Patient p2 = new Patient("Anita", 30, "Migraine");
+ //
+ // Console.WriteLine($"Hospital Name: {Patient.HospitalName}");
+ // Console.WriteLine($"Total Patients: {Patient.GetTotalPatients()}");
+ // Console.WriteLine();
+ //
+ // // Using 'is' operator
+ // object obj = p1;
+ //
+ // if (obj is Patient )
+ // {
+ //  Patient? p = obj as Patient;
+ //  p?.Display();
+ // }
+ 
+ 
+ 
+ 
+ Hospital hospital = new Hospital();
 
- Console.WriteLine($"Hospital Name: {Patient.HospitalName}");
- Console.WriteLine($"Total Patients: {Patient.GetTotalPatients()}");
- Console.WriteLine();
+ Doctor d1 = new Doctor(1, "Raj");
 
- // Using 'is' operator
- object obj = p1;
+ Doctor d2 = new Doctor(2, "Sharma");
 
- if (obj is Patient )
- {
-  Patient? p = obj as Patient;
-  p?.Display();
- }
+ Patient p1 = new Patient(101, "Harsh");
+
+ Patient p2 = new Patient(102, "Rahul");
+
+ hospital.AddDoctor(d1);
+ hospital.AddDoctor(d2);
+
+ hospital.AddPatient(p1);
+ hospital.AddPatient(p2);
+
+ d1.Consult(p1);
+ d1.Consult(p2);
+
+ d2.Consult(p1);
 
  }
  
