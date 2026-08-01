@@ -2,6 +2,7 @@ namespace ConsoleAppLearning1.Learning.Operator.Learning.OOPS;
 
 public class Book
 {
+    public string title;
     
     public string Title { get; set;}
     public string Author { get; set;}

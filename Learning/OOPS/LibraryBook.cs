@@ -2,7 +2,10 @@ namespace ConsoleAppLearning1.Learning.Operator.Learning.OOPS;
 
 public class LibraryBook
 {
-    public string Author { get; set; }
+    public static string LibraryName = "Library Book";
+
+    private readonly string author;
+    public  string  Author { get; set; }
     public string Title { get; set; }
     public int Available { get; set; }
     public double Price { get; set; }
@@ -16,6 +19,7 @@ public class LibraryBook
         Available = available;
         Price = price;
     }
+    
 
     public void BorrowBook()
     {
