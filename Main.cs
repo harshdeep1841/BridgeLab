@@ -9,6 +9,7 @@ using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverriding;
 using ConsoleAppLearning1.Learning.Operator.Learning.OOPS;
 using ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem;
 using ConsoleAppLearning1.Learning.Operator.Learning.ProblemSolving;
+using ConsoleAppLearning1.Learning.Operator.Learning.SnakeLadderGame;
 using Operators;
 using Hospital = ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem.Hospital;
 using Patient = ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem.Patient;
@@ -345,8 +346,8 @@ public class MainCs
   // Console.WriteLine(circle.GetPerimeter());
   //
   //
-  Book book = new Book("Thinking slow and fast", "Daniel Kahneman", 120);
-  Console.WriteLine(book.Title);
+  // Book book = new Book("Thinking slow and fast", "Daniel Kahneman", 120);
+  // Console.WriteLine(book.Title);
  //book.Title = "How are you?";
  // book.display();
  
@@ -421,7 +422,33 @@ public class MainCs
 // Doctor d1 = new Doctor(1 , "Mahesh Bhatt" ,34 , "Male" , "Cardiologists" , 13131);
 // hospital.RegisterPatient(p1);
 // Appointment appointment = new Appointment("")
+//   string text = "   The   quick   brown    fox    jumps   over    the   lazy   dog.   \n" +
+//                 "   this    is   the   second    sentence   with   bad   spacing.   \n" +
+//                 "   and   here   is   the   third   one    to   finish   the   test.   ";
+//
+// Console.WriteLine(StringProblem.FormatSentence(text));
 
+  Game game = new Game();
+
+  Console.Write("Enter number of players (2-4): ");
+
+  int count = int.Parse(Console.ReadLine());
+
+  if (count < 2 || count > 4)
+  {
+   Console.WriteLine("Invalid number of players.");
+   return;
+  }
+
+  for (int i = 1; i <= count; i++)
+  {
+   Console.Write($"Player {i} Name : ");
+   string name = Console.ReadLine();
+
+   game.Players.Add(new Player(name));
+  }
+
+  game.Start();
  }
  
  
