@@ -1,4 +1,5 @@
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace ConsoleAppLearning1.Learning.Operator.Learning.ProblemSolving;
 
@@ -208,8 +209,38 @@ public class StringProblem
 
     }
 
-    public static void PracticeDateTime()
+
+    public static string FormatSentence(string sentence)
     {
+        /*
+             One space after punctuation,
+           Capital letter after period/question/exclamation marks,
+           Trimmed extra spaces.
+         */
+        
+        //my name is harsh! how are you?
+        string[] strs = Regex.Split(sentence, @"\s+");
+        StringBuilder res = new  StringBuilder();
+        string prev = "";
+        foreach(string s in strs)
+        {
+            if (string.IsNullOrEmpty(s))
+                continue;
+            
+            if (prev != "" && ( prev[prev.Length - 1] == '!' || prev[prev.Length - 1] == '?' || prev[prev.Length - 1] == '.'))
+            {
+                res.Append(Char.ToUpper(s[0])).Append(s.Substring(1)).Append(" ");
+            }
+            else
+            {
+                res.Append(s).Append(" ");
+            }
+            
+            prev = s;
+            
+        }
+        
+        return res.ToString();
         
     }
 
