@@ -3,7 +3,12 @@ namespace ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementS
 
 public class Address
 {
-    public string City { get; set; }
+    private string city;
+    public string City
+    {
+        get { return city; }
+        set { value = city; }
+    }
 
     public string Street { get; set; }
 
