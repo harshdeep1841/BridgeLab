@@ -18,7 +18,7 @@ public class Animal
         this.age = age;
         Console.WriteLine($"{this.name} {this.age}");
     }
-    public virtual void Speak()
+    public  void Speak()
     {
         Console.WriteLine("Animal speaks");
     }
