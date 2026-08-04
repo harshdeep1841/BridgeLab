@@ -23,7 +23,7 @@ public class StringProblem
         // bool checkStr = name.Contains("ar");
         // Console.WriteLine(newnewStr);
         // Console.WriteLine(checkStr);
-        //
+        
         
     }
     

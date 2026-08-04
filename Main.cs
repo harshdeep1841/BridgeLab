@@ -3,16 +3,17 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.DatetimeExplore;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.ExploreObject;
+using ConsoleAppLearning1.Learning.Operator.Learning.Methods.Inheritance;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodExplore;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverloading;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverriding;
-using ConsoleAppLearning1.Learning.Operator.Learning.OOPS;
 using ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem;
 using ConsoleAppLearning1.Learning.Operator.Learning.ProblemSolving;
 using ConsoleAppLearning1.Learning.Operator.Learning.SnakeLadderGame;
 using Operators;
 using Hospital = ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem.Hospital;
 using Patient = ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem.Patient;
+using Student = ConsoleAppLearning1.Learning.Operator.Learning.Methods.Inheritance.Student;
 
 namespace ConsoleAppLearning1.Learning.Operator;
 public class MainCs
@@ -428,33 +429,72 @@ public class MainCs
 //
 // Console.WriteLine(StringProblem.FormatSentence(text));
 
-  Game game = new Game();
+  // Game game = new Game();
+  //
+  // Console.Write("Enter number of players (2-4): ");
+  //
+  // int count = int.Parse(Console.ReadLine());
+  //
+  // if (count < 2 || count > 4)
+  // {
+  //  Console.WriteLine("Invalid number of players.");
+  //  return;
+  // }
+  //
+  // for (int i = 1; i <= count; i++)
+  // {
+  //  Console.Write($"Player {i} Name : ");
+  //  string name = Console.ReadLine();
+  //
+  //  game.Players.Add(new Player(name));
+  // }
+  //
+  // game.Start();
+  //
+  //  Employee e1 = new Employee("Harsh" , 21);  //compiler autmatically check values through Equals() and also generate HashCode
+  //  Employee e2 = new Employee("Harsh", 21);
+  //  HashSet<Employee> set = new HashSet<Employee>();
+  //  set.Add(e1);
+  //  set.Add(e2);
+  //  Console.WriteLine(set.Count);
+  // Console.WriteLine(e1.Equals(e2));
 
-  Console.Write("Enter number of players (2-4): ");
 
-  int count = int.Parse(Console.ReadLine());
+  Animal animal = new Dog("Tom" , 2);
+  animal.Speak();
+  
+  Teacher teacher = new Teacher(
+   "John",
+   40,
+   "Mathematics");
 
-  if (count < 2 || count > 4)
-  {
-   Console.WriteLine("Invalid number of players.");
-   return;
-  }
+  Student student = new Student(
+   "Harsh",
+   20,
+   4);
 
-  for (int i = 1; i <= count; i++)
-  {
-   Console.Write($"Player {i} Name : ");
-   string name = Console.ReadLine();
+  Staff staff = new Staff(
+   "Rahul",
+   35,
+   "Administration");
 
-   game.Players.Add(new Player(name));
-  }
+  teacher.Display();
+  teacher.DisplayRole();
 
-  game.Start();
+  Console.WriteLine();
+
+  student.Display();
+  student.DisplayRole();
+
+  Console.WriteLine();
+
+  staff.Display();
+  staff.DisplayRole();
+
  }
  
+ //record Employee(string name, int age);
  
-   
-
-
  
 }
     

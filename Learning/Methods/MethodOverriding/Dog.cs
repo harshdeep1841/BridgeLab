@@ -14,7 +14,7 @@ public class Dog : Animal
         this.age = age;
         Console.WriteLine("call from Dog");
     }
-    public  override void Speak()
+    public  new void Speak()
     {
         Console.Write("Dog barks");
     }

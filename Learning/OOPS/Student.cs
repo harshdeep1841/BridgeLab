@@ -30,6 +30,10 @@ public class Student
         this.Cgpa = cgpa;
     }
 
+    public void Display()
+    {
+        throw new NotImplementedException();
+    }
 }
 
 public class PostgraduateStudent : Student
