@@ -5,6 +5,12 @@ public abstract class Product
     public long ProductId { get; set; }
     public string Name { get; set; }
     public decimal Price { get; set; }
+
+    static int NumberOfProducts;
+    static Product()
+    {
+        NumberOfProducts = 1;
+    }
     
     public Product(){}
 
@@ -13,6 +19,7 @@ public abstract class Product
         ProductId = productId;
         Name = name;
         Price = price;
+        NumberOfProducts++;
     }
     
     public abstract decimal CalculateDiscount();
