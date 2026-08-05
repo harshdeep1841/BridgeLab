@@ -460,37 +460,50 @@ public class MainCs
   // Console.WriteLine(e1.Equals(e2));
 
 
-  Animal animal = new Dog("Tom" , 2);
-  animal.Speak();
+  // Animal animal = new Dog("Tom" , 2);
+  // animal.Speak();
+  //
+  // Teacher teacher = new Teacher(
+  //  "John",
+  //  40,
+  //  "Mathematics");
+  //
+  // Student student = new Student(
+  //  "Harsh",
+  //  20,
+  //  4);
+  //
+  // Staff staff = new Staff(
+  //  "Rahul",
+  //  35,
+  //  "Administration");
+  //
+  // teacher.Display();
+  // teacher.DisplayRole();
+  //
+  // Console.WriteLine();
+  //
+  // student.Display();
+  // student.DisplayRole();
+  //
+  // Console.WriteLine();
+  //
+  // staff.Display();
+  // staff.DisplayRole();
+  //
+  Book book1 = new Book("title1", "author1");
+  Book [] books = {book1  ,  new Book("title2" , "author2")};
   
-  Teacher teacher = new Teacher(
-   "John",
-   40,
-   "Mathematics");
-
-  Student student = new Student(
-   "Harsh",
-   20,
-   4);
-
-  Staff staff = new Staff(
-   "Rahul",
-   35,
-   "Administration");
-
-  teacher.Display();
-  teacher.DisplayRole();
-
-  Console.WriteLine();
-
-  student.Display();
-  student.DisplayRole();
-
-  Console.WriteLine();
-
-  staff.Display();
-  staff.DisplayRole();
-
+  Library library = new Library(books);
+  Book [] searchedBooks = library.Search("title");
+  foreach(Book book in searchedBooks)
+  {
+   Console.WriteLine(book);
+  }
+  library.CheckoutBook("title1");
+  Console.WriteLine(book1.IsAvailable);
+  library.ReturnBook("title1");
+  Console.WriteLine(book1.IsAvailable);
  }
  
  //record Employee(string name, int age);
