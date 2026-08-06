@@ -1,7 +1,7 @@
 namespace ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem;
 
 
-public class Bill
+class Bill
 {
     public int BillNo { get; }
 

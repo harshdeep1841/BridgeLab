@@ -5,6 +5,7 @@ public abstract class Product
     public long ProductId { get; set; }
     public string Name { get; set; }
     public decimal Price { get; set; }
+    
 
     static int NumberOfProducts;
     static Product()
