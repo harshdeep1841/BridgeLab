@@ -22,8 +22,8 @@ public class Patient : Person
     {
         BloodGroup = bloodGroup;
 
-        Address = new Address(address);
-
+        //Address = new Address(address);
+        Address  =  address;
         MedicalRecord = medicalRecord;
     }
 
