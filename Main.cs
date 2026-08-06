@@ -10,12 +10,14 @@ using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverriding;
 using ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem;
 using ConsoleAppLearning1.Learning.Operator.Learning.ProblemSolving;
 using ConsoleAppLearning1.Learning.Operator.Learning.SnakeLadderGame;
+using ConsoleAppLearning1.Learning.Operator.Learning.Test;
 using Operators;
 using Hospital = ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem.Hospital;
 using Patient = ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem.Patient;
 using Student = ConsoleAppLearning1.Learning.Operator.Learning.Methods.Inheritance.Student;
 
 namespace ConsoleAppLearning1.Learning.Operator;
+
 public class MainCs
 {
  public static void Main(string[] args)
@@ -349,71 +351,71 @@ public class MainCs
   //
   // Book book = new Book("Thinking slow and fast", "Daniel Kahneman", 120);
   // Console.WriteLine(book.Title);
- //book.Title = "How are you?";
- // book.display();
- 
- 
+  //book.Title = "How are you?";
+  // book.display();
 
- 
- //  Student s1 = new Student("Harsh", 2121);
- //  Student s2 = new Student("Harsh", 2122);
- //
- // Console.WriteLine(s1.name == s2.name);
- //Console.WriteLine(s1.Equals(s2));
 
- // Person person1 = new Person("Harsh", 20, "harshdeepsingh10d@gmail.com");
- // Person person2 = new Person(person1);
- // Console.WriteLine(person1.Name);
- //  Console.WriteLine(person2.Name);
- 
- // Hotel booking1 = new Hotel("Rohan" , RoomType.Double , 2);
- // Hotel booking2 = new Hotel(booking1);
- // booking2.RoomType = RoomType.Triple;
- // Console.WriteLine(booking2.RoomType);
- 
- // LibraryBook book1 = new LibraryBook("Danial kahneman", "Daniel Kahneman", 2  , 120);
- // Console.WriteLine(book1.Title);
- // book1.BorrowBook();
- // Console.WriteLine(book1.Available);
 
- // CarRental carRental1 = new CarRental("Harsh", CarModel.Hyundai_Creta, 3);
- // Console.WriteLine(carRental1.TotalCost());
- 
- //PostgraduateStudent postgraduateStudent1 = new PostgraduateStudent(1841 , "Harsh" , 9.21);
 
- // BankAccount bankAccount = new SavingAccount(12345654321, "Harsh");
- // SavingAccount savingAccount = new SavingAccount(12345654322, "James");
- // if (bankAccount is SavingAccount)
- // {
- //  Console.WriteLine("This is a saving account");
- // }
- //
- //
- //
- // if (bankAccount is SavingAccount)
- // {
- //  Console.WriteLine("This is a bank account");
- // }
- // LibraryBook libraryBook = new LibraryBook("author", "title", 12, 120);
- // libraryBook.Author = "Daniel Kahneman";
- //
- 
- 
- // Patient p1 = new Patient("Rahul", 25, "Fever");
- // Patient p2 = new Patient("Anita", 30, "Migraine");
- //
- // Console.WriteLine($"Hospital Name: {Patient.HospitalName}");
- // Console.WriteLine($"Total Patients: {Patient.GetTotalPatients()}");
- // Console.WriteLine();
- //
- // // Using 'is' operator
- // object obj = p1;
- //
- // if (obj is Patient )
- // {
- //  Patient? p = obj as Patient;
- //  p?.Display();
- // }
+  //  Student s1 = new Student("Harsh", 2121);
+  //  Student s2 = new Student("Harsh", 2122);
+  //
+  // Console.WriteLine(s1.name == s2.name);
+  //Console.WriteLine(s1.Equals(s2));
+
+  // Person person1 = new Person("Harsh", 20, "harshdeepsingh10d@gmail.com");
+  // Person person2 = new Person(person1);
+  // Console.WriteLine(person1.Name);
+  //  Console.WriteLine(person2.Name);
+
+  // Hotel booking1 = new Hotel("Rohan" , RoomType.Double , 2);
+  // Hotel booking2 = new Hotel(booking1);
+  // booking2.RoomType = RoomType.Triple;
+  // Console.WriteLine(booking2.RoomType);
+
+  // LibraryBook book1 = new LibraryBook("Danial kahneman", "Daniel Kahneman", 2  , 120);
+  // Console.WriteLine(book1.Title);
+  // book1.BorrowBook();
+  // Console.WriteLine(book1.Available);
+
+  // CarRental carRental1 = new CarRental("Harsh", CarModel.Hyundai_Creta, 3);
+  // Console.WriteLine(carRental1.TotalCost());
+
+  //PostgraduateStudent postgraduateStudent1 = new PostgraduateStudent(1841 , "Harsh" , 9.21);
+
+  // BankAccount bankAccount = new SavingAccount(12345654321, "Harsh");
+  // SavingAccount savingAccount = new SavingAccount(12345654322, "James");
+  // if (bankAccount is SavingAccount)
+  // {
+  //  Console.WriteLine("This is a saving account");
+  // }
+  //
+  //
+  //
+  // if (bankAccount is SavingAccount)
+  // {
+  //  Console.WriteLine("This is a bank account");
+  // }
+  // LibraryBook libraryBook = new LibraryBook("author", "title", 12, 120);
+  // libraryBook.Author = "Daniel Kahneman";
+  //
+
+
+  // Patient p1 = new Patient("Rahul", 25, "Fever");
+  // Patient p2 = new Patient("Anita", 30, "Migraine");
+  //
+  // Console.WriteLine($"Hospital Name: {Patient.HospitalName}");
+  // Console.WriteLine($"Total Patients: {Patient.GetTotalPatients()}");
+  // Console.WriteLine();
+  //
+  // // Using 'is' operator
+  // object obj = p1;
+  //
+  // if (obj is Patient )
+  // {
+  //  Patient? p = obj as Patient;
+  //  p?.Display();
+  // }
 
 //
 //  Hospital hospital = new Hospital("Civil Hospital");
@@ -460,42 +462,59 @@ public class MainCs
   // Console.WriteLine(e1.Equals(e2));
 
 
-  Animal animal = new Dog("Tom" , 2);
-  animal.Speak();
-  
-  Teacher teacher = new Teacher(
-   "John",
-   40,
-   "Mathematics");
+  // Animal animal = new Dog("Tom" , 2);
+  // animal.Speak();
+  //
+  // Teacher teacher = new Teacher(
+  //  "John",
+  //  40,
+  //  "Mathematics");
+  //
+  // Student student = new Student(
+  //  "Harsh",
+  //  20,
+  //  4);
+  //
+  // Staff staff = new Staff(
+  //  "Rahul",
+  //  35,
+  //  "Administration");
+  //
+  // teacher.Display();
+  // teacher.DisplayRole();
+  //
+  // Console.WriteLine();
+  //
+  // student.Display();
+  // student.DisplayRole();
+  //
+  // Console.WriteLine();
+  //
+  // staff.Display();
+  // staff.DisplayRole();
+  //
+  //  Book book1 = new Book("title1", "author1");
+  //  Book [] books = {book1  ,  new Book("title2" , "author2")};
+  //  
+  //  Library library = new Library(books);
+  //  Book [] searchedBooks = library.Search("title");
+  //  foreach(Book book in searchedBooks)
+  //  {
+  //   Console.WriteLine(book);
+  //  }
+  //  library.CheckoutBook("title1");
+  //  Console.WriteLine(book1.IsAvailable);
+  //  library.ReturnBook("title1");
+  //  Console.WriteLine(book1.IsAvailable);
+  // }
+  //
+  //record Employee(string name, int age);
 
-  Student student = new Student(
-   "Harsh",
-   20,
-   4);
-
-  Staff staff = new Staff(
-   "Rahul",
-   35,
-   "Administration");
-
-  teacher.Display();
-  teacher.DisplayRole();
-
-  Console.WriteLine();
-
-  student.Display();
-  student.DisplayRole();
-
-  Console.WriteLine();
-
-  staff.Display();
-  staff.DisplayRole();
+  // Patient p1 = new Patient(1, "Harsh" , 20 ,"MALE" , BloodGroup.O_Negative , new Address("Ambala" , "Huda" , "134003" , "India") , new MedicalRecord(1 , "diagonis" , "Elergy"));
+  // Test1 test1 = new Test1();
 
  }
- 
- //record Employee(string name, int age);
- 
- 
+
 }
     
 
