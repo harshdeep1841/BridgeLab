@@ -12,6 +12,8 @@ using ConsoleAppLearning1.Learning.Operator.Learning.ProblemSolving;
 using ConsoleAppLearning1.Learning.Operator.Learning.SnakeLadderGame;
 using ConsoleAppLearning1.Learning.Operator.Learning.Test;
 using Operators;
+using Animal = ConsoleAppLearning1.Learning.Operator.Learning.Test.Animal;
+using Dog = ConsoleAppLearning1.Learning.Operator.Learning.Test.Dog;
 using Hospital = ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem.Hospital;
 using Patient = ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem.Patient;
 using Student = ConsoleAppLearning1.Learning.Operator.Learning.Methods.Inheritance.Student;
@@ -513,6 +515,7 @@ public class MainCs
   // Patient p1 = new Patient(1, "Harsh" , 20 ,"MALE" , BloodGroup.O_Negative , new Address("Ambala" , "Huda" , "134003" , "India") , new MedicalRecord(1 , "diagonis" , "Elergy"));
   // Test1 test1 = new Test1();
 
+  
  }
 
 }
