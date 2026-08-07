@@ -5,7 +5,8 @@
 &lt;/AssemblyExplorer&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=87300995_002D9a21_002D48ab_002D9fba_002Dcc9b7ed4daad/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test5" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
-    &lt;TestId&gt;NUnit3x::BD0D07D1-9970-435B-9DAB-0998EF79BA99::net8.0::TestProject1.UnitTestAssignement.Test5&lt;/TestId&gt;
-    &lt;TestId&gt;NUnit3x::BD0D07D1-9970-435B-9DAB-0998EF79BA99::net8.0::TestProject1.Tests.CalculatorTest3&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::1F0F330F-AECF-4CB1-8D0E-435B8394CF3E::net8.0::TestProject1.UnitTestAssignement.Test1&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::1F0F330F-AECF-4CB1-8D0E-435B8394CF3E::net8.0::TestProject1.UnitTestAssignement.Test3&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::1F0F330F-AECF-4CB1-8D0E-435B8394CF3E::net8.0::TestProject1.UnitTestAssignement.Test2&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
