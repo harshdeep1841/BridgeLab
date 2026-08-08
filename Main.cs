@@ -9,6 +9,7 @@ using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverloading;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverriding;
 using ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem;
 using ConsoleAppLearning1.Learning.Operator.Learning.ProblemSolving;
+using ConsoleAppLearning1.Learning.Operator.Learning.RegixExplore;
 using ConsoleAppLearning1.Learning.Operator.Learning.SnakeLadderGame;
 using ConsoleAppLearning1.Learning.Operator.Learning.Test;
 using Operators;
@@ -514,6 +515,10 @@ public class MainCs
 
   // Patient p1 = new Patient(1, "Harsh" , 20 ,"MALE" , BloodGroup.O_Negative , new Address("Ambala" , "Huda" , "134003" , "India") , new MedicalRecord(1 , "diagonis" , "Elergy"));
   // Test1 test1 = new Test1();
+  
+  
+  BasicRegix basicRegix =  new BasicRegix();
+  basicRegix.Basics1();
 
   
  }
