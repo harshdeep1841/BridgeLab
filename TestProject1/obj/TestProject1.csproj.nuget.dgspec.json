@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/harshdeepsingh/RiderProjects/TestProject1/TestProject1/TestProject1.csproj": {}
+    "/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/TestProject1/TestProject1.csproj": {}
   },
   "projects": {
-    "/Users/harshdeepsingh/RiderProjects/TestProject1/ClassLibrary1/ClassLibrary1.csproj": {
+    "/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/ClassLibrary1/ClassLibrary1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/harshdeepsingh/RiderProjects/TestProject1/ClassLibrary1/ClassLibrary1.csproj",
+        "projectUniqueName": "/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/ClassLibrary1/ClassLibrary1.csproj",
         "projectName": "ClassLibrary1",
-        "projectPath": "/Users/harshdeepsingh/RiderProjects/TestProject1/ClassLibrary1/ClassLibrary1.csproj",
+        "projectPath": "/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/ClassLibrary1/ClassLibrary1.csproj",
         "packagesPath": "/Users/harshdeepsingh/.nuget/packages/",
-        "outputPath": "/Users/harshdeepsingh/RiderProjects/TestProject1/ClassLibrary1/obj/",
+        "outputPath": "/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/ClassLibrary1/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/harshdeepsingh/.nuget/NuGet/NuGet.Config"
@@ -57,14 +57,14 @@
         }
       }
     },
-    "/Users/harshdeepsingh/RiderProjects/TestProject1/TestProject1/TestProject1.csproj": {
+    "/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/TestProject1/TestProject1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/harshdeepsingh/RiderProjects/TestProject1/TestProject1/TestProject1.csproj",
+        "projectUniqueName": "/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/TestProject1/TestProject1.csproj",
         "projectName": "TestProject1",
-        "projectPath": "/Users/harshdeepsingh/RiderProjects/TestProject1/TestProject1/TestProject1.csproj",
+        "projectPath": "/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/TestProject1/TestProject1.csproj",
         "packagesPath": "/Users/harshdeepsingh/.nuget/packages/",
-        "outputPath": "/Users/harshdeepsingh/RiderProjects/TestProject1/TestProject1/obj/",
+        "outputPath": "/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/TestProject1/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/harshdeepsingh/.nuget/NuGet/NuGet.Config"
@@ -79,8 +79,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/harshdeepsingh/RiderProjects/TestProject1/ClassLibrary1/ClassLibrary1.csproj": {
-                "projectPath": "/Users/harshdeepsingh/RiderProjects/TestProject1/ClassLibrary1/ClassLibrary1.csproj"
+              "/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/ClassLibrary1/ClassLibrary1.csproj": {
+                "projectPath": "/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/ClassLibrary1/ClassLibrary1.csproj"
               }
             }
           }

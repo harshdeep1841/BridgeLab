@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "f3fa5K77c/g=",
+  "dgSpecHash": "fbnLwPv5X+U=",
   "success": true,
-  "projectFilePath": "/Users/harshdeepsingh/RiderProjects/TestProject1/TestProject1/TestProject1.csproj",
+  "projectFilePath": "/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/TestProject1/TestProject1.csproj",
   "expectedPackageFiles": [
     "/Users/harshdeepsingh/.nuget/packages/coverlet.collector/6.0.0/coverlet.collector.6.0.0.nupkg.sha512",
     "/Users/harshdeepsingh/.nuget/packages/microsoft.codecoverage/17.6.0/microsoft.codecoverage.17.6.0.nupkg.sha512",
