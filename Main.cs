@@ -1,6 +1,7 @@
 using System.Collections.Specialized;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using ConsoleAppLearning1.Learning.Operator.Learning.Generic;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.DatetimeExplore;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.ExploreObject;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.Inheritance;
@@ -517,8 +518,28 @@ public class MainCs
   // Test1 test1 = new Test1();
   
   
-  BasicRegix basicRegix =  new BasicRegix();
-  basicRegix.Basics1();
+  // BasicRegix basicRegix =  new BasicRegix();
+  // basicRegix.Basics1();
+  
+  // Storage<Electronics> electronics = new Storage<Electronics>();
+  //
+  // electronics.AddItem(new Electronics(1, "Laptop"));
+  // electronics.AddItem(new Electronics(2, "Phone"));
+  //
+  // electronics.DisplayItems();
+  
+  
+  // Course<ExamCourse> examCourses = new Course<ExamCourse>();
+  //
+  // examCourses.AddCourse(
+  //  new ExamCourse("Data Structures")
+  // );
+  //
+  // examCourses.AddCourse(
+  //  new ExamCourse("Operating Systems")
+  // );
+  //
+  // examCourses.DisplayCourses();
 
   
  }
