@@ -12,8 +12,4 @@
         <Compile Remove="TestProject1/**/*.cs" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Learning\Regix\" />
-    </ItemGroup>
-
 </Project>
