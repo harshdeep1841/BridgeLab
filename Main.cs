@@ -1,6 +1,7 @@
 using System.Collections.Specialized;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Text;
 using ConsoleAppLearning1.Learning.Operator.Learning.Generic;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.DatetimeExplore;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.ExploreObject;
@@ -518,9 +519,21 @@ public class MainCs
   // Test1 test1 = new Test1();
   
   
-  // BasicRegix basicRegix =  new BasicRegix();
-  // basicRegix.Basics1();
-  
+  BasicRegex basicRegex =  new BasicRegex();
+  basicRegex.Basics1();
+  RegexAssignement regexAssignement = new RegexAssignement();
+  regexAssignement.ValidateUserName("HarshdeepSinghhgdfhg");
+  regexAssignement.ValidateLicencePlateNumber("AA1212");
+  regexAssignement.ExtractEmailFromSentence( "Contact us at support@example.com and info@company.org"
+  );
+  regexAssignement.ExtractAllCaptilizedWords( "The Eiffel Tower is in Paris and the Statue of Liberty is in New York."
+  );
+  regexAssignement.ExtractLinks("Visit https://www.google.com and http://example.org for more info.");
+  regexAssignement.ReplaceSpace("This    is an example with    multiple spaces."
+  );
+  string badSentence = "what is fuck is wrong with you dumbass";
+  regexAssignement.SensorBadWords(badSentence);
+  //regexAssignement.ValidateIpAddress("import socket, struct; ip_num = struct.unpack(\"!I\", socket.inet_aton(\"192.168.1.1\"))[0]");
   // Storage<Electronics> electronics = new Storage<Electronics>();
   //
   // electronics.AddItem(new Electronics(1, "Laptop"));

@@ -2,7 +2,7 @@ using System.Text.RegularExpressions;
 
 namespace ConsoleAppLearning1.Learning.Operator.Learning.RegixExplore;
 
-public class BasicRegix
+public class BasicRegex
 {
     public void Basics1()
     {
@@ -85,10 +85,12 @@ public class BasicRegix
         }
         
         string str11 = "My PIN is 123";
+        string str12 = "a a";
         //string pattern11 = @"\d{2}";
         string pattern12 = @"\d{2,}";
         string pattern13 = @"\d{2,2}";
-        Match match11 = Regex.Match(str11, pattern13);
+        string pattern14 = @"a{2,5}";
+        Match match11 = Regex.Match(str12, pattern14);
 
         if (match11.Success)
         {
