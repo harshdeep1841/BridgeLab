@@ -26,7 +26,16 @@ public class Patient : Person
         Address  =  address;
         MedicalRecord = medicalRecord;
     }
+    public Patient(Address address, MedicalRecord medicalRecord)
+    {
+        Address = address;
+        MedicalRecord = medicalRecord;
+    }
 
+    Patient(BloodGroup bloodGroup, Address address, MedicalRecord medicalRecord) : this(address, medicalRecord)
+    {
+        
+    }
     public void Admit()
     {
         Console.WriteLine($"{Name} admitted.");

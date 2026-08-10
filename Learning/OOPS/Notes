@@ -13,3 +13,26 @@ Example ->  public double Area
                   return Math.PI * Radius * Radius;
               }
           }
+
+
+
+
+✅ Composition (♦)
+
+Ask:
+
+Can the child exist without the parent? → No
+Is the child owned exclusively by one parent? → Yes
+If the parent is deleted, should the child also be deleted? → Yes
+
+Example: Patient ♦── MedicalRecord
+
+✅ Aggregation (◇)
+
+Ask:
+
+Can the child exist without the parent? → Yes
+Can the child be shared or moved to another parent? → Yes
+If the parent is deleted, does the child still exist? → Yes
+
+Example: Department ◇── Doctor
