@@ -1,6 +1,10 @@
+using System.Collections;
 using System.Collections.Specialized;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Text;
+using ConsoleAppLearning1.Learning.Operator.Learning.Collections;
+using ConsoleAppLearning1.Learning.Operator.Learning.Generic;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.DatetimeExplore;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.ExploreObject;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.Inheritance;
@@ -9,9 +13,13 @@ using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverloading;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverriding;
 using ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem;
 using ConsoleAppLearning1.Learning.Operator.Learning.ProblemSolving;
+using ConsoleAppLearning1.Learning.Operator.Learning.RegixExplore;
 using ConsoleAppLearning1.Learning.Operator.Learning.SnakeLadderGame;
+using ConsoleAppLearning1.Learning.Operator.Learning.SocialMedia;
 using ConsoleAppLearning1.Learning.Operator.Learning.Test;
 using Operators;
+using Animal = ConsoleAppLearning1.Learning.Operator.Learning.Test.Animal;
+using Dog = ConsoleAppLearning1.Learning.Operator.Learning.Test.Dog;
 using Hospital = ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem.Hospital;
 using Patient = ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem.Patient;
 using Student = ConsoleAppLearning1.Learning.Operator.Learning.Methods.Inheritance.Student;
@@ -512,7 +520,126 @@ public class MainCs
 
   // Patient p1 = new Patient(1, "Harsh" , 20 ,"MALE" , BloodGroup.O_Negative , new Address("Ambala" , "Huda" , "134003" , "India") , new MedicalRecord(1 , "diagonis" , "Elergy"));
   // Test1 test1 = new Test1();
+  
+  
+  // BasicRegex basicRegex =  new BasicRegex();
+  // basicRegex.Basics1();
+  // RegexAssignement regexAssignement = new RegexAssignement();
+  // regexAssignement.ValidateUserName("HarshdeepSinghhgdfhg");
+  // regexAssignement.ValidateLicencePlateNumber("AA1212");
+  // regexAssignement.ExtractEmailFromSentence( "Contact us at support@example.com and info@company.org"
+  // );
+  // regexAssignement.ExtractAllCaptilizedWords( "The Eiffel Tower is in Paris and the Statue of Liberty is in New York."
+  // );
+  // regexAssignement.ExtractLinks("Visit https://www.google.com and http://example.org for more info.");
+  // regexAssignement.ReplaceSpace("This    is an example with    multiple spaces."
+  // );
+  // string badSentence = "what is fuck is wrong with you dumbass";
+  // regexAssignement.SensorBadWords(badSentence);
+  //regexAssignement.ValidateIpAddress("import socket, struct; ip_num = struct.unpack(\"!I\", socket.inet_aton(\"192.168.1.1\"))[0]");
+  // Storage<Electronics> electronics = new Storage<Electronics>();
+  //
+  // electronics.AddItem(new Electronics(1, "Laptop"));
+  // electronics.AddItem(new Electronics(2, "Phone"));
+  //
+  // electronics.DisplayItems();
+  
+  
+  // Course<ExamCourse> examCourses = new Course<ExamCourse>();
+  //
+  // examCourses.AddCourse(
+  //  new ExamCourse("Data Structures")
+  // );
+  //
+  // examCourses.AddCourse(
+  //  new ExamCourse("Operating Systems")
+  // );
+  //
+  // examCourses.DisplayCourses();
 
+  AssignmentCollection assignmentCollection = new AssignmentCollection();
+   ArrayList list = new ArrayList() { 1, 2, 3, 4, 5 };
+  assignmentCollection.Reverse(list);
+  string[] strs = { "apple", "banana", "apple", "orange" };
+  assignmentCollection.FreqElement(strs);
+  //Console.WriteLine(string.Join(", ", list));
+  // foreach (int e in list)
+  // {
+  //  Console.WriteLine(e);
+  // }
+  //
+  
+  
+  
+  
+  
+  public class Program
+  {
+   public static void Main()
+   {
+    Instagram instagram = new Instagram();
+
+    // Users
+    User harsh =
+     new RegularUser(
+      1,
+      "harsh",
+      "harsh@gmail.com",
+      "1234"
+     );
+
+    User rahul =
+     new RegularUser(
+      2,
+      "rahul",
+      "rahul@gmail.com",
+      "5678"
+     );
+
+    User admin =
+     new AdminUser(
+      3,
+      "admin",
+      "admin@gmail.com",
+      "admin123"
+     );
+
+    instagram.RegisterUser(harsh);
+    instagram.RegisterUser(rahul);
+    instagram.RegisterUser(admin);
+
+    // Polymorphism
+    harsh.DisplayProfile();
+    admin.DisplayProfile();
+
+    // Media
+    Media image =
+     new Image("vacation.jpg");
+
+    // Create post
+    harsh.CreatePost(
+     "Amazing vacation!",
+     image
+    );
+
+    // We will retrieve the post
+    // from the Instagram system in a real application.
+
+    Console.WriteLine();
+
+    // Follow
+    harsh.Follow(rahul);
+
+    Console.WriteLine();
+
+    // Media polymorphism
+    Media video =
+     new Video("reel.mp4");
+
+    video.Display();
+   }
+  }
+  
  }
 
 }
