@@ -520,8 +520,8 @@ public class MainCs
 
   // Patient p1 = new Patient(1, "Harsh" , 20 ,"MALE" , BloodGroup.O_Negative , new Address("Ambala" , "Huda" , "134003" , "India") , new MedicalRecord(1 , "diagonis" , "Elergy"));
   // Test1 test1 = new Test1();
-  
-  
+
+
   // BasicRegex basicRegex =  new BasicRegex();
   // basicRegex.Basics1();
   // RegexAssignement regexAssignement = new RegexAssignement();
@@ -543,8 +543,8 @@ public class MainCs
   // electronics.AddItem(new Electronics(2, "Phone"));
   //
   // electronics.DisplayItems();
-  
-  
+
+
   // Course<ExamCourse> examCourses = new Course<ExamCourse>();
   //
   // examCourses.AddCourse(
@@ -558,7 +558,7 @@ public class MainCs
   // examCourses.DisplayCourses();
 
   AssignmentCollection assignmentCollection = new AssignmentCollection();
-   ArrayList list = new ArrayList() { 1, 2, 3, 4, 5 };
+  ArrayList list = new ArrayList() { 1, 2, 3, 4, 5 };
   assignmentCollection.Reverse(list);
   string[] strs = { "apple", "banana", "apple", "orange" };
   assignmentCollection.FreqElement(strs);
@@ -570,79 +570,75 @@ public class MainCs
   //
   
   
-  
-  
-  
-  public class Program
-  {
-   public static void Main()
-   {
-    Instagram instagram = new Instagram();
+  Instagram instagram = new Instagram();
 
-    // Users
-    User harsh =
-     new RegularUser(
-      1,
-      "harsh",
-      "harsh@gmail.com",
-      "1234"
-     );
+  // Users
+  User harsh =
+   new RegularUser(
+    1,
+    "harsh",
+    "harsh@gmail.com",
+    "1234"
+   );
 
-    User rahul =
-     new RegularUser(
-      2,
-      "rahul",
-      "rahul@gmail.com",
-      "5678"
-     );
+  User rahul =
+   new RegularUser(
+    2,
+    "rahul",
+    "rahul@gmail.com",
+    "5678"
+   );
 
-    User admin =
-     new AdminUser(
-      3,
-      "admin",
-      "admin@gmail.com",
-      "admin123"
-     );
+  User admin =
+   new AdminUser(
+    3,
+    "admin",
+    "admin@gmail.com",
+    "admin123"
+   );
 
-    instagram.RegisterUser(harsh);
-    instagram.RegisterUser(rahul);
-    instagram.RegisterUser(admin);
+  instagram.RegisterUser(harsh);
+  instagram.RegisterUser(rahul);
+  instagram.RegisterUser(admin);
 
-    // Polymorphism
-    harsh.DisplayProfile();
-    admin.DisplayProfile();
+  // Polymorphism
+  harsh.DisplayProfile();
+  admin.DisplayProfile();
 
-    // Media
-    Media image =
-     new Image("vacation.jpg");
+  // Media
+  Media image =
+   new Image("vacation.jpg");
 
-    // Create post
-    harsh.CreatePost(
-     "Amazing vacation!",
-     image
-    );
+  // Create post
+  harsh.CreatePost(
+   "Amazing vacation!",
+   image
+  );
 
-    // We will retrieve the post
-    // from the Instagram system in a real application.
+  // We will retrieve the post
+  // from the Instagram system in a real application.
 
-    Console.WriteLine();
+  Console.WriteLine();
 
-    // Follow
-    harsh.Follow(rahul);
+  // Follow
+  harsh.Follow(rahul);
 
-    Console.WriteLine();
+  Console.WriteLine();
 
-    // Media polymorphism
-    Media video =
-     new Video("reel.mp4");
+  // Media polymorphism
+  // Media video =
+  //  new Video("reel.mp4");
 
-    video.Display();
-   }
-  }
-  
+  // video.Display();
+ 
+
+
+
+
  }
-
 }
+
+
     
 
 
