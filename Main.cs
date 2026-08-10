@@ -28,7 +28,7 @@ namespace ConsoleAppLearning1.Learning.Operator;
 
 public class MainCs
 {
- public static void Main(string[] args)
+ public void Main(string[] args)
  {
   // Arithmatic a = new Arithmatic();
   // a.func();
@@ -558,7 +558,7 @@ public class MainCs
   // examCourses.DisplayCourses();
 
   AssignmentCollection assignmentCollection = new AssignmentCollection();
-  ArrayList list = new ArrayList() { 1, 2, 3, 4, 5 };
+  ArrayList list = new ArrayList() { 1, 2, 3, 4, 5 , 6};
   assignmentCollection.Reverse(list);
   string[] strs = { "apple", "banana", "apple", "orange" };
   assignmentCollection.FreqElement(strs);
@@ -569,6 +569,15 @@ public class MainCs
   // }
   //
   
+  assignmentCollection.rotateListByK(list , 2);
+  foreach (int e in list)
+  {
+   Console.WriteLine(e);
+  } 
+  HashSet<int> set1 = new HashSet<int> { 1, 2, 3 };
+  HashSet<int> set2 = new HashSet<int> { 3, 2, 1 };
+
+  Console.WriteLine(assignmentCollection.AreSetsEqual(set1, set2));
   
   Instagram instagram = new Instagram();
 
@@ -631,6 +640,8 @@ public class MainCs
 
   // video.Display();
  
+  
+  
 
 
 
