@@ -36,7 +36,7 @@ public class AssignmentCollection
 
         foreach (var (k, v) in dict)
         {
-            Console.Write(k + " " + v);
+            Console.WriteLine(k + " " + v);
         }
     }
 
@@ -74,6 +74,18 @@ public class AssignmentCollection
     //TODO
     //rest of the questions
     
+    
+    public void CollectionTest()
+    {
+        List<int> list = new List<int>();
+        list.Add(1);
+        list.Add(1);
+        list.Add(1);
+       int cnt =  list.Count;
+       int cap =  list.Capacity;
+       Console.Write($"{cnt} ,   {cap}");
+       
+    }
     
     
 }

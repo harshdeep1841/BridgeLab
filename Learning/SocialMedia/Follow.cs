@@ -5,7 +5,6 @@ public class Follow
     public User Follower { get; }
 
     public User Following { get; }
-
     public DateTime CreatedAt { get; }
 
     public Follow(User follower, User following)
