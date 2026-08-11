@@ -28,7 +28,7 @@ namespace ConsoleAppLearning1.Learning.Operator;
 
 public class MainCs
 {
- public void Main(string[] args)
+ public static void Main(string[] args)
  {
   // Arithmatic a = new Arithmatic();
   // a.func();
@@ -561,7 +561,7 @@ public class MainCs
   ArrayList list = new ArrayList() { 1, 2, 3, 4, 5 , 6};
   assignmentCollection.Reverse(list);
   string[] strs = { "apple", "banana", "apple", "orange" };
-  assignmentCollection.FreqElement(strs);
+  // assignmentCollection.FreqElement(strs);
   //Console.WriteLine(string.Join(", ", list));
   // foreach (int e in list)
   // {
@@ -641,12 +641,20 @@ public class MainCs
   // video.Display();
  
   
-  
+  assignmentCollection.CollectionTest();
+  assignmentCollection.FreqElement(strs);
 
+  IEnumerable<int> list1 = new List<int>(); //generic
+  IEnumerable<int> list2 = new int[] {1 , 2, 3}; //generic
+  IEnumerable list3 = new ArrayList(); //non-generic
 
+  List<int> list4 = new List<int>();
 
 
  }
+ 
+ 
+ 
 }
 
 
