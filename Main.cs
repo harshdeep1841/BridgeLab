@@ -647,13 +647,15 @@ public class MainCs
   IEnumerable<int> list1 = new List<int>(); //generic
   IEnumerable<int> list2 = new int[] {1 , 2, 3}; //generic
   IEnumerable list3 = new ArrayList(); //non-generic
-
   List<int> list4 = new List<int>();
-
-
+  int[] arr = new[] { 3, 4, 5 };
+  Test11 test = new Test11();
+  test.Test111(ref arr);
+  Console.WriteLine(string.Join(",", arr));
+  
  }
  
- 
+
  
 }
 
