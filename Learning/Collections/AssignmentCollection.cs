@@ -36,11 +36,56 @@ public class AssignmentCollection
 
         foreach (var (k, v) in dict)
         {
-            Console.Write(k + " " + v);
+            Console.WriteLine(k + " " + v);
         }
     }
+
+    
+    //1 2 3 4 5 6
+    //2 1 6 5 4 3
+    //3 4 5 6 1 2 
+    public void rotateListByK(ArrayList list, int k)
+    {
+        list.Reverse(0 , k);
+        list.Reverse(k, list.Count - k);
+        list.Reverse(0 , list.Count );
+    }
+    
+    public  ArrayList RemoveDuplicates(ArrayList list)
+    {
+        HashSet<int> seen = new HashSet<int>();
+        ArrayList result = new ArrayList();
+
+        foreach (int item in list)
+        {
+            if (seen.Add(item))
+            {
+                result.Add(item);
+            }
+        }
+
+        return result;
+    }
+    public  bool AreSetsEqual(HashSet<int> set1, HashSet<int> set2)
+    {
+        return set1.SetEquals(set2);
+    }
+    
+    //TODO
+    //rest of the questions
     
     
+    public void CollectionTest()
+    {
+        List<int> list = new List<int>();
+        list.Add(1);
+        list.Add(1);
+        list.Add(1);
+       int cnt =  list.Count;
+       int cap =  list.Capacity;
+       Console.Write($"{cnt} ,   {cap}");
+       
+    }
     
     
 }

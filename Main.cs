@@ -4,6 +4,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections;
+using ConsoleAppLearning1.Learning.Operator.Learning.Collections.AssignementDataStructures;
 using ConsoleAppLearning1.Learning.Operator.Learning.Generic;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.DatetimeExplore;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.ExploreObject;
@@ -22,7 +23,7 @@ using Animal = ConsoleAppLearning1.Learning.Operator.Learning.Test.Animal;
 using Dog = ConsoleAppLearning1.Learning.Operator.Learning.Test.Dog;
 using Hospital = ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem.Hospital;
 using Patient = ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem.Patient;
-using Student = ConsoleAppLearning1.Learning.Operator.Learning.Methods.Inheritance.Student;
+using Student = ConsoleAppLearning1.Learning.Operator.Learning.Collections.AssignementDataStructures;
 
 namespace ConsoleAppLearning1.Learning.Operator;
 
@@ -520,8 +521,8 @@ public class MainCs
 
   // Patient p1 = new Patient(1, "Harsh" , 20 ,"MALE" , BloodGroup.O_Negative , new Address("Ambala" , "Huda" , "134003" , "India") , new MedicalRecord(1 , "diagonis" , "Elergy"));
   // Test1 test1 = new Test1();
-  
-  
+
+
   // BasicRegex basicRegex =  new BasicRegex();
   // basicRegex.Basics1();
   // RegexAssignement regexAssignement = new RegexAssignement();
@@ -543,8 +544,8 @@ public class MainCs
   // electronics.AddItem(new Electronics(2, "Phone"));
   //
   // electronics.DisplayItems();
-  
-  
+
+
   // Course<ExamCourse> examCourses = new Course<ExamCourse>();
   //
   // examCourses.AddCourse(
@@ -557,11 +558,11 @@ public class MainCs
   //
   // examCourses.DisplayCourses();
 
-  AssignmentCollection assignmentCollection = new AssignmentCollection();
-   ArrayList list = new ArrayList() { 1, 2, 3, 4, 5 };
-  assignmentCollection.Reverse(list);
-  string[] strs = { "apple", "banana", "apple", "orange" };
-  assignmentCollection.FreqElement(strs);
+  // AssignmentCollection assignmentCollection = new AssignmentCollection();
+  // ArrayList list = new ArrayList() { 1, 2, 3, 4, 5 , 6};
+  // assignmentCollection.Reverse(list);
+  // string[] strs = { "apple", "banana", "apple", "orange" };
+  // assignmentCollection.FreqElement(strs);
   //Console.WriteLine(string.Join(", ", list));
   // foreach (int e in list)
   // {
@@ -569,80 +570,136 @@ public class MainCs
   // }
   //
   
+  // assignmentCollection.rotateListByK(list , 2);
+  // foreach (int e in list)
+  // {
+  //  Console.WriteLine(e);
+  // } 
+  // HashSet<int> set1 = new HashSet<int> { 1, 2, 3 };
+  // HashSet<int> set2 = new HashSet<int> { 3, 2, 1 };
+  //
+  // Console.WriteLine(assignmentCollection.AreSetsEqual(set1, set2));
+  //
+  Instagram instagram = new Instagram();
+
+  // Users
+  User harsh =
+   new RegularUser(
+    1,
+    "harsh",
+    "harsh@gmail.com",
+    "1234"
+   );
+
+  User rahul =
+   new RegularUser(
+    2,
+    "rahul",
+    "rahul@gmail.com",
+    "5678"
+   );
+
+  User admin =
+   new AdminUser(
+    3,
+    "admin",
+    "admin@gmail.com",
+    "admin123"
+   );
+
+  instagram.RegisterUser(harsh);
+  instagram.RegisterUser(rahul);
+  instagram.RegisterUser(admin);
+
+  // Polymorphism
+  harsh.DisplayProfile();
+  admin.DisplayProfile();
+
+  // Media
+  Media image =
+   new Image("vacation.jpg");
+
+  // Create post
+  harsh.CreatePost(
+   "Amazing vacation!",
+   image
+  );
+
+  // We will retrieve the post
+  // from the Instagram system in a real application.
+
+  Console.WriteLine();
+
+  // Follow
+  harsh.Follow(rahul);
+
+  Console.WriteLine();
+
+  // Media polymorphism
+  // Media video =
+  //  new Video("reel.mp4");
+
+  // video.Display();
+ 
   
+  // assignmentCollection.CollectionTest();
+  // assignmentCollection.FreqElement(strs);
+  //
+  // IEnumerable<int> list1 = new List<int>(); //generic
+  // IEnumerable<int> list2 = new int[] {1 , 2, 3}; //generic
+  // IEnumerable list3 = new ArrayList(); //non-generic
+  // List<int> list4 = new List<int>();
+  // int[] arr = new[] { 3, 4, 5 };
+  // Test11 test = new Test11();
+  // test.Test111(ref arr);
+  // Console.WriteLine(string.Join(",", arr));
+ 
   
-  
-  
-  public class Program
+  StudentLinkedList list = new StudentLinkedList();
+
+  list.AddLast(new Student.Student(101, "Harsh", 22, 'A'));
+  list.AddLast(new Student.Student(102, "Rahul", 21, 'B'));
+  list.AddLast(new Student.Student(103, "Aman", 23, 'C'));
+
+  Console.WriteLine("Initial List");
+  list.Display();
+
+  Console.WriteLine("Add First");
+  list.AddFirst(new Student.Student(100, "John", 20, 'A'));
+  list.Display();
+
+  Console.WriteLine("Add at Position 3");
+  list.AddAtPosition(new Student.Student(105, "Karan", 21, 'B'), 3);
+  list.Display();
+
+  Console.WriteLine("Search Student");
+  Student.Student student = list.Search(102);
+
+  if (student != null)
   {
-   public static void Main()
-   {
-    Instagram instagram = new Instagram();
-
-    // Users
-    User harsh =
-     new RegularUser(
-      1,
-      "harsh",
-      "harsh@gmail.com",
-      "1234"
-     );
-
-    User rahul =
-     new RegularUser(
-      2,
-      "rahul",
-      "rahul@gmail.com",
-      "5678"
-     );
-
-    User admin =
-     new AdminUser(
-      3,
-      "admin",
-      "admin@gmail.com",
-      "admin123"
-     );
-
-    instagram.RegisterUser(harsh);
-    instagram.RegisterUser(rahul);
-    instagram.RegisterUser(admin);
-
-    // Polymorphism
-    harsh.DisplayProfile();
-    admin.DisplayProfile();
-
-    // Media
-    Media image =
-     new Image("vacation.jpg");
-
-    // Create post
-    harsh.CreatePost(
-     "Amazing vacation!",
-     image
-    );
-
-    // We will retrieve the post
-    // from the Instagram system in a real application.
-
-    Console.WriteLine();
-
-    // Follow
-    harsh.Follow(rahul);
-
-    Console.WriteLine();
-
-    // Media polymorphism
-    Media video =
-     new Video("reel.mp4");
-
-    video.Display();
-   }
+   Console.WriteLine(student);
   }
-  
- }
+  else
+  {
+   Console.WriteLine("Student Not Found.");
+  }
 
+  Console.WriteLine();
+
+  Console.WriteLine("Update Grade");
+  list.UpdateGrade(103, 'A');
+  list.Display();
+
+  Console.WriteLine("Delete Student");
+  list.DeleteByRollNumber(101);
+  list.Display();
+ }
+ 
+
+ 
 }
+
+
     
 
 
