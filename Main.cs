@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections;
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections.AssignementDataStructures;
+using ConsoleAppLearning1.Learning.Operator.Learning.Collections.AssignmentQueueStackHashMapHashing;
 using ConsoleAppLearning1.Learning.Operator.Learning.Generic;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.DatetimeExplore;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.ExploreObject;
@@ -693,6 +694,37 @@ public class MainCs
   Console.WriteLine("Delete Student");
   list.DeleteByRollNumber(101);
   list.Display();
+  
+  
+  Test1 test = new Test1();
+  Stack<int> stack = new Stack<int>();
+  stack.Push(1);
+  stack.Push(2);
+  stack.Push(3);
+  stack.Push(4);
+  stack.Push(5);
+  foreach (int i in stack)
+  {
+   Console.WriteLine(i);
+  }
+  Console.WriteLine();
+  Console.WriteLine();
+  Console.WriteLine();
+  
+  test.StackRecursionReverse(stack);
+  foreach (int i in stack)
+  {
+   Console.WriteLine(i);
+  }
+  
+  ImplementQueue implementQueue = new ImplementQueue();
+  implementQueue.Add(1);
+  implementQueue.Add(2);
+  implementQueue.Add(3);
+  implementQueue.Add(4);
+  implementQueue.Add(5);
+  implementQueue.Display();
+
  }
  
 

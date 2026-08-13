@@ -16,7 +16,6 @@ public class MovieLinkedList
             head = tail = newNode;
             return;
         }
-
         newNode.Next = head;
         head.Previous = newNode;
         head = newNode;
