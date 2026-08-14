@@ -5,6 +5,8 @@ using System.Runtime.InteropServices;
 using System.Text;
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections;
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections.AssignementDataStructures;
+using ConsoleAppLearning1.Learning.Operator.Learning.Collections.AssignmentQueueStackHashMapHashing;
+using ConsoleAppLearning1.Learning.Operator.Learning.Collections.SortingAlgos;
 using ConsoleAppLearning1.Learning.Operator.Learning.Generic;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.DatetimeExplore;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.ExploreObject;
@@ -213,7 +215,7 @@ public class MainCs
   // }
 
 
-  int[] nums = { 10, 20, -30, 40, 50 };
+  
   int[] ones = { 1, 0, 1, 1, 1, 0, 20, 40 };
   // int a = 5;
   // MethodExp.Change(nums , ref a) ;
@@ -655,44 +657,86 @@ public class MainCs
   // Console.WriteLine(string.Join(",", arr));
  
   
-  StudentLinkedList list = new StudentLinkedList();
-
-  list.AddLast(new Student.Student(101, "Harsh", 22, 'A'));
-  list.AddLast(new Student.Student(102, "Rahul", 21, 'B'));
-  list.AddLast(new Student.Student(103, "Aman", 23, 'C'));
-
-  Console.WriteLine("Initial List");
-  list.Display();
-
-  Console.WriteLine("Add First");
-  list.AddFirst(new Student.Student(100, "John", 20, 'A'));
-  list.Display();
-
-  Console.WriteLine("Add at Position 3");
-  list.AddAtPosition(new Student.Student(105, "Karan", 21, 'B'), 3);
-  list.Display();
-
-  Console.WriteLine("Search Student");
-  Student.Student student = list.Search(102);
-
-  if (student != null)
-  {
-   Console.WriteLine(student);
-  }
-  else
-  {
-   Console.WriteLine("Student Not Found.");
-  }
-
-  Console.WriteLine();
-
-  Console.WriteLine("Update Grade");
-  list.UpdateGrade(103, 'A');
-  list.Display();
-
-  Console.WriteLine("Delete Student");
-  list.DeleteByRollNumber(101);
-  list.Display();
+  // StudentLinkedList list = new StudentLinkedList();
+  //
+  // list.AddLast(new Student.Student(101, "Harsh", 22, 'A'));
+  // list.AddLast(new Student.Student(102, "Rahul", 21, 'B'));
+  // list.AddLast(new Student.Student(103, "Aman", 23, 'C'));
+  //
+  // Console.WriteLine("Initial List");
+  // list.Display();
+  //
+  // Console.WriteLine("Add First");
+  // list.AddFirst(new Student.Student(100, "John", 20, 'A'));
+  // list.Display();
+  //
+  // Console.WriteLine("Add at Position 3");
+  // list.AddAtPosition(new Student.Student(105, "Karan", 21, 'B'), 3);
+  // list.Display();
+  //
+  // Console.WriteLine("Search Student");
+  // Student.Student student = list.Search(102);
+  //
+  // if (student != null)
+  // {
+  //  Console.WriteLine(student);
+  // }
+  // else
+  // {
+  //  Console.WriteLine("Student Not Found.");
+  // }
+  //
+  // Console.WriteLine();
+  //
+  // Console.WriteLine("Update Grade");
+  // list.UpdateGrade(103, 'A');
+  // list.Display();
+  //
+  // Console.WriteLine("Delete Student");
+  // list.DeleteByRollNumber(101);
+  // list.Display();
+  //
+  //
+  // Test1 test = new Test1();
+  // Stack<int> stack = new Stack<int>();
+  // stack.Push(1);
+  // stack.Push(2);
+  // stack.Push(3);
+  // stack.Push(4);
+  // stack.Push(5);
+  // foreach (int i in stack)
+  // {
+  //  Console.WriteLine(i);
+  // }
+  // Console.WriteLine();
+  // Console.WriteLine();
+  // Console.WriteLine();
+  //
+  // test.StackRecursionReverse(stack);
+  // foreach (int i in stack)
+  // {
+  //  Console.WriteLine(i);
+  // }
+  //
+  // ImplementQueue implementQueue = new ImplementQueue();
+  // implementQueue.Add(1);
+  // implementQueue.Add(2);
+  // implementQueue.Add(3);
+  // implementQueue.Add(4);
+  // implementQueue.Add(5);
+  // implementQueue.Display();
+  //
+  //
+  int[] nums = { 10, 20, -30, 60, 50 };
+  ISort sort1 = new BubbleSort();
+  ISort sort2 = new SelectionSort();
+  ISort sort3 = new InsertionSort();
+  MergeSort sort4 = new MergeSort();
+  // sort1.Sort(nums);
+ // sort2.Sort(nums);
+ // sort3.Sort(nums);
+ //sort4.Sort(nums , 0 , 4);
+ 
  }
  
 
