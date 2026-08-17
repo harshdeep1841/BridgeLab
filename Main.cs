@@ -8,6 +8,7 @@ using ConsoleAppLearning1.Learning.Operator.Learning.Collections.AssignementData
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections.AssignmentQueueStackHashMapHashing;
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections.SortingAlgos;
 using ConsoleAppLearning1.Learning.Operator.Learning.Generic;
+using ConsoleAppLearning1.Learning.Operator.Learning.Generic.Test;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.DatetimeExplore;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.ExploreObject;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.Inheritance;
@@ -15,22 +16,54 @@ using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodExplore;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverloading;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverriding;
 using ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem;
+using ConsoleAppLearning1.Learning.Operator.Learning.PortfolioApp;
+using ConsoleAppLearning1.Learning.Operator.Learning.PortfolioApp.FinancialPortfolioRebalancer.Services;
 using ConsoleAppLearning1.Learning.Operator.Learning.ProblemSolving;
 using ConsoleAppLearning1.Learning.Operator.Learning.RegixExplore;
 using ConsoleAppLearning1.Learning.Operator.Learning.SnakeLadderGame;
 using ConsoleAppLearning1.Learning.Operator.Learning.SocialMedia;
 using ConsoleAppLearning1.Learning.Operator.Learning.Test;
+using FinancialPortfolioRebalancer.Services;
 using Operators;
 using Animal = ConsoleAppLearning1.Learning.Operator.Learning.Test.Animal;
 using Dog = ConsoleAppLearning1.Learning.Operator.Learning.Test.Dog;
+using Employee = ConsoleAppLearning1.Learning.Operator.Learning.Generic.Test.Employee;
 using Hospital = ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem.Hospital;
 using Patient = ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem.Patient;
 using Student = ConsoleAppLearning1.Learning.Operator.Learning.Collections.AssignementDataStructures;
 
 namespace ConsoleAppLearning1.Learning.Operator;
 
+
+
+public class Node
+{
+ public int Data {get; set;}
+ public Node Next { get; set; }
+
+ public Node(int data, Node next)
+ {
+  this.Data = data;
+  this.Next = next;
+ }
+
+ public Node(int data)
+ {
+  this.Data = data;
+  this.Next = null;
+ }
+}
+
+
+
+
 public class MainCs
 {
+ 
+
+ 
+ 
+ 
  public static void Main(string[] args)
  {
   // Arithmatic a = new Arithmatic();
@@ -647,7 +680,7 @@ public class MainCs
   // assignmentCollection.CollectionTest();
   // assignmentCollection.FreqElement(strs);
   //
-  // IEnumerable<int> list1 = new List<int>(); //generic
+  IEnumerable<int> list1 = new List<int>(); //generic
   // IEnumerable<int> list2 = new int[] {1 , 2, 3}; //generic
   // IEnumerable list3 = new ArrayList(); //non-generic
   // List<int> list4 = new List<int>();
@@ -737,8 +770,93 @@ public class MainCs
  // sort3.Sort(nums);
  //sort4.Sort(nums , 0 , 4);
  
- }
+ // Box<int> box = new Box<int>();
+ // box.Value = 2;
  
+//  Box box = new Box();
+//  box.Value = "string";
+//  int a = (int) box.Value;
+//
+//  IEnumerable<Dog> dogs = new List<Dog>();
+//  IEnumerable<Animal> animals = dogs;
+//  
+//  Employee employee = new Employee();
+//  Repository<Entity> repository = new Repository<Entity>();
+//  repository.PrintName(employee);
+//
+// Factory<Learning.Generic.Test.Student> factory = new Factory<Learning.Generic.Test.Student>();
+// Learning.Generic.Test.Student student = factory.Create();
+//
+ AssignmentCollection assignmentCollection  = new AssignmentCollection();
+ HashSet<int> set = new HashSet<int>() { 3 , 1, 2, 2 ,3 ,4};
+// Console.WriteLine(string.Join(", ", set));
+// int[] arr = new int[] { 1, 2, 3, 4, 5 };
+// Learning.Collections.Node head = assignmentCollection.ArrayToLL(arr);
+// Learning.Collections.Node kthFromLast = assignmentCollection.KthFromEnd(head, 2);
+// Console.WriteLine(kthFromLast.Data);
+//
+// Queue<int> queue = new Queue<int>();
+// queue.Enqueue(1);
+// queue.Enqueue(2);
+// queue.Enqueue(3);
+// queue.Enqueue(4);
+// queue.Enqueue(5);
+// assignmentCollection.ReverseQueue(queue);
+// Console.WriteLine(string.Join(", ", queue));
+// SortedList<int , int> sortedList = new SortedList<int, int>();
+// foreach (int num in set)
+// {
+//  sortedList.Add(num , 1);
+// }
+//
+// foreach (var (key , value) in sortedList)
+// {
+//  Console.WriteLine(key + " ");
+// }
+
+// assignmentCollection.GenerateBinaryNumbers(5);
+
+
+
+
+  Portfolio<Holding> portfolio =
+   new Portfolio<Holding>();
+
+  Holding apple =
+   HoldingParser.Parse(
+    "HOLDING:AAPL|QTY:150|COST:145.32|CURRENT:198.77|TARGET_WEIGHT:0.20");
+
+  portfolio.Add(apple);
+  
+  
+  Console.WriteLine(
+   "Total Portfolio Value: "
+   + portfolio.TotalValue);
+
+  Console.WriteLine();
+
+  var actions = portfolio.Rebalance();
+
+  Console.WriteLine("Rebalancing Actions:");
+
+  foreach (var action in actions)
+  {
+   Console.WriteLine(
+    action.Action
+    + " "
+    + action.Ticker
+    + " | Current Weight: "
+    + action.CurrentWeight.ToString("P2")
+    + " | Target Weight: "
+    + action.TargetWeight.ToString("P2")
+    + " | Drift: "
+    + action.Drift.ToString("P2"));
+  }
+
+
+
+}
+
 
  
 }
