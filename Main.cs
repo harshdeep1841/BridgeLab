@@ -3,6 +3,7 @@ using System.Collections.Specialized;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Text.Json;
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections;
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections.AssignementDataStructures;
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections.AssignmentQueueStackHashMapHashing;
@@ -17,13 +18,11 @@ using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverloading;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverriding;
 using ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem;
 using ConsoleAppLearning1.Learning.Operator.Learning.PortfolioApp;
-using ConsoleAppLearning1.Learning.Operator.Learning.PortfolioApp.FinancialPortfolioRebalancer.Services;
 using ConsoleAppLearning1.Learning.Operator.Learning.ProblemSolving;
 using ConsoleAppLearning1.Learning.Operator.Learning.RegixExplore;
 using ConsoleAppLearning1.Learning.Operator.Learning.SnakeLadderGame;
 using ConsoleAppLearning1.Learning.Operator.Learning.SocialMedia;
 using ConsoleAppLearning1.Learning.Operator.Learning.Test;
-using FinancialPortfolioRebalancer.Services;
 using Operators;
 using Animal = ConsoleAppLearning1.Learning.Operator.Learning.Test.Animal;
 using Dog = ConsoleAppLearning1.Learning.Operator.Learning.Test.Dog;
@@ -31,8 +30,6 @@ using Employee = ConsoleAppLearning1.Learning.Operator.Learning.Generic.Test.Emp
 using Hospital = ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem.Hospital;
 using Patient = ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem.Patient;
 using Student = ConsoleAppLearning1.Learning.Operator.Learning.Collections.AssignementDataStructures;
-
-namespace ConsoleAppLearning1.Learning.Operator;
 
 
 
@@ -819,43 +816,69 @@ public class MainCs
 
 
 
-  Portfolio<Holding> portfolio =
-   new Portfolio<Holding>();
+  // Portfolio<Holding> portfolio =
+  //  new Portfolio<Holding>();
+  //
+  // Holding apple =
+  //  HoldingParser.Parse(
+  //   "HOLDING:AAPL|QTY:150|COST:145.32|CURRENT:198.77|TARGET_WEIGHT:0.20");
+  //
+  // portfolio.Add(apple);
+  //
+  //
+  // Console.WriteLine(
+  //  "Total Portfolio Value: "
+  //  + portfolio.TotalValue);
+  //
+  // Console.WriteLine();
+  //
+  // var actions = portfolio.Rebalance();
+  //
+  // Console.WriteLine("Rebalancing Actions:");
+  //
+  // foreach (var action in actions)
+  // {
+  //  Console.WriteLine(
+  //   action.Action
+  //   + " "
+  //   + action.Ticker
+  //   + " | Current Weight: "
+  //   + action.CurrentWeight.ToString("P2")
+  //   + " | Target Weight: "
+  //   + action.TargetWeight.ToString("P2")
+  //   + " | Drift: "
+  //   + action.Drift.ToString("P2"));
+  // }
 
-  Holding apple =
-   HoldingParser.Parse(
-    "HOLDING:AAPL|QTY:150|COST:145.32|CURRENT:198.77|TARGET_WEIGHT:0.20");
 
-  portfolio.Add(apple);
+ // using FileStream fsRead =  new FileStream("/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/input.txt", FileMode.Open, FileAccess.Read);
+ // using FileStream fsWrite = new FileStream("/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/output.txt", FileMode.Create, FileAccess.Write);
+ //
+ //  Console.WriteLine(File.Exists("/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/input.txt"));
+ //  int byteData;
+ //  int cnt = 0;
+ //  while ((byteData = fsRead.ReadByte()) != -1)
+ //  {
+ //   fsWrite.WriteByte((byte)byteData);
+ //   cnt++;
+ //  }
   
+  // Console.WriteLine(cnt);
   
-  Console.WriteLine(
-   "Total Portfolio Value: "
-   + portfolio.TotalValue);
+  using StreamReader streamReader = new StreamReader("input.txt");
+  using StreamWriter streamWriter = new StreamWriter("output.txt");
 
-  Console.WriteLine();
-
-  var actions = portfolio.Rebalance();
-
-  Console.WriteLine("Rebalancing Actions:");
-
-  foreach (var action in actions)
+  string str;
+  while((str = streamReader.ReadLine()) != null)
   {
-   Console.WriteLine(
-    action.Action
-    + " "
-    + action.Ticker
-    + " | Current Weight: "
-    + action.CurrentWeight.ToString("P2")
-    + " | Target Weight: "
-    + action.TargetWeight.ToString("P2")
-    + " | Drift: "
-    + action.Drift.ToString("P2"));
+   streamWriter.WriteLine(str);
   }
 
+  ConsoleAppLearning1.Learning.Operator.Learning.Methods.Inheritance.Student student = new ConsoleAppLearning1.Learning.Operator.Learning.Methods.Inheritance.Student("Harsh" , 20 , 90);
+  string json = JsonSerializer.Serialize(student);
+   Console.WriteLine(json);
 
-
-}
+ }
 
 
  
