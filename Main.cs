@@ -16,11 +16,14 @@ using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodExplore;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverloading;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverriding;
 using ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem;
+using ConsoleAppLearning1.Learning.Operator.Learning.PortfolioApp;
+using ConsoleAppLearning1.Learning.Operator.Learning.PortfolioApp.FinancialPortfolioRebalancer.Services;
 using ConsoleAppLearning1.Learning.Operator.Learning.ProblemSolving;
 using ConsoleAppLearning1.Learning.Operator.Learning.RegixExplore;
 using ConsoleAppLearning1.Learning.Operator.Learning.SnakeLadderGame;
 using ConsoleAppLearning1.Learning.Operator.Learning.SocialMedia;
 using ConsoleAppLearning1.Learning.Operator.Learning.Test;
+using FinancialPortfolioRebalancer.Services;
 using Operators;
 using Animal = ConsoleAppLearning1.Learning.Operator.Learning.Test.Animal;
 using Dog = ConsoleAppLearning1.Learning.Operator.Learning.Test.Dog;
@@ -811,7 +814,46 @@ public class MainCs
 //  Console.WriteLine(key + " ");
 // }
 
-assignmentCollection.GenerateBinaryNumbers(5);
+// assignmentCollection.GenerateBinaryNumbers(5);
+
+
+
+
+  Portfolio<Holding> portfolio =
+   new Portfolio<Holding>();
+
+  Holding apple =
+   HoldingParser.Parse(
+    "HOLDING:AAPL|QTY:150|COST:145.32|CURRENT:198.77|TARGET_WEIGHT:0.20");
+
+  portfolio.Add(apple);
+  
+  
+  Console.WriteLine(
+   "Total Portfolio Value: "
+   + portfolio.TotalValue);
+
+  Console.WriteLine();
+
+  var actions = portfolio.Rebalance();
+
+  Console.WriteLine("Rebalancing Actions:");
+
+  foreach (var action in actions)
+  {
+   Console.WriteLine(
+    action.Action
+    + " "
+    + action.Ticker
+    + " | Current Weight: "
+    + action.CurrentWeight.ToString("P2")
+    + " | Target Weight: "
+    + action.TargetWeight.ToString("P2")
+    + " | Drift: "
+    + action.Drift.ToString("P2"));
+  }
+
+
 
 }
 
