@@ -23,6 +23,7 @@ using ConsoleAppLearning1.Learning.Operator.Learning.RegixExplore;
 using ConsoleAppLearning1.Learning.Operator.Learning.SnakeLadderGame;
 using ConsoleAppLearning1.Learning.Operator.Learning.SocialMedia;
 using ConsoleAppLearning1.Learning.Operator.Learning.Test;
+using ConsoleAppLearning1.Learning.Streams;
 using Operators;
 using Animal = ConsoleAppLearning1.Learning.Operator.Learning.Test.Animal;
 using Dog = ConsoleAppLearning1.Learning.Operator.Learning.Test.Dog;
@@ -865,19 +866,23 @@ public class MainCs
   
   // Console.WriteLine(cnt);
   
-  using StreamReader streamReader = new StreamReader("input.txt");
-  using StreamWriter streamWriter = new StreamWriter("output.txt");
-
-  string str;
-  while((str = streamReader.ReadLine()) != null)
-  {
-   streamWriter.WriteLine(str);
-  }
-
-  ConsoleAppLearning1.Learning.Operator.Learning.Methods.Inheritance.Student student = new ConsoleAppLearning1.Learning.Operator.Learning.Methods.Inheritance.Student("Harsh" , 20 , 90);
-  string json = JsonSerializer.Serialize(student);
-   Console.WriteLine(json);
-
+  // using StreamReader streamReader = new StreamReader("input.txt");
+  // using StreamWriter streamWriter = new StreamWriter("output.txt");
+  //
+  // string str;
+  // while((str = streamReader.ReadLine()) != null)
+  // {
+  //  streamWriter.WriteLine(str);
+  // }
+  //
+  // ConsoleAppLearning1.Learning.Operator.Learning.Methods.Inheritance.Student student = new ConsoleAppLearning1.Learning.Operator.Learning.Methods.Inheritance.Student("Harsh" , 20 , 90);
+  // string json = JsonSerializer.Serialize(student);
+  //  Console.WriteLine(json);
+  //
+   // BufferedStreamDemo.CopyWithBuffer();
+   
+   ComparePerformance cp = new ComparePerformance();
+   cp.Compare();
  }
 
 

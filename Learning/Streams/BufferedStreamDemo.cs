@@ -22,19 +22,18 @@ using System.IO;
 
                 using FileStream fsWrite = new FileStream(destinationFile, FileMode.Create, FileAccess.Write);
                 using BufferedStream bsWrite = new BufferedStream(fsWrite);
-
+                using StreamReader streamReader  = new  StreamReader(fsRead);
+                using StreamWriter streamWriter = new  StreamWriter(fsWrite);
                 byte[] buffer = new byte[4096];
                 int bytesRead;
-
-                while ((bytesRead = bsRead.Read(buffer, 0, buffer.Length)) > 0)
+                int utf;
+                while((utf = streamReader.Read()) != -1)
                 {
-                    bsWrite.Write(buffer, 0, bytesRead);
+                    streamWriter.Write((char)utf);
                 }
-
-                stopwatch.Stop();
-
-                Console.WriteLine("Buffered Copy Completed.");
-                Console.WriteLine("Execution Time: " + stopwatch.ElapsedMilliseconds + " ms");
+                // stopwatch.Stop();
+                // Console.WriteLine("Buffered Copy Completed.");
+                // Console.WriteLine("Execution Time: " + stopwatch.ElapsedMilliseconds + " ms");
             }
             catch (IOException ex)
             {

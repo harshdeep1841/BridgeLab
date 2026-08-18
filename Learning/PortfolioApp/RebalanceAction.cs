@@ -11,5 +11,6 @@ public  class RebalanceAction
     public decimal TargetWeight { get; set; }
 
     public decimal Drift { get; set; }
+    
 }
 
