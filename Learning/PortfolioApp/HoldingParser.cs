@@ -4,7 +4,7 @@ namespace ConsoleAppLearning1.Learning.Operator.Learning.PortfolioApp;
 
 public static class HoldingParser
 {
-    private static readonly Regex HoldingRegex =
+    private static  Regex HoldingRegex =
         new Regex(
             @"^HOLDING:(?<ticker>[A-Za-z]+)\|" +
             @"QTY:(?<quantity>\d+(?:\.\d+)?)\|" +
