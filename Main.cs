@@ -916,8 +916,10 @@ public class MainCs
 //   searchArr[searchArr.Length - 1] = 1;
 //   searchTarget.searchTarget(searchArr , 1);
 //  
-StringAnalysis stringAnalysis = new StringAnalysis();
-stringAnalysis.Analysis();
+// StringAnalysis stringAnalysis = new StringAnalysis();
+// stringAnalysis.Analysis();
+FileAnalysis fileAnalysis = new FileAnalysis();
+fileAnalysis.Analaysis();
  }
  
 }

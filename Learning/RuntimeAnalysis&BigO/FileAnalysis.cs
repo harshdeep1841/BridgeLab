@@ -7,23 +7,35 @@ public class FileAnalysis
 {
     public void Analaysis()
     {
-        //FileStream
         Stopwatch Stopwatch = new Stopwatch();
-        Stopwatch.Start();
-        FileStream fs = new FileStream("analysis.txt", FileMode.Create);
-        Byte[] bytes = new Byte[1024 * 1024]; //that is 1 MB 
+        FileStream fs = new FileStream("analysis3.txt", FileMode.Create ,FileAccess.ReadWrite);
+        byte[] bytes = new byte[1024 * 1024]; //that is 1 MB 
         for (int i = 0; i < 500; i++)
         {
             fs.Write(bytes, 0, bytes.Length);
         }
 
+        fs.Flush();
+        fs.Position = 0;
+        //StreamReader
+        StreamReader sr  = new StreamReader("analysis3.txt");
+        int utf;
+        int s;
+        Stopwatch.Start();
+        while ((utf = sr.Read()) != -1)
+        {
+            
+        }
         Stopwatch.Stop();
         Console.WriteLine(Stopwatch.ElapsedMilliseconds);
-        //StreamReader
         Stopwatch.Reset();
+        //Filestream
         Stopwatch.Start();
-        StreamReader sr  = new StreamReader(new FileStream("analysis.txt", FileMode.Create));
-        
-        
+
+        while ((s = fs.ReadByte()) != -1)
+        {
+        }
+        Stopwatch.Stop();
+        Console.WriteLine(Stopwatch.ElapsedMilliseconds);
     }
 }
