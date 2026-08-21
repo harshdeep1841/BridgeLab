@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppLearning1", "ConsoleAppLearning1.csproj", "{CFB83129-7DFA-4C43-B0DD-5448F3FAA7D6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioLibrary", "PortfolioLibrary\PortfolioLibrary.csproj", "{1BAE230B-39C0-4ABE-BCD1-83B85D552281}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject2", "TestProject2\TestProject2.csproj", "{6EA07CFB-A591-4AF8-A45E-75E2B2E54848}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{CFB83129-7DFA-4C43-B0DD-5448F3FAA7D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFB83129-7DFA-4C43-B0DD-5448F3FAA7D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFB83129-7DFA-4C43-B0DD-5448F3FAA7D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BAE230B-39C0-4ABE-BCD1-83B85D552281}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BAE230B-39C0-4ABE-BCD1-83B85D552281}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BAE230B-39C0-4ABE-BCD1-83B85D552281}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BAE230B-39C0-4ABE-BCD1-83B85D552281}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EA07CFB-A591-4AF8-A45E-75E2B2E54848}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EA07CFB-A591-4AF8-A45E-75E2B2E54848}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EA07CFB-A591-4AF8-A45E-75E2B2E54848}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EA07CFB-A591-4AF8-A45E-75E2B2E54848}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

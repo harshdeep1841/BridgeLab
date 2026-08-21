@@ -18,7 +18,6 @@ using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodExplore;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverloading;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverriding;
 using ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem;
-using ConsoleAppLearning1.Learning.Operator.Learning.PortfolioApp;
 using ConsoleAppLearning1.Learning.Operator.Learning.ProblemSolving;
 using ConsoleAppLearning1.Learning.Operator.Learning.RegixExplore;
 using ConsoleAppLearning1.Learning.Operator.Learning.SnakeLadderGame;

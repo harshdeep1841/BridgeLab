@@ -1,0 +1,11 @@
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/PortfolioLibrary/bin/Debug/net8.0/PortfolioLibrary.deps.json
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/PortfolioLibrary/bin/Debug/net8.0/PortfolioLibrary.dll
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/PortfolioLibrary/bin/Debug/net8.0/PortfolioLibrary.pdb
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/PortfolioLibrary/obj/Debug/net8.0/PortfolioLibrary.GeneratedMSBuildEditorConfig.editorconfig
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/PortfolioLibrary/obj/Debug/net8.0/PortfolioLibrary.AssemblyInfoInputs.cache
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/PortfolioLibrary/obj/Debug/net8.0/PortfolioLibrary.AssemblyInfo.cs
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/PortfolioLibrary/obj/Debug/net8.0/PortfolioLibrary.csproj.CoreCompileInputs.cache
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/PortfolioLibrary/obj/Debug/net8.0/PortfolioLibrary.dll
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/PortfolioLibrary/obj/Debug/net8.0/refint/PortfolioLibrary.dll
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/PortfolioLibrary/obj/Debug/net8.0/PortfolioLibrary.pdb
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/PortfolioLibrary/obj/Debug/net8.0/ref/PortfolioLibrary.dll
