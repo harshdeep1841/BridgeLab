@@ -36,6 +36,8 @@ using Student = ConsoleAppLearning1.Learning.Operator.Learning.Collections.Assig
 
 
 
+
+
 public class Node
 {
  public int Data {get; set;}
@@ -60,10 +62,7 @@ public class Node
 public class MainCs
 {
 
-
-
-
-
+ 
  public static void Main(string[] args)
  {
   // Arithmatic a = new Arithmatic();
@@ -923,8 +922,5 @@ fileAnalysis.Analaysis();
  }
  
 }
-
-
-    
 
 
