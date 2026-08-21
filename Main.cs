@@ -3,6 +3,8 @@ using System.Collections.Specialized;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Text.Json;
+using System.Text.RegularExpressions;
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections;
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections.AssignementDataStructures;
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections.AssignmentQueueStackHashMapHashing;
@@ -17,13 +19,13 @@ using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverloading;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverriding;
 using ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem;
 using ConsoleAppLearning1.Learning.Operator.Learning.PortfolioApp;
-using ConsoleAppLearning1.Learning.Operator.Learning.PortfolioApp.FinancialPortfolioRebalancer.Services;
 using ConsoleAppLearning1.Learning.Operator.Learning.ProblemSolving;
 using ConsoleAppLearning1.Learning.Operator.Learning.RegixExplore;
 using ConsoleAppLearning1.Learning.Operator.Learning.SnakeLadderGame;
 using ConsoleAppLearning1.Learning.Operator.Learning.SocialMedia;
 using ConsoleAppLearning1.Learning.Operator.Learning.Test;
-using FinancialPortfolioRebalancer.Services;
+using ConsoleAppLearning1.Learning.RuntimeAnalysis_BigO;
+using ConsoleAppLearning1.Learning.Streams;
 using Operators;
 using Animal = ConsoleAppLearning1.Learning.Operator.Learning.Test.Animal;
 using Dog = ConsoleAppLearning1.Learning.Operator.Learning.Test.Dog;
@@ -32,7 +34,7 @@ using Hospital = ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMan
 using Patient = ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem.Patient;
 using Student = ConsoleAppLearning1.Learning.Operator.Learning.Collections.AssignementDataStructures;
 
-namespace ConsoleAppLearning1.Learning.Operator;
+
 
 
 
@@ -59,10 +61,7 @@ public class Node
 
 public class MainCs
 {
- 
 
- 
- 
  
  public static void Main(string[] args)
  {
@@ -248,8 +247,8 @@ public class MainCs
   // }
 
 
-  
-  int[] ones = { 1, 0, 1, 1, 1, 0, 20, 40 };
+
+  // int[] ones = { 1, 0, 1, 1, 1, 0, 20, 40 };
   // int a = 5;
   // MethodExp.Change(nums , ref a) ;
   // Console.WriteLine(a);
@@ -604,7 +603,7 @@ public class MainCs
   //  Console.WriteLine(e);
   // }
   //
-  
+
   // assignmentCollection.rotateListByK(list , 2);
   // foreach (int e in list)
   // {
@@ -615,72 +614,72 @@ public class MainCs
   //
   // Console.WriteLine(assignmentCollection.AreSetsEqual(set1, set2));
   //
-  Instagram instagram = new Instagram();
-
-  // Users
-  User harsh =
-   new RegularUser(
-    1,
-    "harsh",
-    "harsh@gmail.com",
-    "1234"
-   );
-
-  User rahul =
-   new RegularUser(
-    2,
-    "rahul",
-    "rahul@gmail.com",
-    "5678"
-   );
-
-  User admin =
-   new AdminUser(
-    3,
-    "admin",
-    "admin@gmail.com",
-    "admin123"
-   );
-
-  instagram.RegisterUser(harsh);
-  instagram.RegisterUser(rahul);
-  instagram.RegisterUser(admin);
-
-  // Polymorphism
-  harsh.DisplayProfile();
-  admin.DisplayProfile();
-
-  // Media
-  Media image =
-   new Image("vacation.jpg");
-
-  // Create post
-  harsh.CreatePost(
-   "Amazing vacation!",
-   image
-  );
-
-  // We will retrieve the post
-  // from the Instagram system in a real application.
-
-  Console.WriteLine();
-
-  // Follow
-  harsh.Follow(rahul);
-
-  Console.WriteLine();
+  // Instagram instagram = new Instagram();
+  //
+  // // Users
+  // User harsh =
+  //  new RegularUser(
+  //   1,
+  //   "harsh",
+  //   "harsh@gmail.com",
+  //   "1234"
+  //  );
+  //
+  // User rahul =
+  //  new RegularUser(
+  //   2,
+  //   "rahul",
+  //   "rahul@gmail.com",
+  //   "5678"
+  //  );
+  //
+  // User admin =
+  //  new AdminUser(
+  //   3,
+  //   "admin",
+  //   "admin@gmail.com",
+  //   "admin123"
+  //  );
+  //
+  // instagram.RegisterUser(harsh);
+  // instagram.RegisterUser(rahul);
+  // instagram.RegisterUser(admin);
+  //
+  // // Polymorphism
+  // harsh.DisplayProfile();
+  // admin.DisplayProfile();
+  //
+  // // Media
+  // Media image =
+  //  new Image("vacation.jpg");
+  //
+  // // Create post
+  // harsh.CreatePost(
+  //  "Amazing vacation!",
+  //  image
+  // );
+  //
+  // // We will retrieve the post
+  // // from the Instagram system in a real application.
+  //
+  // Console.WriteLine();
+  //
+  // // Follow
+  // harsh.Follow(rahul);
+  //
+  // Console.WriteLine();
 
   // Media polymorphism
   // Media video =
   //  new Video("reel.mp4");
 
   // video.Display();
- 
-  
+
+
   // assignmentCollection.CollectionTest();
   // assignmentCollection.FreqElement(strs);
   //
-  IEnumerable<int> list1 = new List<int>(); //generic
+  //IEnumerable<int> list1 = new List<int>(); //generic
   // IEnumerable<int> list2 = new int[] {1 , 2, 3}; //generic
   // IEnumerable list3 = new ArrayList(); //non-generic
   // List<int> list4 = new List<int>();
@@ -688,8 +687,8 @@ public class MainCs
   // Test11 test = new Test11();
   // test.Test111(ref arr);
   // Console.WriteLine(string.Join(",", arr));
- 
-  
+
+
   // StudentLinkedList list = new StudentLinkedList();
   //
   // list.AddLast(new Student.Student(101, "Harsh", 22, 'A'));
@@ -758,24 +757,23 @@ public class MainCs
   // implementQueue.Add(4);
   // implementQueue.Add(5);
   // implementQueue.Display();
-  //
-  //
-  int[] nums = { 10, 20, -30, 60, 50 };
-  ISort sort1 = new BubbleSort();
-  ISort sort2 = new SelectionSort();
-  ISort sort3 = new InsertionSort();
-  MergeSort sort4 = new MergeSort();
+  // int[] nums = { 10, 20, -30, 60, 50 };
+  // ISort sort1 = new BubbleSort();
+  // ISort sort2 = new SelectionSort();
+  // ISort sort3 = new InsertionSort();
+  // MergeSort sort4 = new MergeSort();
   // sort1.Sort(nums);
- // sort2.Sort(nums);
- // sort3.Sort(nums);
- //sort4.Sort(nums , 0 , 4);
- 
- // Box<int> box = new Box<int>();
- // box.Value = 2;
- 
-//  Box box = new Box();
-//  box.Value = "string";
-//  int a = (int) box.Value;
+  // sort2.Sort(nums);
+  // sort3.Sort(nums);
+  //sort4.Sort(nums , 0 , 4);
+
+  // Box box = new Box();
+  // box.Value = 2;
+  //
+  // box.Value = "string";
+  // Console.WriteLine(box.Value);
+  //int a = (int) box.Value;
+  //Console.WriteLine(a);
 //
 //  IEnumerable<Dog> dogs = new List<Dog>();
 //  IEnumerable<Animal> animals = dogs;
@@ -787,8 +785,8 @@ public class MainCs
 // Factory<Learning.Generic.Test.Student> factory = new Factory<Learning.Generic.Test.Student>();
 // Learning.Generic.Test.Student student = factory.Create();
 //
- AssignmentCollection assignmentCollection  = new AssignmentCollection();
- HashSet<int> set = new HashSet<int>() { 3 , 1, 2, 2 ,3 ,4};
+  // AssignmentCollection assignmentCollection  = new AssignmentCollection();
+  // HashSet<int> set = new HashSet<int>() { 3 , 1, 2, 2 ,3 ,4};
 // Console.WriteLine(string.Join(", ", set));
 // int[] arr = new int[] { 1, 2, 3, 4, 5 };
 // Learning.Collections.Node head = assignmentCollection.ArrayToLL(arr);
@@ -819,49 +817,110 @@ public class MainCs
 
 
 
-  Portfolio<Holding> portfolio =
-   new Portfolio<Holding>();
+  // Portfolio<Holding> portfolio =
+  //  new Portfolio<Holding>();
+  //
+  // Holding apple =
+  // HoldingParser.Parse(
+  //"HOLDING:AAPL|QTY:150|COST:145.32|CURRENT:198.77|TARGET_WEIGHT:0.20");
+  //
+  // portfolio.Add(apple);
+  //
+  //
+  // Console.WriteLine(
+  //  "Total Portfolio Value: "
+  //  + portfolio.TotalValue);
+  //
+  // Console.WriteLine();
+  //
+  // var actions = portfolio.Rebalance();
+  //
+  // Console.WriteLine("Rebalancing Actions:");
+  //
+  // foreach (var action in actions)
+  // {
+  //  Console.WriteLine(
+  //   action.Action
+  //   + " "
+  //   + action.Ticker
+  //   + " | Current Weight: "
+  //   + action.CurrentWeight.ToString("P2")
+  //   + " | Target Weight: "
+  //   + action.TargetWeight.ToString("P2")
+  //   + " | Drift: "
+  //   + action.Drift.ToString("P2"));
+  // }
 
-  Holding apple =
-   HoldingParser.Parse(
-    "HOLDING:AAPL|QTY:150|COST:145.32|CURRENT:198.77|TARGET_WEIGHT:0.20");
 
-  portfolio.Add(apple);
+  // using FileStream fsRead =  new FileStream("/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/input.txt", FileMode.Open, FileAccess.Read);
+  // using FileStream fsWrite = new FileStream("/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/output.txt", FileMode.Create, FileAccess.Write);
+  //
+  //  Console.WriteLine(File.Exists("/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/input.txt"));
+  //  int byteData;
+  //  int cnt = 0;
+  //  while ((byteData = fsRead.ReadByte()) != -1)
+  //  {
+  //   fsWrite.WriteByte((byte)byteData);
+  //   cnt++;
+  //  }
+
+  // Console.WriteLine(cnt);
+
+  // using StreamReader streamReader = new StreamReader("input.txt");
+  // using StreamWriter streamWriter = new StreamWriter("output.txt");
+  //
+  // string str;
+  // while((str = streamReader.ReadLine()) != null)
+  // {
+  //  streamWriter.WriteLine(str);
+  // }
+  //
+  // ConsoleAppLearning1.Learning.Operator.Learning.Methods.Inheritance.Student student = new ConsoleAppLearning1.Learning.Operator.Learning.Methods.Inheritance.Student("Harsh" , 20 , 90);
+  // string json = JsonSerializer.Serialize(student);
+  //  Console.WriteLine(json);
+  //
+  // BufferedStreamDemo.CopyWithBuffer();
+
+  // ComparePerformance cp = new ComparePerformance();
+  // cp.Compare();
+  // List<string> sentences = new List<string>()
+  // {
+  //  "The quick brown fox jumps over the lazy dog.",
+  //  "C# is a powerful object-oriented programming language.",
+  //  "Learning to code opens up many career opportunities.",
+  //  "Always write clean and maintainable code."
+  // };
+  //  SearchSpecificWordListOfSentences searchSpecificWordList = new SearchSpecificWordListOfSentences();
+  // string searchStr =  searchSpecificWordList.SearchWord(sentences, "programming");
+  // Console.WriteLine(searchStr);
+
+  // RotationPointBS rotationPointBS = new RotationPointBS();
+  // int[] bsArray = new[] { 4, 5, 1, 2, 3 };
+  // rotationPointBS.RotatePointInSortedArray(bsArray);
+  // FirstAndLastOccuranceBS firstAndLastOccuranceBS = new FirstAndLastOccuranceBS();
+  // int [] bsArray1 = new[] { 1 ,2, 2 ,2 ,3 ,4 ,4 ,5 ,6};
+  // int firstOccurance = firstAndLastOccuranceBS.FirstOccurance(bsArray1 , 2);
+  // Console.WriteLine("The first occurance is: " + firstOccurance);
+  // int lastOccurance = firstAndLastOccuranceBS.LastOccurance(bsArray1 , 2);
+  // Console.WriteLine("The last occurance is: " + lastOccurance);
+  // string sentence = "this is is a test test";
+  // MatchCollection match = Regex.Matches(sentence, @"\\b(\\w+)\\s+\\1\\b");
+  // foreach (Match m in match)
+  // {
+  //  Console.WriteLine(m.Value);
+  // }
   
-  
-  Console.WriteLine(
-   "Total Portfolio Value: "
-   + portfolio.TotalValue);
-
-  Console.WriteLine();
-
-  var actions = portfolio.Rebalance();
-
-  Console.WriteLine("Rebalancing Actions:");
-
-  foreach (var action in actions)
-  {
-   Console.WriteLine(
-    action.Action
-    + " "
-    + action.Ticker
-    + " | Current Weight: "
-    + action.CurrentWeight.ToString("P2")
-    + " | Target Weight: "
-    + action.TargetWeight.ToString("P2")
-    + " | Drift: "
-    + action.Drift.ToString("P2"));
-  }
-
-
-
-}
-
-
+//   SearchTarget searchTarget = new SearchTarget();
+//   int[] searchArr = new int[1000000];
+//   searchArr[searchArr.Length - 1] = 1;
+//   searchTarget.searchTarget(searchArr , 1);
+//  
+// StringAnalysis stringAnalysis = new StringAnalysis();
+// stringAnalysis.Analysis();
+FileAnalysis fileAnalysis = new FileAnalysis();
+fileAnalysis.Analaysis();
+ }
  
 }
-
-
-    
 
 
