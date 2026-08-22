@@ -31,6 +31,21 @@ using System.IO;
                 {
                     streamWriter.Write((char)utf);
                 }
+
+                while ((bsRead.Read(buffer, 0, buffer.Length)) != -1)
+                {
+                    
+                }
+                char [] charBuffer  = new char[buffer.Length];
+                while (streamReader.Read(charBuffer, 0, buffer.Length) != -1)
+                {
+                    
+                }
+
+                while ((utf = streamReader.Read()) != -1)
+                {
+                    
+                }
                 // stopwatch.Stop();
                 // Console.WriteLine("Buffered Copy Completed.");
                 // Console.WriteLine("Execution Time: " + stopwatch.ElapsedMilliseconds + " ms");
