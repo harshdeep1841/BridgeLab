@@ -18,6 +18,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\ConsoleAppLearning1.csproj" />
       <ProjectReference Include="..\PortfolioLibrary\PortfolioLibrary.csproj" />
     </ItemGroup>
 

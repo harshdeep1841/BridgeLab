@@ -99,3 +99,8 @@
 /Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/TestProject2/obj/Debug/net8.0/TestProject2.pdb
 /Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/TestProject2/obj/Debug/net8.0/TestProject2.genruntimeconfig.cache
 /Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/TestProject2/obj/Debug/net8.0/ref/TestProject2.dll
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/TestProject2/bin/Debug/net8.0/ConsoleAppLearning1.deps.json
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/TestProject2/bin/Debug/net8.0/ConsoleAppLearning1.runtimeconfig.json
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/TestProject2/bin/Debug/net8.0/ConsoleAppLearning1
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/TestProject2/bin/Debug/net8.0/ConsoleAppLearning1.dll
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/TestProject2/bin/Debug/net8.0/ConsoleAppLearning1.pdb

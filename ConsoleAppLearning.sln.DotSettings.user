@@ -10,5 +10,13 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=efda226c_002Dd115_002D4c07_002Da58a_002Df54b3df7cff3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test1 #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;NUnit3x::6EA07CFB-A591-4AF8-A45E-75E2B2E54848::net8.0::TestProject2.PortfolioTests.Test1&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::6EA07CFB-A591-4AF8-A45E-75E2B2E54848::net8.0::TestProject2.BrowserManagerTest.Back_ShouldMoveToPreviousPage&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::6EA07CFB-A591-4AF8-A45E-75E2B2E54848::net8.0::TestProject2.BrowserManagerTest.OpenTab_ShouldCreateCurrentTab&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::6EA07CFB-A591-4AF8-A45E-75E2B2E54848::net8.0::TestProject2.BrowserManagerTest.SwitchToNextTab_ShouldMoveToNextTab&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::6EA07CFB-A591-4AF8-A45E-75E2B2E54848::net8.0::TestProject2.BrowserManagerTest.Visit_ShouldUpdateCurrentUrl&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::6EA07CFB-A591-4AF8-A45E-75E2B2E54848::net8.0::TestProject2.BrowserManagerTest.CloseOnlyTab_ShouldLeaveNoTabs&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::6EA07CFB-A591-4AF8-A45E-75E2B2E54848::net8.0::TestProject2.BrowserManagerTest.CloseCurrentTab_ShouldMoveToNextAvailableTab&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::6EA07CFB-A591-4AF8-A45E-75E2B2E54848::net8.0::TestProject2.BrowserManagerTest.Forward_ShouldMoveToNextPage&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::6EA07CFB-A591-4AF8-A45E-75E2B2E54848::net8.0::TestProject2.BrowserManagerTest.BookMark_Get&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

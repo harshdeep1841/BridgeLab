@@ -12,8 +12,4 @@
         <Compile Remove="PortfolioLibrary\**\*.cs" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Learning\Reflection&amp;Annotations\" />
-    </ItemGroup>
-
 </Project>
