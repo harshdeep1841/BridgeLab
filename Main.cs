@@ -9,6 +9,8 @@ using ConsoleAppLearning1.Learning.Operator.Learning.Collections;
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections.AssignementDataStructures;
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections.AssignmentQueueStackHashMapHashing;
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections.SortingAlgos;
+using ConsoleAppLearning1.Learning.Reflection_Annotations.Reflection;
+
 namespace ConsoleAppLearning1.Learning.Operator.Learning.Generic;
 using ConsoleAppLearning1.Learning.Operator.Learning.Generic.Test;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.DatetimeExplore;
@@ -924,7 +926,8 @@ public class MainCs
 // MathOp mathOperations = Delegates.Add(1, 2);
 // mathOperations += Delegates.Subtract(2 , 4);
 
-
+  ReflectionPractice reflectionPractice = new ReflectionPractice();
+  reflectionPractice.GetFieldsMethods();
 
 
  }

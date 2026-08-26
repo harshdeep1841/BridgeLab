@@ -35,7 +35,6 @@ class ReflectionClassInfo
             Console.WriteLine("Class not found.");
             return;
         }
-
         Console.WriteLine("\nMethods:");
         foreach (MethodInfo method in type.GetMethods(
                      BindingFlags.Public |
