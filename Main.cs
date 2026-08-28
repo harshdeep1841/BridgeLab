@@ -10,6 +10,7 @@ using ConsoleAppLearning1.Learning.Operator.Learning.Collections.AssignementData
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections.AssignmentQueueStackHashMapHashing;
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections.Implementations;
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections.SortingAlgos;
+using ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.LamdaExplore;
 using ConsoleAppLearning1.Learning.Reflection_Annotations.Reflection;
 using TestProject1;
 
@@ -931,9 +932,36 @@ public class MainCs
   // ReflectionPractice reflectionPractice = new ReflectionPractice();
   // reflectionPractice.GetFieldsMethods();
  
- TestAttributes attributes = new TestAttributes();
- attributes.Display();
- Console.WriteLine("Hello World!");
+ // TestAttributes attributes = new TestAttributes();
+ // attributes.Display();
+ // Console.WriteLine("Hello World!");
+ 
+ // LamdaSample layout = new LamdaSample();
+ // layout.Sample();
+
+ // List<StudentClassRoom> classRoom = new List<StudentClassRoom>();
+ // classRoom.Add(new StudentClassRoom("HARSH" , 80));
+ // classRoom.Add(new StudentClassRoom("DIVYAM" , 30));
+ // classRoom.Add(new StudentClassRoom("HARMAN" , 50));
+ // classRoom.Add(new StudentClassRoom("JASKARAN" , 60));
+ // classRoom.Add(new StudentClassRoom("KESHAV" , 65));
+ // classRoom.Add(new StudentClassRoom("HARSAINYAM" , 80));
+ //
+ // List<StudentClassRoom> studentPassed = classRoom.FindAll(student => student.HasPassed &&  student.Score > 0);
+ // StudentClassRoom? student = classRoom.Find(student => student.Name.StartsWith("h" , StringComparison.OrdinalIgnoreCase));
+ // Console.WriteLine(student?.Name);
+
+ // List<string> Names = new List<string>() { "Harsh", "Divyam", "Keshav", "Ram", "Rohan" };
+  // Names.Sort((student1, student2) => student1.Length.CompareTo(student2.Length));
+  // List<string> SortedNames = Names.OrderBy(name => name.Length).ToList();
+  // Console.WriteLine(string.Join(" , ", Names));
+  // Console.WriteLine(string.Join(" , ", SortedNames));
+ 
+  MultiCastDelegates delegates = new MultiCastDelegates();
+  Delegate1 delegate1  = delegates.Method1;
+  delegate1 +=  delegates.Method2;
+  delegate1 +=  delegates.Method3;
+  delegate1("Harsh");
  }
  
 }
