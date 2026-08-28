@@ -1,0 +1,14 @@
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/bin/Release/net8.0/ConsoleAppLearning1
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/bin/Release/net8.0/ConsoleAppLearning1.deps.json
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/bin/Release/net8.0/ConsoleAppLearning1.runtimeconfig.json
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/bin/Release/net8.0/ConsoleAppLearning1.dll
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/bin/Release/net8.0/ConsoleAppLearning1.pdb
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/obj/Release/net8.0/ConsoleAppLearning1.GeneratedMSBuildEditorConfig.editorconfig
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/obj/Release/net8.0/ConsoleAppLearning1.AssemblyInfoInputs.cache
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/obj/Release/net8.0/ConsoleAppLearning1.AssemblyInfo.cs
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/obj/Release/net8.0/ConsoleAppLearning1.csproj.CoreCompileInputs.cache
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/obj/Release/net8.0/ConsoleAppLearning1.dll
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/obj/Release/net8.0/refint/ConsoleAppLearning1.dll
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/obj/Release/net8.0/ConsoleAppLearning1.pdb
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/obj/Release/net8.0/ConsoleAppLearning1.genruntimeconfig.cache
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/obj/Release/net8.0/ref/ConsoleAppLearning1.dll

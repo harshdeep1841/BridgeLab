@@ -8,8 +8,12 @@ using System.Text.RegularExpressions;
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections;
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections.AssignementDataStructures;
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections.AssignmentQueueStackHashMapHashing;
+using ConsoleAppLearning1.Learning.Operator.Learning.Collections.Implementations;
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections.SortingAlgos;
-using ConsoleAppLearning1.Learning.Operator.Learning.Generic;
+using ConsoleAppLearning1.Learning.Reflection_Annotations.Reflection;
+using TestProject1;
+
+namespace ConsoleAppLearning1.Learning.Operator.Learning.Generic;
 using ConsoleAppLearning1.Learning.Operator.Learning.Generic.Test;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.DatetimeExplore;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.ExploreObject;
@@ -18,12 +22,12 @@ using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodExplore;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverloading;
 using ConsoleAppLearning1.Learning.Operator.Learning.Methods.MethodOverriding;
 using ConsoleAppLearning1.Learning.Operator.Learning.OOPS.HospitalMangementSystem;
-using ConsoleAppLearning1.Learning.Operator.Learning.PortfolioApp;
 using ConsoleAppLearning1.Learning.Operator.Learning.ProblemSolving;
 using ConsoleAppLearning1.Learning.Operator.Learning.RegixExplore;
 using ConsoleAppLearning1.Learning.Operator.Learning.SnakeLadderGame;
 using ConsoleAppLearning1.Learning.Operator.Learning.SocialMedia;
 using ConsoleAppLearning1.Learning.Operator.Learning.Test;
+using ConsoleAppLearning1.Learning.Reflection;
 using ConsoleAppLearning1.Learning.RuntimeAnalysis_BigO;
 using ConsoleAppLearning1.Learning.Streams;
 using Operators;
@@ -917,8 +921,19 @@ public class MainCs
 //  
 // StringAnalysis stringAnalysis = new StringAnalysis();
 // stringAnalysis.Analysis();
-FileAnalysis fileAnalysis = new FileAnalysis();
-fileAnalysis.Analaysis();
+// FileAnalysis fileAnalysis = new FileAnalysis();
+// fileAnalysis.Analaysis();
+
+
+// MathOp mathOperations = Delegates.Add(1, 2);
+// mathOperations += Delegates.Subtract(2 , 4);
+
+  // ReflectionPractice reflectionPractice = new ReflectionPractice();
+  // reflectionPractice.GetFieldsMethods();
+ 
+ TestAttributes attributes = new TestAttributes();
+ attributes.Display();
+ Console.WriteLine("Hello World!");
  }
  
 }

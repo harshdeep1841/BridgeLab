@@ -8,7 +8,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Learning\Streams\" />
+        <Compile Remove="TestProject2\**\*.cs" />
+        <Compile Remove="PortfolioLibrary\**\*.cs" />
     </ItemGroup>
 
 </Project>
