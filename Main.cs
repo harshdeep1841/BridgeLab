@@ -957,11 +957,14 @@ public class MainCs
   // Console.WriteLine(string.Join(" , ", Names));
   // Console.WriteLine(string.Join(" , ", SortedNames));
  
-  MultiCastDelegates delegates = new MultiCastDelegates();
-  Delegate1 delegate1  = delegates.Method1;
-  delegate1 +=  delegates.Method2;
-  delegate1 +=  delegates.Method3;
-  delegate1("Harsh");
+  // MultiCastDelegates delegates = new MultiCastDelegates();
+  // Delegate1 delegate1  = delegates.Method1;
+  // delegate1 +=  delegates.Method2;
+  // delegate1 +=  delegates.Method3;
+  // delegate1("Harsh");
+  
+  LinqType linq = new LinqType();
+  linq.LinqSql();
  }
  
 }
