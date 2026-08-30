@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "qcYTLuPNxjRPEzNrLn0ZcQrAWsAmD+0qR33oi83NAxb15v+CLHiBLfPLpDnfGlw7wAEKmy21jnBR9U4oiNIqZg==",
+  "dgSpecHash": "RM4e2ZmPEkZ9znmHrupWQf2zzhwpIqAwiCUwGIaU7llKNSTYFROdVzXGSLmGJPtjLUpEKRhpotclLAVGE5vj0Q==",
   "success": true,
   "projectFilePath": "/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/ConsoleAppLearning1.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/harshdeepsingh/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
+    "/Users/harshdeepsingh/.nuget/packages/newtonsoft.json.schema/4.0.1/newtonsoft.json.schema.4.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

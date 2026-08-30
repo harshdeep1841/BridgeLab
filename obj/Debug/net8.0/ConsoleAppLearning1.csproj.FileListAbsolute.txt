@@ -12,3 +12,7 @@
 /Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/obj/Debug/net8.0/ConsoleAppLearning1.pdb
 /Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/obj/Debug/net8.0/ConsoleAppLearning1.genruntimeconfig.cache
 /Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/obj/Debug/net8.0/ref/ConsoleAppLearning1.dll
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/obj/Debug/net8.0/ConsoleAppLearning1.csproj.AssemblyReference.cache
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/bin/Debug/net8.0/Newtonsoft.Json.dll
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/bin/Debug/net8.0/Newtonsoft.Json.Schema.dll
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/obj/Debug/net8.0/ConsoleAppLearning1.csproj.CopyComplete

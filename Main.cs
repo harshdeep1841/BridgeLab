@@ -10,6 +10,8 @@ using ConsoleAppLearning1.Learning.Operator.Learning.Collections.AssignementData
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections.AssignmentQueueStackHashMapHashing;
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections.Implementations;
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections.SortingAlgos;
+using ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.Closures;
+using ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.JsonDataHandling;
 using ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.LamdaExplore;
 using ConsoleAppLearning1.Learning.Reflection_Annotations.Reflection;
 using TestProject1;
@@ -963,8 +965,66 @@ public class MainCs
   // delegate1 +=  delegates.Method3;
   // delegate1("Harsh");
   
-  LinqType linq = new LinqType();
-  linq.LinqSql();
+  // LinqType linq = new LinqType();
+  // linq.LinqSql();
+
+  // Func<int> counterA = () =>
+  // {
+  //  int total = 0;
+  //  return total += 10;
+  // };
+  //
+  // Console.WriteLine(counterA());
+  // Console.WriteLine(counterA());
+  //
+  
+  // ClosuresSample sample =  new ClosuresSample();
+  // Func<int> ctr1 = sample.CreatingRunningCounter();
+  // Console.WriteLine(ctr1());
+  // Console.WriteLine(ctr1());
+
+  // List<Action<int>> actions = new List<Action<int>>();
+  // for (int i = 0; i < 5; i++)
+  // {
+  //  actions.Add((a) => {Console.WriteLine(i);});
+  // }
+  // foreach (Action<int> action in actions)
+  // {
+  //  action(1);
+  // }
+  
+  // List<Action> tasks = new List<Action>();
+  // for (int i = 1; i <= 3; i++)
+  // {
+  //  int currentId = i; 
+  //  tasks.Add(() => Console.WriteLine($"Processing Task #{currentId}"));
+  // }
+  // foreach (var t in tasks) t();
+  MultiCastDelegates multicastDelegate = new MultiCastDelegates();
+  // Delegate2 delegate2 = multicastDelegate.Add;
+  // delegate2 += multicastDelegate.substract;
+  // delegate2 += multicastDelegate.Multiply;
+  // Delegate1 delegate3 = multicastDelegate.Method1;
+  Delegate1 delegate3 = multicastDelegate.Method1;
+  delegate3 += multicastDelegate.Method2;
+  // delegate3 -= multicastDelegate.Method1;
+  delegate3("Harsh");
+  // Console.WriteLine(delegate2(1, 2));
+  
+  
+  
+  
+  JsonPractice service = new JsonPractice();
+
+  service.Question1();
+  service.Question2();
+  service.Question3();
+  service.Question4();
+  service.Question5();
+  service.Question6();
+  service.Question7();
+
+  Console.ReadKey();
  }
  
 }
