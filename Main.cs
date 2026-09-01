@@ -13,6 +13,7 @@ using ConsoleAppLearning1.Learning.Operator.Learning.Collections.SortingAlgos;
 using ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.Closures;
 using ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.JsonDataHandling;
 using ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.LamdaExplore;
+using ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.MultiGatewayProcessing;
 using ConsoleAppLearning1.Learning.Reflection_Annotations.Reflection;
 using TestProject1;
 
@@ -1025,8 +1026,44 @@ public class MainCs
   service.Question7();
 
   Console.ReadKey();
- }
- 
+  
+     PaymentProcessor processor = new PaymentProcessor();
+
+     processor.AddRule(RuleFactory.CreateAmountLimitRule(50000));
+     processor.AddRule(RuleFactory.CreateCurrencyRule(
+      new[] { "USD", "EUR", "INR", "GBP", "JPY" }));
+
+     processor.TransactionSettled += transaction =>
+     {
+      Console.WriteLine(
+       $"Transaction {transaction.TransactionId} settled.");
+     };
+
+     processor.TransactionFlaggedForReview += transaction =>
+     {
+      Console.WriteLine(
+       $"Transaction {transaction.TransactionId} flagged for review.");
+     };
+
+     processor.Logger += transaction =>
+     {
+      Console.WriteLine(
+       $"Logged Transaction: {transaction.TransactionId}");
+     };
+
+     List<Transaction> transactions = new List<Transaction>()
+     {
+      new Transaction(1,101,20000,"USD","Retail"),
+      new Transaction(2,102,70000,"USD","Electronics"),
+      new Transaction(3,103,15000,"INR","Retail"),
+      new Transaction(4,104,1000,"AUD","Travel")
+     };
+
+     processor.ProcessBatch(transactions);
+
+     Console.WriteLine("\nProcessing Completed.");
+    }
+   
 }
 
 

@@ -104,3 +104,4 @@
 /Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/TestProject2/bin/Debug/net8.0/ConsoleAppLearning1
 /Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/TestProject2/bin/Debug/net8.0/ConsoleAppLearning1.dll
 /Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/TestProject2/bin/Debug/net8.0/ConsoleAppLearning1.pdb
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/TestProject2/bin/Debug/net8.0/Newtonsoft.Json.Schema.dll

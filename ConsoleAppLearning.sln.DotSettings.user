@@ -19,5 +19,7 @@
     &lt;TestId&gt;NUnit3x::6EA07CFB-A591-4AF8-A45E-75E2B2E54848::net8.0::TestProject2.BrowserManagerTest.CloseCurrentTab_ShouldMoveToNextAvailableTab&lt;/TestId&gt;
     &lt;TestId&gt;NUnit3x::6EA07CFB-A591-4AF8-A45E-75E2B2E54848::net8.0::TestProject2.BrowserManagerTest.Forward_ShouldMoveToNextPage&lt;/TestId&gt;
     &lt;TestId&gt;NUnit3x::6EA07CFB-A591-4AF8-A45E-75E2B2E54848::net8.0::TestProject2.BrowserManagerTest.BookMark_Get&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::6EA07CFB-A591-4AF8-A45E-75E2B2E54848::net8.0::TestProject2.PaymentProcessorTests.CurrencyRuleFails&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::6EA07CFB-A591-4AF8-A45E-75E2B2E54848::net8.0::TestProject2.PaymentProcessorTests.LoggerTest&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
