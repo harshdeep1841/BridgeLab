@@ -62,10 +62,6 @@ using System.Linq;
             {
                 Console.WriteLine($"{e.Message}");
             }
-            catch (OverflowException e)
-            {
-                Console.WriteLine($"{e.Message}");
-            }
             catch (Exception e)
             {
                 Console.WriteLine($"{e.Message}");

@@ -1,5 +1,6 @@
 namespace ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.MultiGatewayProcessing;
 
+    [RiskTier("Low")]
     public class Merchant
     {
         public int MerchantId { get; set; }

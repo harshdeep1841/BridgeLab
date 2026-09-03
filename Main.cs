@@ -11,6 +11,7 @@ using ConsoleAppLearning1.Learning.Operator.Learning.Collections.AssignmentQueue
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections.Implementations;
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections.SortingAlgos;
 using ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.Closures;
+using ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.CSVDataHandling;
 using ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.JsonDataHandling;
 using ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.LamdaExplore;
 using ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.MultiGatewayProcessing;
@@ -1015,54 +1016,76 @@ public class MainCs
   
   
   
-  JsonPractice service = new JsonPractice();
-
-  service.Question1();
-  service.Question2();
-  service.Question3();
-  service.Question4();
-  service.Question5();
-  service.Question6();
-  service.Question7();
-
-  Console.ReadKey();
+  // JsonPractice service = new JsonPractice();
+  //
+  // service.Question1();
+  // service.Question2();
+  // service.Question3();
+  // service.Question4();
+  // service.Question5();
+  // service.Question6();
+  // service.Question7();
+  //
+  // Console.ReadKey();
+  //
+  //    PaymentProcessor processor = new PaymentProcessor();
+  //
+  //    processor.AddRule(RuleFactory.CreateAmountLimitRule(50000));
+  //    processor.AddRule(RuleFactory.CreateCurrencyRule(
+  //     new[] { "USD", "EUR", "INR", "GBP", "JPY" }));
+  //
+  //    processor.TransactionSettled += transaction =>
+  //    {
+  //     Console.WriteLine(
+  //      $"Transaction {transaction.TransactionId} settled.");
+  //    };
+  //
+  //    processor.TransactionFlaggedForReview += transaction =>
+  //    {
+  //     Console.WriteLine(
+  //      $"Transaction {transaction.TransactionId} flagged for review.");
+  //    };
+  //
+  //    processor.Logger += transaction =>
+  //    {
+  //     Console.WriteLine(
+  //      $"Logged Transaction: {transaction.TransactionId}");
+  //    };
+  //
+  //    List<Transaction> transactions = new List<Transaction>()
+  //    {
+  //     new Transaction(1,101,20000,"USD","Retail"),
+  //     new Transaction(2,102,70000,"USD","Electronics"),
+  //     new Transaction(3,103,15000,"INR","Retail"),
+  //     new Transaction(4,104,1000,"AUD","Travel")
+  //    };
+  //
+  //    processor.ProcessBatch(transactions);
+  //
+  //    Console.WriteLine("\nProcessing Completed.");
   
-     PaymentProcessor processor = new PaymentProcessor();
-
-     processor.AddRule(RuleFactory.CreateAmountLimitRule(50000));
-     processor.AddRule(RuleFactory.CreateCurrencyRule(
-      new[] { "USD", "EUR", "INR", "GBP", "JPY" }));
-
-     processor.TransactionSettled += transaction =>
-     {
-      Console.WriteLine(
-       $"Transaction {transaction.TransactionId} settled.");
-     };
-
-     processor.TransactionFlaggedForReview += transaction =>
-     {
-      Console.WriteLine(
-       $"Transaction {transaction.TransactionId} flagged for review.");
-     };
-
-     processor.Logger += transaction =>
-     {
-      Console.WriteLine(
-       $"Logged Transaction: {transaction.TransactionId}");
-     };
-
-     List<Transaction> transactions = new List<Transaction>()
-     {
-      new Transaction(1,101,20000,"USD","Retail"),
-      new Transaction(2,102,70000,"USD","Electronics"),
-      new Transaction(3,103,15000,"INR","Retail"),
-      new Transaction(4,104,1000,"AUD","Travel")
-     };
-
-     processor.ProcessBatch(transactions);
-
-     Console.WriteLine("\nProcessing Completed.");
-    }
+  // Publisher publisher = new Publisher();
+  // Subscriber subscriber = new Subscriber(publisher);
+  //  subscriber = null;
+  //  publisher.Raise();
+  
+  // CsvSample sample = new CsvSample();
+  // sample.ReadCsvFile();
+  // sample.ReadCsvUsingCsvHelper();
+  // sample.WriteCSVUsingCsvHelper();
+  
+  JsonSample jsonSample = new JsonSample();
+  // List<string> subjects = new List<string>();
+  // subjects.Add("Math");
+  // subjects.Add("English");
+  // subjects.Add("Science");
+  // StudentDH student1 = new StudentDH() {Age = 20, Name = "Harsh",Subjects = subjects };
+  // StudentDH student2 = new StudentDH() {Age = 21, Name = "Keshav",Subjects = subjects };
+  // jsonSample.Serialize(student1);
+  // jsonSample.Serialize(student2);
+  // jsonSample.ReadJsonData();
+  jsonSample.WriteJsonData();
+ }
    
 }
 

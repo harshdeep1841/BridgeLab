@@ -16,3 +16,4 @@
 /Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/bin/Debug/net8.0/Newtonsoft.Json.dll
 /Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/bin/Debug/net8.0/Newtonsoft.Json.Schema.dll
 /Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/obj/Debug/net8.0/ConsoleAppLearning1.csproj.CopyComplete
+/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/bin/Debug/net8.0/CsvHelper.dll

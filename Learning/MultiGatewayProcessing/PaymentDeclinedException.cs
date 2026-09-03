@@ -1,7 +1,7 @@
 namespace ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.MultiGatewayProcessing;
 
 using System;
-
+ 
     public class PaymentDeclinedException : Exception
     {
         public int TransactionId { get; }

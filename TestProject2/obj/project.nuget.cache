@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "T/gtMWYFfaQ=",
+  "dgSpecHash": "S7P/EBNCQWI=",
   "success": true,
   "projectFilePath": "/Users/harshdeepsingh/RiderProjects/ConsoleAppLearning/TestProject2/TestProject2.csproj",
   "expectedPackageFiles": [
     "/Users/harshdeepsingh/.nuget/packages/coverlet.collector/6.0.0/coverlet.collector.6.0.0.nupkg.sha512",
+    "/Users/harshdeepsingh/.nuget/packages/csvhelper/33.1.0/csvhelper.33.1.0.nupkg.sha512",
     "/Users/harshdeepsingh/.nuget/packages/microsoft.codecoverage/17.6.0/microsoft.codecoverage.17.6.0.nupkg.sha512",
     "/Users/harshdeepsingh/.nuget/packages/microsoft.net.test.sdk/17.6.0/microsoft.net.test.sdk.17.6.0.nupkg.sha512",
     "/Users/harshdeepsingh/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",

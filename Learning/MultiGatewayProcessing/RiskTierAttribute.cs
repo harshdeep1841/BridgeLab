@@ -2,7 +2,7 @@ namespace ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.MultiG
 
 using System;
 
-    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
+    [AttributeUsage(AttributeTargets.Class )]
     public class RiskTierAttribute : Attribute
     {
         public string Tier { get; }
