@@ -12,4 +12,10 @@
         <Compile Remove="PortfolioLibrary\**\*.cs" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="CsvHelper" Version="33.1.0" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+      <PackageReference Include="Newtonsoft.Json.Schema" Version="4.0.1" />
+    </ItemGroup>
+
 </Project>

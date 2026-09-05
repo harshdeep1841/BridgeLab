@@ -5,6 +5,7 @@
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AIComparable_00601_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2026_002E1_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003Fd4a2e25913fb4d4ba329787ad0b92580c65200_003Ff0_003Fdeae64d9_003FIComparable_00601_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AMatch_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2026_002E1_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003F3c574f93f8484f5999ee2961fa98cd9810b000_003Fb6_003F985320d5_003FMatch_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AMath_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2026_002E1_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003F92082bbffd544823a064b53d7672598dca528_003Fed_003F17e07949_003FMath_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	
 	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;
   &lt;Assembly Path="/Users/harshdeepsingh/.dotnet/packs/Microsoft.NETCore.App.Ref/8.0.29/ref/net8.0/System.Transactions.Local.dll" /&gt;
 &lt;/AssemblyExplorer&gt;</s:String>
@@ -19,5 +20,8 @@
     &lt;TestId&gt;NUnit3x::6EA07CFB-A591-4AF8-A45E-75E2B2E54848::net8.0::TestProject2.BrowserManagerTest.CloseCurrentTab_ShouldMoveToNextAvailableTab&lt;/TestId&gt;
     &lt;TestId&gt;NUnit3x::6EA07CFB-A591-4AF8-A45E-75E2B2E54848::net8.0::TestProject2.BrowserManagerTest.Forward_ShouldMoveToNextPage&lt;/TestId&gt;
     &lt;TestId&gt;NUnit3x::6EA07CFB-A591-4AF8-A45E-75E2B2E54848::net8.0::TestProject2.BrowserManagerTest.BookMark_Get&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::6EA07CFB-A591-4AF8-A45E-75E2B2E54848::net8.0::TestProject2.PaymentProcessorTests.CurrencyRuleFails&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::6EA07CFB-A591-4AF8-A45E-75E2B2E54848::net8.0::TestProject2.PaymentProcessorTests.LoggerTest&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::6EA07CFB-A591-4AF8-A45E-75E2B2E54848::net8.0::TestProject2.PaymentProcessorTests.UnsupportedCurrencyRule&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

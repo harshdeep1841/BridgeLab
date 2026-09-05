@@ -1,0 +1,42 @@
+CREATE DATABASE college_db;
+
+CREATE SCHEMA academics;
+CREATE SCHEMA admin;
+
+SELECT schema_name
+FROM information_schema.schemata;
+
+CREATE TABLE academics.students
+(
+    student_id SERIAL PRIMARY KEY,
+    full_name VARCHAR(100) NOT NULL,
+    dob DATE,
+    email TEXT,
+    cgpa NUMERIC(3,2),
+    is_active BOOLEAN DEFAULT TRUE,
+    skills TEXT[],
+    profile JSONB,
+    enrolled_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+SELECT column_name,
+       data_type
+FROM information_schema.columns
+WHERE table_schema='academics'
+AND table_name='students';
+
+CREATE DATABASE library_db;
+
+CREATE SCHEMA catalog;
+
+CREATE TABLE catalog.books
+(
+    book_id SERIAL PRIMARY KEY,
+    title VARCHAR(200) NOT NULL,
+    author VARCHAR(100) NOT NULL,
+    isbn VARCHAR(20) UNIQUE,
+    price NUMERIC(10,2),
+    published_date DATE,
+    is_available BOOLEAN DEFAULT TRUE,
+    extra_info JSONB
+);

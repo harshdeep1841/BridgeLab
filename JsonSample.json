@@ -1,0 +1,29 @@
+[{
+  "id": 102,
+  "name": "Bob",
+  "age": 30,
+  "email": "bob@example.com",
+  "skills": [
+    "Python",
+    "Django",
+    "AWS"
+  ],
+  "address": {
+    "city": "Los Angeles",
+    "zip": "90001"
+  }
+},{
+  "id": 102,
+  "name": "Harsh",
+  "age": 30,
+  "email": "bob@example.com",
+  "skills": [
+    "Python",
+    "Django",
+    "AWS"
+  ],
+  "address": {
+    "city": "Los Angeles",
+    "zip": "90001"
+  }
+}]

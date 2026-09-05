@@ -1,0 +1,10 @@
+*****Events and delegate*****
+1) while using multicast delegate we are able to do += or -= but 
+also = which is able to override that delagate variable and also 
+= null removes all methods from delegate which should not happen
+that why we use event that make sure = should not be allowed and
+throw Compile time error. 
+2)in delegate we can also do Invoke 
+in some different class but that should not be done as what 
+if that event doesnt happens and still u invoke that then all
+subsribers will get notification but fact is that nothing happens.

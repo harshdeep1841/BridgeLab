@@ -10,6 +10,12 @@ using ConsoleAppLearning1.Learning.Operator.Learning.Collections.AssignementData
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections.AssignmentQueueStackHashMapHashing;
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections.Implementations;
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections.SortingAlgos;
+using ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.Closures;
+using ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.CSVDataHandling;
+using ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.JsonDataHandling;
+using ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.LamdaExplore;
+using ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.Multi_Threading;
+using ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.MultiGatewayProcessing;
 using ConsoleAppLearning1.Learning.Reflection_Annotations.Reflection;
 using TestProject1;
 
@@ -931,11 +937,162 @@ public class MainCs
   // ReflectionPractice reflectionPractice = new ReflectionPractice();
   // reflectionPractice.GetFieldsMethods();
  
- TestAttributes attributes = new TestAttributes();
- attributes.Display();
- Console.WriteLine("Hello World!");
- }
+ // TestAttributes attributes = new TestAttributes();
+ // attributes.Display();
+ // Console.WriteLine("Hello World!");
  
+ // LamdaSample layout = new LamdaSample();
+ // layout.Sample();
+
+ // List<StudentClassRoom> classRoom = new List<StudentClassRoom>();
+ // classRoom.Add(new StudentClassRoom("HARSH" , 80));
+ // classRoom.Add(new StudentClassRoom("DIVYAM" , 30));
+ // classRoom.Add(new StudentClassRoom("HARMAN" , 50));
+ // classRoom.Add(new StudentClassRoom("JASKARAN" , 60));
+ // classRoom.Add(new StudentClassRoom("KESHAV" , 65));
+ // classRoom.Add(new StudentClassRoom("HARSAINYAM" , 80));
+ //
+ // List<StudentClassRoom> studentPassed = classRoom.FindAll(student => student.HasPassed &&  student.Score > 0);
+ // StudentClassRoom? student = classRoom.Find(student => student.Name.StartsWith("h" , StringComparison.OrdinalIgnoreCase));
+ // Console.WriteLine(student?.Name);
+
+ // List<string> Names = new List<string>() { "Harsh", "Divyam", "Keshav", "Ram", "Rohan" };
+  // Names.Sort((student1, student2) => student1.Length.CompareTo(student2.Length));
+  // List<string> SortedNames = Names.OrderBy(name => name.Length).ToList();
+  // Console.WriteLine(string.Join(" , ", Names));
+  // Console.WriteLine(string.Join(" , ", SortedNames));
+ 
+  // MultiCastDelegates delegates = new MultiCastDelegates();
+  // Delegate1 delegate1  = delegates.Method1;
+  // delegate1 +=  delegates.Method2;
+  // delegate1 +=  delegates.Method3;
+  // delegate1("Harsh");
+  
+  // LinqType linq = new LinqType();
+  // linq.LinqSql();
+
+  // Func<int> counterA = () =>
+  // {
+  //  int total = 0;
+  //  return total += 10;
+  // };
+  //
+  // Console.WriteLine(counterA());
+  // Console.WriteLine(counterA());
+  //
+  
+  // ClosuresSample sample =  new ClosuresSample();
+  // Func<int> ctr1 = sample.CreatingRunningCounter();
+  // Console.WriteLine(ctr1());
+  // Console.WriteLine(ctr1());
+
+  // List<Action<int>> actions = new List<Action<int>>();
+  // for (int i = 0; i < 5; i++)
+  // {
+  //  actions.Add((a) => {Console.WriteLine(i);});
+  // }
+  // foreach (Action<int> action in actions)
+  // {
+  //  action(1);
+  // }
+  
+  // List<Action> tasks = new List<Action>();
+  // for (int i = 1; i <= 3; i++)
+  // {
+  //  int currentId = i; 
+  //  tasks.Add(() => Console.WriteLine($"Processing Task #{currentId}"));
+  // }
+  // foreach (var t in tasks) t();
+  MultiCastDelegates multicastDelegate = new MultiCastDelegates();
+  // Delegate2 delegate2 = multicastDelegate.Add;
+  // delegate2 += multicastDelegate.substract;
+  // delegate2 += multicastDelegate.Multiply;
+  // Delegate1 delegate3 = multicastDelegate.Method1;
+  Delegate1 delegate3 = multicastDelegate.Method1;
+  delegate3 += multicastDelegate.Method2;
+  // delegate3 -= multicastDelegate.Method1;
+  delegate3("Harsh");
+  // Console.WriteLine(delegate2(1, 2));
+  
+  
+  
+  
+  // JsonPractice service = new JsonPractice();
+  //
+  // service.Question1();
+  // service.Question2();
+  // service.Question3();
+  // service.Question4();
+  // service.Question5();
+  // service.Question6();
+  // service.Question7();
+  //
+  // Console.ReadKey();
+  //
+  //    PaymentProcessor processor = new PaymentProcessor();
+  //
+  //    processor.AddRule(RuleFactory.CreateAmountLimitRule(50000));
+  //    processor.AddRule(RuleFactory.CreateCurrencyRule(
+  //     new[] { "USD", "EUR", "INR", "GBP", "JPY" }));
+  //
+  //    processor.TransactionSettled += transaction =>
+  //    {
+  //     Console.WriteLine(
+  //      $"Transaction {transaction.TransactionId} settled.");
+  //    };
+  //
+  //    processor.TransactionFlaggedForReview += transaction =>
+  //    {
+  //     Console.WriteLine(
+  //      $"Transaction {transaction.TransactionId} flagged for review.");
+  //    };
+  //
+  //    processor.Logger += transaction =>
+  //    {
+  //     Console.WriteLine(
+  //      $"Logged Transaction: {transaction.TransactionId}");
+  //    };
+  //
+  //    List<Transaction> transactions = new List<Transaction>()
+  //    {
+  //     new Transaction(1,101,20000,"USD","Retail"),
+  //     new Transaction(2,102,70000,"USD","Electronics"),
+  //     new Transaction(3,103,15000,"INR","Retail"),
+  //     new Transaction(4,104,1000,"AUD","Travel")
+  //    };
+  //
+  //    processor.ProcessBatch(transactions);
+  //
+  //    Console.WriteLine("\nProcessing Completed.");
+  
+  // Publisher publisher = new Publisher();
+  // Subscriber subscriber = new Subscriber(publisher);
+  //  subscriber = null;
+  //  publisher.Raise();
+  
+  CsvSample sample = new CsvSample();
+  // sample.ReadCsvFile();
+  // sample.ReadCsvUsingCsvHelper();
+  // sample.WriteCSVUsingCsvHelper();
+  sample.SortCsvUsingCsvHelper();
+  
+  JsonSample jsonSample = new JsonSample();
+  // List<string> subjects = new List<string>();
+  // subjects.Add("Math");
+  // subjects.Add("English");
+  // subjects.Add("Science");
+  // StudentDH student1 = new StudentDH() {Age = 20, Name = "Harsh",Subjects = subjects };
+  // StudentDH student2 = new StudentDH() {Age = 21, Name = "Keshav",Subjects = subjects };
+  // jsonSample.Serialize(student1);
+  // jsonSample.Serialize(student2);
+  // jsonSample.ReadJsonData();
+  // jsonSample.WriteJsonData();
+  // jsonSample.ParseJsonData();
+ // Console.WriteLine(jsonSample.ValidateJson()); 
+  SingleThreadCreation.MainThread();
+ 
+ }
+   
 }
 
 
