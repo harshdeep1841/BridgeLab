@@ -44,4 +44,24 @@ public class CsvSample
         
         csv.WriteRecords(employees);
     }
+
+    public void SortCsvUsingCsvHelper()
+    {
+        List<EmployeeCsv> sortedRecords;
+        {
+            using StreamReader sr = new StreamReader("csv-sample-1.csv");
+            using var csvReader = new CsvReader(sr, CultureInfo.InvariantCulture);
+            var records = csvReader.GetRecords<EmployeeCsv>();
+            sortedRecords = records.OrderByDescending(employee => employee.Salary).ToList();
+            
+        }
+        foreach (var record in sortedRecords)
+        {
+                Console.WriteLine(record.Name);
+        }
+        
+        using  StreamWriter sw = new StreamWriter("csv-sample-1.csv");
+      using  var csvWriter = new CsvWriter(sw , CultureInfo.InvariantCulture);
+      csvWriter.WriteRecords(sortedRecords);
+    }
 }

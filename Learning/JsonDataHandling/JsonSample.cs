@@ -1,4 +1,6 @@
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Schema;
 
 namespace ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.JsonDataHandling;
 
@@ -62,4 +64,26 @@ public class JsonSample
         File.AppendAllText("JsonSample.json", jsonString );
 
     }
+    
+    public void ParseJsonData()
+    {
+     string jsonstring = File.ReadAllText("JsonSample.json");
+     JArray jArray = JArray.Parse(jsonstring);
+     //JObject jsonObject = JObject.Parse(jsonstring);
+     Console.WriteLine(jArray[1]["name"]);
+    }
+
+    public bool ValidateJson()
+    {
+        string schema = File.ReadAllText("schema.json");
+        JSchema jSchema = JSchema.Parse(schema);
+        string jsonSample = File.ReadAllText("JsonSample.json");
+        JArray jArray = JArray.Parse(jsonSample);
+        if (jArray[0].IsValid(jSchema))
+        {
+            return true;
+        }
+        return false;
+    }
+    
 }
