@@ -1,0 +1,294 @@
+.
+├── BrowserManager
+├── BookMarkManager.cs
+.├── Browser.cs
+.├── BrowserTab.cs
+.├── History
+..├── BrowserHistory.cs
+..└── HistoryNode.cs
+.├── Models
+..├── Bookmark.cs
+..└── LoadRequest.cs
+.└── Tabs
+.    ├── TabManager.cs
+.    └── TabNode.cs
+├── Closures
+.├── ClosuresSample.cs
+.└── Publisher.cs
+├── Collections
+.├── AssignementDataStructures
+..├── CircularLinkedList.cs
+..├── Movie.cs
+..├── MovieLinkedList.cs
+..├── Student.cs
+..├── StudentLinkedList.cs
+..└── Task.cs
+.├── AssignmentCollection.cs
+.├── AssignmentQueueStackHashMapHashing
+..└── ImplementQueue.cs
+.├── Implementations
+..├── QueueUsingStack.cs
+..└── StackUsingQueue.cs
+.└── SortingAlgos
+.    ├── BubbleSort.cs
+.    ├── CountSort.cs
+.    ├── HeapSort.cs
+.    ├── InsertionSort.cs
+.    ├── ISort.cs
+.    ├── MergeSort.cs
+.    ├── QuickSort.cs
+.    └── SelectionSort.cs
+├── CSVDataHandling
+.├── ConvertToCsv.cs
+.├── CsvSample.cs
+.├── Employee.cs
+.├── EmployeeCsv.cs
+.├── employees
+.├── ReadCsv.cs
+.├── Student.cs
+.└── students.csv
+├── DataAnnotationsUsage
+.├── CustomMinAgeAttribute.cs
+.└── User.cs
+├── ExceptionHandling
+.├── AgeValidation.cs
+.├── DivisionAndInputException.cs
+.├── FileException.cs
+.├── FileHandlingUsing.cs
+.└── MultipleExceptions.cs
+├── FileBasedStudentRecordBackupSystem
+.├── OperationsOnRecords.cs
+.└── StudentRecord.cs
+├── GC
+.└── TicketBooth.cs
+├── Generic
+.├── AssignmentCourse.cs
+.├── BookCategory.cs
+.├── ClothingCategory.cs
+.├── Course.cs
+.├── CourseType.cs
+.├── Delegates.cs
+.├── Electronics.cs
+.├── ExamCourse.cs
+.├── Furniture.cs
+.├── Groceries.cs
+.├── Product.cs
+.├── Storage.cs
+.├── Test
+..├── Box.cs
+..├── Customer.cs
+..├── Employee.cs
+..├── Entity.cs
+..├── Factory.cs
+..├── Repository.cs
+..└── Student.cs
+.└── WarehouseItem.cs
+├── JsonDataHandling
+.├── CarDH.cs
+.├── EmployeeDH.cs
+.├── IplAndCensorshipAnalyzer.cs
+.├── JsonPractice.cs
+.├── JsonSample.cs
+.├── Match.cs
+.├── Notes
+.├── PersonDH.cs
+.├── StudentDH.cs
+.├── StudentValidationDH.cs
+.└── UserDH.cs
+├── LamdaExplore
+.├── ApplicationLogger.cs
+.├── LamdaSample.cs
+.├── LinqType.cs
+.├── MultiCastDelegates.cs
+.├── Notes
+.└── StudentClassRoom.cs
+├── Methods
+.├── DatetimeExplore
+..├── DateTimeExp.cs
+..└── Notes
+.├── ExploreObject
+..├── ExploreObject.cs
+..└── Notes
+.├── Inheritance
+..├── DeliveredOrder.cs
+..├── Developer.cs
+..├── Employee.cs
+..├── Intern.cs
+..├── Manager.cs
+..├── Order.cs
+..├── Person.cs
+..├── ShippedOrder.cs
+..├── Staff.cs
+..├── Student.cs
+..└── Teacher.cs
+.├── MethodExplore
+..├── Assignments.cs
+..└── MethodExp.cs
+.├── MethodOverloading
+..└── Calculator.cs
+.├── MethodOverriding
+..├── Animal.cs
+..└── Dog.cs
+.└── Notes
+├── Multi-Threading
+.└── SingleThreadCreation.cs
+├── MultiGatewayProcessing
+.├── ConnectionHandle.cs
+.├── Merchant.cs
+.├── PaymentDeclinedException.cs
+.├── PaymentProcessor.cs
+.├── RequiresManualReviewAttribute.cs
+.├── RiskTierAttribute.cs
+.├── RuleFactory.cs
+.├── Transaction.cs
+.└── UnsupportedCurrencyException.cs
+├── OOPS
+.├── BankAccount.cs
+.├── Book.cs
+.├── CarRental.cs
+.├── Circle.cs
+.├── EcommercePlatform
+..├── Clothing.cs
+..├── Electronics.cs
+..├── Groceries.cs
+..├── ITaxable.cs
+..└── Product.cs
+.├── Employee.cs
+.├── EmployeeMangementSystem
+..├── Employee.cs
+..├── FullTimeEmployee.cs
+..├── IDepartment.cs
+..└── PartTimeEmployee.cs
+.├── Hospital.cs
+.├── HospitalMangementSystem
+..├── Address.cs
+..├── Appointment.cs
+..├── Bill.cs
+..├── Department.cs
+..├── Doctor.cs
+..├── HMS_UMLSequence.png
+..├── Hospital.cs
+..├── HospitalManagementUMLClass.png
+..├── MedicalRecord.cs
+..├── Nurse.cs
+..├── Patient.cs
+..├── Person.cs
+..└── Prescription.cs
+.├── Hotel.cs
+.├── LibraryBook.cs
+.├── Notes
+.├── Person.cs
+.├── ProductInventory.cs
+.├── Student.cs
+.├── UniversityManagementSystem
+..├── Address.cs
+..├── Course.cs
+..├── Department.cs
+..├── Person.cs
+..├── Student.cs
+..├── Teacher.cs
+..├── UniversityClassUML.png
+..└── UniversityUMLSequence.png
+.└── VehicleRentalSystem
+.    ├── Bike.cs
+.    ├── Car.cs
+.    ├── IInsurable.cs
+.    ├── Truck.cs
+.    └── Vehicle.cs
+├── Operator
+.├── Arithmatic.cs
+.├── Assignment.cs
+.├── BitWise.cs
+.└── Shift.cs
+├── PostgresDB
+.├── 03 Assignment_ Keys & Constraints_pdf.pdf
+.├── AssignmentCmds
+.├── library_db_schema_catlog_table_books.png
+.├── Server.png
+.├── student_db_schema_academics_table_student.png
+.└── Submission of DDL, DML & DCL_ASSIGNEMENT.pdf
+├── ProblemSolving
+.├── ArrayProblem.cs
+.├── Assignment1.cs
+.├── Book.cs
+.├── Library.cs
+.├── Notes.txt
+.├── StringProblem.cs
+.├── StudentScoreAnalyzer.cs
+.└── TempratureAnalyzer.cs
+├── Reflection&Annotations
+.├── Notes
+.└── Reflection
+.    ├── ReflectionAttributeExample.cs
+.    ├── ReflectionClassInfo.cs
+.    ├── ReflectionConstructorExample.cs
+.    ├── ReflectionDynamicMethod.cs
+.    ├── ReflectionExample.cs
+.    ├── ReflectionPraactice.cs
+.    ├── ReflectionPrivateField.cs
+.    ├── ReflectionPrivateMethod.cs
+.    └── ReflectionStaticFields.cs
+├── RegixExplore
+.├── BasicRegex.cs
+.└── RegexAssignement.cs
+├── Review4
+.└── SearchInRotatedSortedArray.cs
+├── RuntimeAnalysis&BigO
+.├── analysis.txt
+.├── FileAnalysis.cs
+.├── SearchTarget.cs
+.├── SortingAnalysis.cs
+.└── StringAnalysis.cs
+├── SnakeLadderGame
+.├── Board.cs
+.├── Game.cs
+.└── Player.cs
+├── SocialMedia
+.├── AdminUser.cs
+.├── Comment.cs
+.├── Follow.cs
+.├── ICommentable.cs
+.├── ILikeable.cs
+.├── Image.cs
+.├── Instagram.cs
+.├── Like.cs
+.├── Media.cs
+.├── Post.cs
+.├── RegularUser.cs
+.└── User.cs
+├── Streams
+.├── BufferedStreamDemo.cs
+.├── ByteToCharacter.cs
+.├── ComparePerformance.cs
+.├── ConcanateStrings.cs
+.├── CountWordOccurances.cs
+.├── FileHandling.cs
+.├── FirstAndLastOccuranceBS.cs
+.├── ReadFileLineByLine.cs
+.├── ReadUserInputAndWriteToFile.cs
+.├── RemoveDuplicatesUsingStringBuilder.cs
+.├── ReverseStringUsingStringBuilder.cs
+.├── RotationPointBS.cs
+.├── SearchSpecificWordListOfSentences.cs
+.└── UserInputDemo.cs
+└── Test
+    ├── Animal.cs
+    ├── HospitalManagementTest
+    .├── Address.cs
+    .├── Department.cs
+    .├── Doctor.cs
+    .├── Patient.cs
+    .└── Person.cs
+    ├── SmartHomeDevice
+    .├── Device.cs
+    .├── DoorLock.cs
+    .├── Light.cs
+    .├── Room.cs
+    .├── SecurityCamera.cs
+    .├── SmartHome.cs
+    .├── Thermostat.cs
+    .└── User.cs
+    ├── TaskSchedular
+    .└── Task.cs
+    ├── test1.cs
+    └── Test11.cs

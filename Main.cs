@@ -1101,6 +1101,8 @@ public class MainCs
   // operationsOnRecords.WriteRecordsIntoCsv();
   // operationsOnRecords.WriteRecordsToJson();
   // operationsOnRecords.WriteRecordsToBinary();
+  IplAndCensorshipAnalyzer analyzer = new IplAndCensorshipAnalyzer();
+  analyzer.JsonToXml();
  }
    
 }

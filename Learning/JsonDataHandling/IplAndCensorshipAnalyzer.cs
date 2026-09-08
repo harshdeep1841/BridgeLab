@@ -1,8 +1,10 @@
 using System.Globalization;
 using System.Text.RegularExpressions;
+using System.Xml;
 using CsvHelper;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Formatting = Newtonsoft.Json.Formatting;
 
 namespace ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.JsonDataHandling;
 
@@ -59,5 +61,13 @@ public class IplAndCensorshipAnalyzer
         }
 
         return string.Join(" ", words);
+    }
+
+
+    public void JsonToXml()
+    {
+        string jsonString = File.ReadAllText("Ipl.json");
+        XmlDocument xmlDoc = JsonConvert.DeserializeXmlNode(jsonString, "Ipl.json");
+        // Console.WriteLine(xmlDoc.BaseURI);
     }
 }
