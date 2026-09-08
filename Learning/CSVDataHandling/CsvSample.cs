@@ -1,5 +1,7 @@
 using System.Globalization;
 using CsvHelper;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.CSVDataHandling;
 
@@ -52,7 +54,7 @@ public class CsvSample
             using StreamReader sr = new StreamReader("csv-sample-1.csv");
             using var csvReader = new CsvReader(sr, CultureInfo.InvariantCulture);
             var records = csvReader.GetRecords<EmployeeCsv>();
-            sortedRecords = records.OrderByDescending(employee => employee.Salary).ToList();
+            sortedRecords = records.OrderByDescending(employee => employee.Salary).Take(5).ToList();
             
         }
         foreach (var record in sortedRecords)
@@ -64,4 +66,33 @@ public class CsvSample
       using  var csvWriter = new CsvWriter(sw , CultureInfo.InvariantCulture);
       csvWriter.WriteRecords(sortedRecords);
     }
+
+    public void JsonToCsv()
+    {
+        JArray jArray = JArray.Parse(File.ReadAllText("jsonSample.json"));
+        List<string> jobjects = jArray.Select(person => person.ToString()).ToList();
+        List<Person> persons  = jobjects.Select(person => JsonConvert.DeserializeObject<Person>(person)).ToList();
+        var csvWriter = new CsvWriter(new StreamWriter("csv-sample-2.csv" , true), CultureInfo.InvariantCulture);
+        csvWriter.WriteRecords(persons);
+    }
+    
+    
+    
+}
+
+
+public class Person
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public int Age { get; set; }
+    public string Email { get; set; }
+    public List<string> Skills { get; set; }
+    public Address Address { get; set; }
+}
+
+public class Address
+{
+    public string City { get; set; }
+    public string Zip { get; set; }
 }

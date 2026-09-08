@@ -12,6 +12,7 @@ using ConsoleAppLearning1.Learning.Operator.Learning.Collections.Implementations
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections.SortingAlgos;
 using ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.Closures;
 using ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.CSVDataHandling;
+using ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.FileBasedStudentRecordBackupSystem;
 using ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.JsonDataHandling;
 using ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.LamdaExplore;
 using ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.Multi_Threading;
@@ -1089,8 +1090,17 @@ public class MainCs
   // jsonSample.WriteJsonData();
   // jsonSample.ParseJsonData();
  // Console.WriteLine(jsonSample.ValidateJson()); 
-  SingleThreadCreation.MainThread();
- 
+  // SingleThreadCreation.MainThread();
+  // CsvSample csvSample = new CsvSample();
+  // csvSample.JsonToCsv();
+  
+  OperationsOnRecords operationsOnRecords = new OperationsOnRecords();
+  operationsOnRecords.AddRecord(new StudentRecord(1 , "Harsh" , 'A', 9.21 , DateTime.Now));
+  operationsOnRecords.AddRecord(new StudentRecord(2 , "Visvas" , 'A', 9.23 , DateTime.Now));
+  operationsOnRecords.AddRecord(new StudentRecord(1 , "Balreet" , 'A', 9.24 , DateTime.Now));
+  // operationsOnRecords.WriteRecordsIntoCsv();
+  // operationsOnRecords.WriteRecordsToJson();
+  // operationsOnRecords.WriteRecordsToBinary();
  }
    
 }
