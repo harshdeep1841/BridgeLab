@@ -59,8 +59,10 @@ public class IplAndCensorshipAnalyzer
         {
             words[1] = "***";
         }
+        
 
         return string.Join(" ", words);
+        
     }
 
 

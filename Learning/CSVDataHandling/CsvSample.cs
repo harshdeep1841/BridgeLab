@@ -1,4 +1,5 @@
 using System.Globalization;
+using System.Text;
 using CsvHelper;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -75,8 +76,18 @@ public class CsvSample
         var csvWriter = new CsvWriter(new StreamWriter("csv-sample-2.csv" , true), CultureInfo.InvariantCulture);
         csvWriter.WriteRecords(persons);
     }
-    
-    
+
+    public void Sample()
+    {
+        MemoryStream memoryStream = new MemoryStream();
+        byte[] bytes = Encoding.UTF8.GetBytes("Harsh");
+        
+        memoryStream.Write(bytes , 0 , bytes.Length);
+        memoryStream.Position = 0;
+        byte[] buffer = new byte[2];
+        memoryStream.Read(buffer , 0, buffer.Length);
+        Console.WriteLine(Encoding.UTF8.GetString(buffer));
+    }
     
 }
 

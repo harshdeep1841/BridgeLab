@@ -1101,8 +1101,10 @@ public class MainCs
   // operationsOnRecords.WriteRecordsIntoCsv();
   // operationsOnRecords.WriteRecordsToJson();
   // operationsOnRecords.WriteRecordsToBinary();
-  IplAndCensorshipAnalyzer analyzer = new IplAndCensorshipAnalyzer();
-  analyzer.JsonToXml();
+  // IplAndCensorshipAnalyzer analyzer = new IplAndCensorshipAnalyzer();
+  // analyzer.JsonToXml();
+  CsvSample csvSample = new CsvSample();
+  csvSample.Sample();
  }
    
 }
