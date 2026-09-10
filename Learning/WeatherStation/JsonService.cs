@@ -8,12 +8,12 @@ using System.Text.Json;
 
 public class JsonService
     {
-        public List<Station> LoadStations(string filePath)
+        public List<Station> LoadStations()
         {
-            string json = File.ReadAllText(filePath);
+            string json = File.ReadAllText("stations.json");
 
             StationRoot root =
-                JsonSerializer.Deserialize<StationRoot>(json);
+                JsonConvert.DeserializeObject<StationRoot>(json);
 
             return root.Stations;
         }
@@ -26,8 +26,10 @@ public class JsonService
         {
 
             string json = JsonConvert.SerializeObject(summary, Formatting.Indented);
-
-            File.WriteAllText(filePath, json);
+            
+            StreamWriter sw = new StreamWriter(filePath , true);
+            sw.Write(json);
+            //File.WriteAllText(filePath, json);
             
         }
     }

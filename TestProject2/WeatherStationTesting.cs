@@ -14,29 +14,14 @@ using System.Linq;
         private WeatherValidator validator;
         private WeatherProcessor processor;
         private BinaryService binaryService;
-
+        private JsonService jsonService;
+        private CsvService csvService;
         [SetUp]
         public void Setup()
         {
-            stations = new List<Station>()
-            {
-                new Station
-                {
-                    Code="ST01",
-                    Region="Coastal",
-                    MinTemp=10,
-                    MaxTemp=45
-                },
-
-                new Station
-                {
-                    Code="ST02",
-                    Region="Hill",
-                    MinTemp=-10,
-                    MaxTemp=30
-                }
-            };
-
+            jsonService = new JsonService();
+            stations = jsonService.LoadStations();
+            csvService = new CsvService();
             validator = new WeatherValidator(stations);
             processor = new WeatherProcessor();
             binaryService = new BinaryService();

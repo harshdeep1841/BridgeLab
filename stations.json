@@ -1,0 +1,6 @@
+{
+  "stations": [
+    { "code": "ST01", "region": "Coastal", "minTemp": 10, "maxTemp": 45 },
+    { "code": "ST02", "region": "Hill", "minTemp": -10, "maxTemp": 30 }
+  ]
+}
