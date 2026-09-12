@@ -10,6 +10,7 @@ using ConsoleAppLearning1.Learning.Operator.Learning.Collections.AssignementData
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections.AssignmentQueueStackHashMapHashing;
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections.Implementations;
 using ConsoleAppLearning1.Learning.Operator.Learning.Collections.SortingAlgos;
+using ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.BirdsSanctuary;
 using ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.Closures;
 using ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.CSVDataHandling;
 using ConsoleAppLearning1.Learning.Operator.Learning.Generic.Learning.FileBasedStudentRecordBackupSystem;
@@ -1094,18 +1095,36 @@ public class MainCs
   // CsvSample csvSample = new CsvSample();
   // csvSample.JsonToCsv();
   
-  OperationsOnRecords operationsOnRecords = new OperationsOnRecords();
-  operationsOnRecords.AddRecord(new StudentRecord(1 , "Harsh" , 'A', 9.21 , DateTime.Now));
-  operationsOnRecords.AddRecord(new StudentRecord(2 , "Visvas" , 'A', 9.23 , DateTime.Now));
-  operationsOnRecords.AddRecord(new StudentRecord(1 , "Balreet" , 'A', 9.24 , DateTime.Now));
+  // OperationsOnRecords operationsOnRecords = new OperationsOnRecords();
+  // operationsOnRecords.AddRecord(new StudentRecord(1 , "Harsh" , 'A', 9.21 , DateTime.Now));
+  // operationsOnRecords.AddRecord(new StudentRecord(2 , "Visvas" , 'A', 9.23 , DateTime.Now));
+  // operationsOnRecords.AddRecord(new StudentRecord(1 , "Balreet" , 'A', 9.24 , DateTime.Now));
   // operationsOnRecords.WriteRecordsIntoCsv();
   // operationsOnRecords.WriteRecordsToJson();
   // operationsOnRecords.WriteRecordsToBinary();
   // IplAndCensorshipAnalyzer analyzer = new IplAndCensorshipAnalyzer();
   // analyzer.JsonToXml();
-  CsvSample csvSample = new CsvSample();
-  csvSample.Sample();
+  // CsvSample csvSample = new CsvSample();
+  // csvSample.Sample();
+  
+  
+  Sanctuary sanctuary = new Sanctuary();
+  Bird bird1 = new Duck(1, "5" , Gender.male);
+  Bird bird2 = new Penguin(1, "15" , Gender.male);
+  Bird bird3 = new Ostrich(3, "22" , Gender.male , 15);
+  sanctuary.Add(bird1);
+  sanctuary.Add(bird2);
+  sanctuary.Add(bird3);
+  
+  Console.WriteLine(sanctuary.FindExistWithId(2));
+  sanctuary.DisplayBirds();
+  Console.WriteLine(sanctuary.FindBirdById(3));
+  HashSet<Bird> set = new HashSet<Bird>();
+  set.Add(bird1);
+  set.Add(bird2);
+  Console.WriteLine(set.Count);
  }
+ 
    
 }
 
