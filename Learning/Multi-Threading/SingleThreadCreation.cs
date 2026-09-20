@@ -13,20 +13,38 @@ public class SingleThreadCreation
         }
     }
 
+    static public void Method2()
+    {
+        for(int i = 1 ; i<= 5 ; i++)
+        {
+            ThreadPool.QueueUserWorkItem( Method3 , i);
+            
+        }
+        Thread.Sleep(10000);
+    }
+
+    private static void Method3(object? state)
+    {
+        Console.WriteLine(Thread.CurrentThread.ManagedThreadId);
+        Console.WriteLine($"{Thread.CurrentThread.Name} {state}");
+        Console.WriteLine();
+    }
+
 
     public static void MainThread()
     {
         Thread thread1 = new Thread(Method1);
-        // Thread thread2 = new Thread(Method1);
-        thread1.Priority = ThreadPriority.Lowest;
+         Thread thread2 = new Thread(Method1);
+        //thread1.Priority = ThreadPriority.Lowest;
         // thread2.Priority = ThreadPriority.Highest;
         thread1.Name = "MainThread1";
-        // thread2.Name = "MainThread2";
+        thread2.Name = "MainThread2";
         //thread1.IsBackground = true;
+
         thread1.Start();
-        // thread1.Join();
-        // thread2.Start();
-        // thread2.Join();
+        thread1.Join();
+         thread2.Start();
+        thread2.Join();
       //  Console.WriteLine(thread1.IsAlive);
         Thread.Sleep(1000);
         Console.WriteLine("Main thread finishes");

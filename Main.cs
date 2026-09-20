@@ -74,7 +74,7 @@ public class Node
 public class MainCs
 {
 
- 
+
  public static void Main(string[] args)
  {
   // Arithmatic a = new Arithmatic();
@@ -921,7 +921,7 @@ public class MainCs
   // {
   //  Console.WriteLine(m.Value);
   // }
-  
+
 //   SearchTarget searchTarget = new SearchTarget();
 //   int[] searchArr = new int[1000000];
 //   searchArr[searchArr.Length - 1] = 1;
@@ -938,38 +938,38 @@ public class MainCs
 
   // ReflectionPractice reflectionPractice = new ReflectionPractice();
   // reflectionPractice.GetFieldsMethods();
- 
- // TestAttributes attributes = new TestAttributes();
- // attributes.Display();
- // Console.WriteLine("Hello World!");
- 
- // LamdaSample layout = new LamdaSample();
- // layout.Sample();
 
- // List<StudentClassRoom> classRoom = new List<StudentClassRoom>();
- // classRoom.Add(new StudentClassRoom("HARSH" , 80));
- // classRoom.Add(new StudentClassRoom("DIVYAM" , 30));
- // classRoom.Add(new StudentClassRoom("HARMAN" , 50));
- // classRoom.Add(new StudentClassRoom("JASKARAN" , 60));
- // classRoom.Add(new StudentClassRoom("KESHAV" , 65));
- // classRoom.Add(new StudentClassRoom("HARSAINYAM" , 80));
- //
- // List<StudentClassRoom> studentPassed = classRoom.FindAll(student => student.HasPassed &&  student.Score > 0);
- // StudentClassRoom? student = classRoom.Find(student => student.Name.StartsWith("h" , StringComparison.OrdinalIgnoreCase));
- // Console.WriteLine(student?.Name);
+  // TestAttributes attributes = new TestAttributes();
+  // attributes.Display();
+  // Console.WriteLine("Hello World!");
 
- // List<string> Names = new List<string>() { "Harsh", "Divyam", "Keshav", "Ram", "Rohan" };
+  // LamdaSample layout = new LamdaSample();
+  // layout.Sample();
+
+  // List<StudentClassRoom> classRoom = new List<StudentClassRoom>();
+  // classRoom.Add(new StudentClassRoom("HARSH" , 80));
+  // classRoom.Add(new StudentClassRoom("DIVYAM" , 30));
+  // classRoom.Add(new StudentClassRoom("HARMAN" , 50));
+  // classRoom.Add(new StudentClassRoom("JASKARAN" , 60));
+  // classRoom.Add(new StudentClassRoom("KESHAV" , 65));
+  // classRoom.Add(new StudentClassRoom("HARSAINYAM" , 80));
+  //
+  // List<StudentClassRoom> studentPassed = classRoom.FindAll(student => student.HasPassed &&  student.Score > 0);
+  // StudentClassRoom? student = classRoom.Find(student => student.Name.StartsWith("h" , StringComparison.OrdinalIgnoreCase));
+  // Console.WriteLine(student?.Name);
+
+  // List<string> Names = new List<string>() { "Harsh", "Divyam", "Keshav", "Ram", "Rohan" };
   // Names.Sort((student1, student2) => student1.Length.CompareTo(student2.Length));
   // List<string> SortedNames = Names.OrderBy(name => name.Length).ToList();
   // Console.WriteLine(string.Join(" , ", Names));
   // Console.WriteLine(string.Join(" , ", SortedNames));
- 
+
   // MultiCastDelegates delegates = new MultiCastDelegates();
   // Delegate1 delegate1  = delegates.Method1;
   // delegate1 +=  delegates.Method2;
   // delegate1 +=  delegates.Method3;
   // delegate1("Harsh");
-  
+
   // LinqType linq = new LinqType();
   // linq.LinqSql();
 
@@ -982,7 +982,7 @@ public class MainCs
   // Console.WriteLine(counterA());
   // Console.WriteLine(counterA());
   //
-  
+
   // ClosuresSample sample =  new ClosuresSample();
   // Func<int> ctr1 = sample.CreatingRunningCounter();
   // Console.WriteLine(ctr1());
@@ -997,7 +997,7 @@ public class MainCs
   // {
   //  action(1);
   // }
-  
+
   // List<Action> tasks = new List<Action>();
   // for (int i = 1; i <= 3; i++)
   // {
@@ -1015,10 +1015,6 @@ public class MainCs
   // delegate3 -= multicastDelegate.Method1;
   delegate3("Harsh");
   // Console.WriteLine(delegate2(1, 2));
-  
-  
-  
-  
   // JsonPractice service = new JsonPractice();
   //
   // service.Question1();
@@ -1066,19 +1062,19 @@ public class MainCs
   //    processor.ProcessBatch(transactions);
   //
   //    Console.WriteLine("\nProcessing Completed.");
-  
+
   // Publisher publisher = new Publisher();
   // Subscriber subscriber = new Subscriber(publisher);
   //  subscriber = null;
   //  publisher.Raise();
-  
-  CsvSample sample = new CsvSample();
+
+  // CsvSample sample = new CsvSample();
   // sample.ReadCsvFile();
   // sample.ReadCsvUsingCsvHelper();
   // sample.WriteCSVUsingCsvHelper();
-  sample.SortCsvUsingCsvHelper();
-  
-  JsonSample jsonSample = new JsonSample();
+  // sample.SortCsvUsingCsvHelper();
+
+  // JsonSample jsonSample = new JsonSample();
   // List<string> subjects = new List<string>();
   // subjects.Add("Math");
   // subjects.Add("English");
@@ -1090,11 +1086,11 @@ public class MainCs
   // jsonSample.ReadJsonData();
   // jsonSample.WriteJsonData();
   // jsonSample.ParseJsonData();
- // Console.WriteLine(jsonSample.ValidateJson()); 
-  // SingleThreadCreation.MainThread();
+  // Console.WriteLine(jsonSample.ValidateJson()); 
+   //SingleThreadCreation.MainThread();
   // CsvSample csvSample = new CsvSample();
   // csvSample.JsonToCsv();
-  
+
   // OperationsOnRecords operationsOnRecords = new OperationsOnRecords();
   // operationsOnRecords.AddRecord(new StudentRecord(1 , "Harsh" , 'A', 9.21 , DateTime.Now));
   // operationsOnRecords.AddRecord(new StudentRecord(2 , "Visvas" , 'A', 9.23 , DateTime.Now));
@@ -1106,26 +1102,37 @@ public class MainCs
   // analyzer.JsonToXml();
   // CsvSample csvSample = new CsvSample();
   // csvSample.Sample();
+
+
+  // Sanctuary sanctuary = new Sanctuary();
+  // Bird bird1 = new Duck(1, "5" , Gender.male);
+  // Bird bird2 = new Penguin(1, "15" , Gender.male);
+  // Bird bird3 = new Ostrich(3, "22" , Gender.male , 15);
+  // sanctuary.Add(bird1);
+  // sanctuary.Add(bird2);
+  // sanctuary.Add(bird3);
+  //
+  // Console.WriteLine(sanctuary.FindExistWithId(2));
+  // sanctuary.DisplayBirds();
+  // Console.WriteLine(sanctuary.FindBirdById(3));
+  // HashSet<Bird> set = new HashSet<Bird>();
+  // set.Add(bird1);
+  // set.Add(bird2);
+  // Console.WriteLine(set.Count);
+
+  // SingleThreadCreation.MainThread();
+  // SingleThreadCreation.Method2();
+
+  // for (;;)
+  // {
+  //  Console.WriteLine("Hello World!");
+  // }
+  DelagateSample delagateSample = new DelagateSample();
   
-  
-  Sanctuary sanctuary = new Sanctuary();
-  Bird bird1 = new Duck(1, "5" , Gender.male);
-  Bird bird2 = new Penguin(1, "15" , Gender.male);
-  Bird bird3 = new Ostrich(3, "22" , Gender.male , 15);
-  sanctuary.Add(bird1);
-  sanctuary.Add(bird2);
-  sanctuary.Add(bird3);
-  
-  Console.WriteLine(sanctuary.FindExistWithId(2));
-  sanctuary.DisplayBirds();
-  Console.WriteLine(sanctuary.FindBirdById(3));
-  HashSet<Bird> set = new HashSet<Bird>();
-  set.Add(bird1);
-  set.Add(bird2);
-  Console.WriteLine(set.Count);
+  Action delegate1 = delagateSample.func1();
+  delegate1 += delagateSample.func2();
+  delegate1();
  }
- 
-   
 }
 
 

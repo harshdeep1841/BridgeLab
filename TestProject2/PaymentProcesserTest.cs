@@ -4,7 +4,7 @@ using NuGet.Frameworks;
 namespace TestProject2;
 
 using NUnit.Framework;
-    public class PaymentProcessorTests
+    public partial class PaymentProcessorTests
     {
         
         private PaymentProcessor processor;
