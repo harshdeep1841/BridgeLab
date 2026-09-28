@@ -96,7 +96,7 @@ public class PaymentProcessor
         {
             return new List<Func<Transaction, bool>>
             {
-                RuleFactory.CreateAmountLimitRule(50_000),
+                RuleFactory.CreateAmountLimitRule(50000),
 
                 RuleFactory.CreateCurrencyRule(
                     new[] { "USD", "EUR", "INR" })
@@ -107,7 +107,7 @@ public class PaymentProcessor
         {
             return new List<Func<Transaction, bool>>
             {
-                RuleFactory.CreateAmountLimitRule(200_000),
+                RuleFactory.CreateAmountLimitRule(200000),
 
                 RuleFactory.CreateCurrencyRule(
                     new[] { "USD", "EUR", "GBP", "JPY" })
@@ -116,7 +116,7 @@ public class PaymentProcessor
 
         return new List<Func<Transaction, bool>>
         {
-            RuleFactory.CreateAmountLimitRule(10_000),
+            RuleFactory.CreateAmountLimitRule(10000),
 
             RuleFactory.CreateCurrencyRule(
                 new[] { "USD", "EUR" })

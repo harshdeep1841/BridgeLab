@@ -1127,11 +1127,14 @@ public class MainCs
   // {
   //  Console.WriteLine("Hello World!");
   // }
-  DelagateSample delagateSample = new DelagateSample();
+  // DelagateSample delagateSample = new DelagateSample();
+  //
+  // Action delegate1 = delagateSample.func1();
+  // delegate1 += delagateSample.func2();
+  // delegate1();
   
-  Action delegate1 = delagateSample.func1();
-  delegate1 += delagateSample.func2();
-  delegate1();
+  HelloWorld.Main_Sample();
+  Thread.Sleep(20000);
  }
 }
 
