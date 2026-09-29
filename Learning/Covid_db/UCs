@@ -1,0 +1,217 @@
+--**Joins:**
+
+--1. Which country has the highest number of confirmed cases on a specific date?
+SELECT c.name
+FROM global_covid_stats g
+JOIN country c
+    ON c.country_id = g.country_id
+where g.report_date = '2021-05-01' AND g.confirmed = (
+    SELECT MAX(confirmed)
+    FROM global_covid_stats gcc
+    where gcc.report_date = '2021-05-01'
+);
+
+--2. Show the total number of deaths in each country, including provinces/states, for a given date.
+select c.name ,  s.name ,  ccs.deaths from covid_case_stats ccs join  state s on ccs.state_id = s.state_id 
+join country c on c.country_id = ccs.country_id WHERE ccs.report_date = '2021-05-01';
+
+--3. List the continents along with the total number of confirmed cases, deaths, and recoveries.
+select c.continent , sum(gcs.confirmed) , sum(gcs.deaths)  , sum(gcs.recovered) from global_covid_stats gcs join
+country c on c.country_id = gcs.country_id group by c.continent ;
+
+--**Aggregate Functions:**
+
+--4. Calculate the average number of new deaths per day across all countries.
+SELECT AVG(gcs.new_deaths) 
+FROM global_covid_stats gcs;
+
+--5. Find the maximum number of active cases recorded in any country on a specific date.
+SELECT MAX(gcs.active_cases) AS max_active_cases FROM global_covid_stats gcs
+WHERE gcs.report_date = '2020-12-31';
+
+--**Stored Procedure:**
+
+--6. Create a stored procedure that returns the total number of recovered cases for a given country and date.
+
+create or replace procedure total_recovered
+(p_country_id INT,
+p_date DATE
+)
+language plpgsql
+as $$
+DECLARE v_total_recovered bigint;
+
+BEGIN
+select recovered into v_total_recovered from global_covid_stats
+where country_id = p_country_id AND p_date = report_date;
+
+RAISE NOTICE 'Total recovered cases: %' , v_total_recovered;
+
+END;
+$$
+
+call total_recovered(1 , '2020-12-31');
+--7. Design a stored procedure to update the number of deaths for a specific country and date.
+
+CREATE OR REPLACE PROCEDURE update_deaths(
+    p_country_id INT,
+    p_date DATE,
+    p_deaths BIGINT
+)
+LANGUAGE plpgsql
+AS $$
+BEGIN
+    UPDATE global_covid_stats
+    SET deaths = p_deaths
+    WHERE country_id = p_country_id
+      AND report_date = p_date;
+
+    RAISE NOTICE 'Deaths updated successfully';
+END;
+$$;
+
+call update_deaths(1 , '2020-12-31' , 1400);
+--**Views:**
+
+--8. Create a view that displays the total number of cases (confirmed, deaths, and recovered) for each country on a specific date.
+
+create or replace view total_number_of_cases
+as select c.name ,  SUM(gcs.confirmed) as confirmed , SUM(gcs.deaths) as deaths , 
+SUM(gcs.recovered) as recovered from global_covid_stats gcs join country c on c.country_id  = gcs.country_id 
+where gcs.report_date = '2020-12-31' group by c.name;
+
+select * from view_case;
+
+--9. Implement a view to show the latest data (confirmed, deaths, recovered) for each country.
+
+CREATE OR REPLACE VIEW latest_country_data AS
+SELECT
+    c.name,
+    gcs.report_date, gcs.confirmed, gcs.deaths, gcs.recovered
+FROM global_covid_stats gcs
+JOIN country c
+    ON c.country_id = gcs.country_id WHERE gcs.report_date = ( SELECT MAX(gcs2.report_date) FROM global_covid_stats gcs2
+    WHERE gcs2.country_id = gcs.country_id
+);
+
+select * from latest_country_data;
+
+--**T-SQL:**
+--10. Write a T-SQL query to calculate the total number of cases (confirmed + deaths + recovered) for each country.
+
+--11. Use T-SQL to identify the country with the highest number of new cases reported on a specific date.
+
+
+
+
+--**CTE (Common Table Expressions):**
+
+--12. Create a CTE to calculate the percentage increase in confirmed cases for each country over the past week.
+
+with percentage_increase as 
+(
+
+)
+
+--13. Use a CTE to find the country with the highest number of active cases at the moment.
+
+with highest_active_cases as
+(
+select c.name , MAX(gcs.active_cases) as active_cases from global_covid_stats gcs  join 
+country c on c.country_id = gcs.country_id where gcs.report_date = (select MAX(gcs2.report_date) from global_covid_stats gcs2)
+group by c.name order by active_cases desc limit 1
+)
+select * from highest_active_cases;
+
+--**Indexes:**
+
+--14. Explain the importance of indexes in optimizing queries for this dataset.
+
+/*
+Indexes are used to make database queries faster.
+In our COVID dataset, tables like global_covid_stats, covid_case_stats, vaccination, and testing 
+can contain a large number of records. If we search these tables without indexes, PostgreSQL 
+may have to check many rows one by one.
+*/
+
+--15. Implement an index on the "Country/Region" column to speed up search operations.
+
+create index country_index_id on country(country_id);
+
+--**User-Defined Functions (UDF):**
+
+--16. Develop a UDF to calculate the mortality rate (deaths / confirmed cases * 100) for a given country.
+
+create or replace function calculate_mortality_rate
+(
+p_country_id int
+)
+returns numeric
+language plpgsql
+
+as $$
+
+declare
+deaths BIGINT;
+confirmed_cases BIGINT;
+mortality_rate numeric;
+
+begin
+	
+	select SUM(gcs.deaths)  , SUM(gcs.confirmed) into deaths , confirmed_cases from
+	global_covid_stats gcs where p_country_id = gcs.country_id ;
+	
+	mortality_rate := (deaths :: numeric / NULLIF(confirmed_cases , 0)) * 100;
+	
+	return mortality_rate;
+	
+end
+$$;
+
+select calculate_mortality_rate(1);
+
+--17. Create a UDF to determine the recovery rate (recovered / confirmed cases * 100) for a specific date.
+
+create or replace function calculate_recovery_rate
+(
+p_date DATE
+)
+returns numeric
+language plpgsql
+as $$
+
+declare 
+recovered BIGINT;
+confirmed_cases BIGINT;
+recovery_rate numeric;
+
+begin
+	
+	select SUM(gcs.recovered) , SUM(gcs.confirmed) into recovered , confirmed_cases from 
+	global_covid_stats gcs where p_date = gcs.report_date ;
+	
+	recovery_rate := (recovered :: numeric / nullif(confirmed_cases , 0)) * 100;
+	
+	return recovery_rate;
+	
+end
+$$
+
+select calculate_recovery_rate('2020-12-31');
+
+--**Group By:**
+--18. Group the data by continent and calculate the total number of confirmed cases for each continent.
+
+select c.continent , COUNT(gcs.confirmed) from global_covid_stats gcs join
+country c on c.country_id = gcs.country_id group by c.continent ;
+
+
+--19. Group the data by date and compute the total number of deaths and recoveries for each date.
+select gcs.report_date , SUM(gcs.deaths) as deaths , SUM(gcs.recovered )  as recovered  from global_covid_stats gcs group by gcs.report_date ;
+
+--20. Group the data by country and calculate the average number of new cases reported daily for each country.
+select c.name , AVG(gcs.new_confirmed ) from global_covid_stats gcs join
+country c on c.country_id = gcs.country_id  group by c.name;
+
+
+

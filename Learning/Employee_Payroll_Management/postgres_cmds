@@ -1,0 +1,336 @@
+CREATE SCHEMA payroll;
+
+CREATE TABLE payroll.departments (
+    department_id SERIAL PRIMARY KEY,
+    department_name VARCHAR(100) NOT NULL UNIQUE
+);
+
+CREATE TABLE payroll.employees (
+    employee_id SERIAL PRIMARY KEY,
+    employee_name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) UNIQUE,
+    department_id INT NOT NULL,
+
+    FOREIGN KEY (department_id)
+        REFERENCES payroll.departments(department_id)
+);
+
+CREATE TABLE payroll.salaries (
+    salary_id SERIAL PRIMARY KEY,
+    employee_id INT NOT NULL,
+    salary NUMERIC(10,2) NOT NULL CHECK (salary > 0),
+    effective_date DATE NOT NULL,
+
+    FOREIGN KEY (employee_id)
+        REFERENCES payroll.employees(employee_id)
+);
+
+
+CREATE TABLE payroll.attendance (
+    attendance_id SERIAL PRIMARY KEY,
+    employee_id INT NOT NULL,
+    attendance_date DATE NOT NULL,
+    status VARCHAR(20) NOT NULL,
+
+    FOREIGN KEY (employee_id)
+        REFERENCES payroll.employees(employee_id),
+
+    CHECK (status IN ('Present', 'Absent', 'Leave'))
+);
+
+CREATE TABLE payroll.bonuses (
+    bonus_id SERIAL PRIMARY KEY,
+    employee_id INT NOT NULL,
+    bonus_amount NUMERIC(10,2) NOT NULL CHECK (bonus_amount >= 0),
+    bonus_month DATE NOT NULL,
+
+    FOREIGN KEY (employee_id)
+        REFERENCES payroll.employees(employee_id)
+);
+
+CREATE TABLE payroll.deductions (
+    deduction_id SERIAL PRIMARY KEY,
+    employee_id INT NOT NULL,
+    deduction_amount NUMERIC(10,2) NOT NULL CHECK (deduction_amount >= 0),
+    deduction_month DATE NOT NULL,
+
+    FOREIGN KEY (employee_id)
+        REFERENCES payroll.employees(employee_id)
+);
+
+
+CREATE TABLE payroll.monthly_payroll (
+    payroll_id SERIAL PRIMARY KEY,
+
+    employee_id INT NOT NULL,
+
+    salary_month DATE NOT NULL,
+
+    basic_salary NUMERIC(10,2) NOT NULL,
+    bonus NUMERIC(10,2) DEFAULT 0,
+    deduction NUMERIC(10,2) DEFAULT 0,
+    net_salary NUMERIC(10,2) NOT NULL,
+
+    FOREIGN KEY (employee_id)
+        REFERENCES payroll.employees(employee_id),
+
+    UNIQUE (employee_id, salary_month)
+);
+
+
+INSERT INTO payroll.departments (department_name)
+VALUES
+('IT'),
+('HR'),
+('Finance');
+
+
+
+INSERT INTO payroll.employees
+(employee_name, email, department_id)
+VALUES
+('Harsh', 'harsh@gmail.com', 1),
+('Rahul', 'rahul@gmail.com', 1),
+('viswas', 'viswas@gmail.com', 1),
+('Simran', 'simran@gmail.com', 2),
+('Priya', 'balreet@gmail.com', 3);
+
+
+
+
+INSERT INTO payroll.salaries
+(employee_id, salary, effective_date)
+VALUES
+(1, 50000, '2026-01-01'),
+(2, 40000, '2026-01-01'),
+(3, 60000, '2026-01-01'),
+(4, 45000, '2026-01-01'),
+(5, 55000, '2026-01-01');
+
+INSERT INTO payroll.bonuses
+(employee_id, bonus_amount, bonus_month)
+VALUES
+(1, 5000, '2026-09-01'),
+(3, 3000, '2026-09-01'),
+(5, 6000, '2026-09-01');
+
+
+INSERT INTO payroll.deductions
+(employee_id, deduction_amount, deduction_month)
+VALUES
+(1, 2000, '2026-09-01'),
+(2, 1000, '2026-09-01'),
+(3, 1500, '2026-09-01');
+
+--to display employee details using join
+SELECT
+    e.employee_id,
+    e.employee_name,
+    d.department_name,
+    s.salary
+FROM payroll.employees e
+JOIN payroll.departments d
+    ON e.department_id = d.department_id
+JOIN payroll.salaries s
+    ON e.employee_id = s.employee_id;
+
+--to display departmentwise salary expenditure using CTE
+
+WITH department_salary AS (
+    SELECT
+        d.department_name,
+        SUM(s.salary) AS total_salary
+    FROM payroll.employees e
+    JOIN payroll.departments d
+        ON e.department_id = d.department_id
+    JOIN payroll.salaries s
+        ON e.employee_id = s.employee_id
+    GROUP BY d.department_name
+)
+SELECT *
+FROM department_salary;
+
+-- employees earning more then department avg
+
+SELECT
+    e.employee_name,
+    s.salary,
+    e.department_id
+FROM payroll.employees e
+JOIN payroll.salaries s
+    ON e.employee_id = s.employee_id
+WHERE s.salary > (
+    SELECT AVG(s2.salary) FROM payroll.employees e2
+    JOIN payroll.salaries s2
+        ON e2.employee_id = s2.employee_id
+    WHERE e2.department_id = e.department_id
+);
+
+--calculate net salary
+
+CREATE OR REPLACE FUNCTION payroll.calculate_net_salary(
+    p_salary NUMERIC,
+    p_bonus NUMERIC,
+    p_deduction NUMERIC
+)
+RETURNS NUMERIC
+LANGUAGE plpgsql
+AS $$
+BEGIN
+    RETURN p_salary + p_bonus - p_deduction;
+END;
+$$;
+
+
+select payroll.calculate_net_salary(50000 , 5000 , 2000);
+
+
+--employee payslip
+
+CREATE OR REPLACE VIEW payroll.employee_payslip AS
+SELECT
+    mp.payroll_id,
+    e.employee_name,
+    d.department_name,
+    mp.salary_month,
+    mp.basic_salary,
+    mp.bonus,
+    mp.deduction,
+    mp.net_salary
+FROM payroll.monthly_payroll mp
+JOIN payroll.employees e
+    ON mp.employee_id = e.employee_id
+JOIN payroll.departments d
+    ON e.department_id = d.department_id;
+
+select * from payroll.employee_payslip;
+
+--prevent duplicate payrolls 
+
+CREATE OR REPLACE FUNCTION payroll.check_duplicate_payroll()
+RETURNS TRIGGER
+LANGUAGE plpgsql
+AS $$
+BEGIN
+
+    IF EXISTS (
+
+        SELECT 1
+        FROM payroll.monthly_payroll
+        WHERE employee_id = NEW.employee_id
+          AND salary_month = NEW.salary_month
+
+    ) THEN
+
+        RAISE EXCEPTION
+        'Salary already processed for this employee and month';
+
+    END IF;
+    RETURN NEW;
+END;
+$$;
+
+--i will use this trigger while inserting new payroll
+
+CREATE TRIGGER trg_duplicate_payroll
+BEFORE INSERT ON payroll.monthly_payroll
+FOR EACH ROW
+EXECUTE FUNCTION payroll.check_duplicate_payroll();
+
+
+--temp table (monthly payroll)
+CREATE TEMP TABLE temp_monthly_payroll (
+    employee_id INT,
+    basic_salary NUMERIC(10,2),
+    bonus NUMERIC(10,2),
+    deduction NUMERIC(10,2)
+);
+
+INSERT INTO temp_monthly_payroll
+(employee_id, basic_salary, bonus, deduction)
+VALUES
+(1, 50000, 5000, 2000),
+(2, 40000, 1000, 500),
+(3, 60000, 3000, 1500);
+
+--truncate table temp_monthly_payroll;
+--select * from temp_monthly_payroll;
+
+
+
+CREATE OR REPLACE PROCEDURE payroll.process_monthly_salary(
+    p_month DATE
+)
+LANGUAGE plpgsql
+AS $$
+DECLARE
+    emp RECORD;
+    payroll_cursor CURSOR FOR
+        SELECT *
+        FROM temp_monthly_payroll;
+BEGIN
+    OPEN payroll_cursor;
+    LOOP
+        FETCH NEXT FROM payroll_cursor INTO emp;
+        EXIT WHEN NOT FOUND;
+        INSERT INTO payroll.monthly_payroll
+(
+    employee_id,
+    salary_month,
+    basic_salary,
+    bonus,
+    deduction,
+    net_salary
+)
+VALUES
+(
+    emp.employee_id,
+    p_month,
+    emp.basic_salary,
+    emp.bonus,
+    emp.deduction,
+    payroll.calculate_net_salary(
+        emp.basic_salary,
+        emp.bonus,
+        emp.deduction
+    )
+);
+
+    END LOOP;
+    CLOSE payroll_cursor;
+END;
+$$;
+
+
+--Transaction
+BEGIN;
+
+CALL payroll.process_monthly_salary('2026-09-03');
+
+
+COMMIT;
+
+
+--Rollback;
+
+select * from payroll.monthly_payroll ;
+
+--role
+create role harsh2006 login password 'harsh06';
+grant usage on schema payroll to harsh2006;
+grant select , insert , update , delete on all tables in schema payroll to harsh2006;
+
+--index
+
+CREATE INDEX idx_employee_id
+ON payroll.employees(employee_id);
+
+CREATE INDEX idx_employee_department
+ON payroll.employees(department_id);
+
+CREATE INDEX idx_salary_employee
+ON payroll.salaries(employee_id);
+
+
+CREATE INDEX idx_payroll_month
+ON payroll.monthly_payroll(salary_month);
